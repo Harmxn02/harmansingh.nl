@@ -1,0 +1,29 @@
+span[data-tooltip] {
+	position: relative;
+	cursor: pointer;
+}
+
+span[data-tooltip]::before {
+	font-size: 1rem;
+	white-space: nowrap; /* Added this line to prevent text from wrapping */
+
+	content: attr(data-tooltip);
+	position: absolute;
+	top: 80%;
+	left: 100%;
+	transform: translateX(-50%);
+	padding: 0.5rem;
+	background-color: #333;
+	color: #fff;
+	border-radius: 0.25rem;
+	opacity: 0;
+	visibility: hidden;
+	transition:
+		opacity 0.3s,
+		visibility 0.3s;
+}
+
+span[data-tooltip]:hover::before {
+	opacity: 1;
+	visibility: visible;
+}
