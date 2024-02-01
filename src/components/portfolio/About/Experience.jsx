@@ -51,14 +51,14 @@ export default function Experience() {
 						>
 							My name is Harman and I am a {getAge()}-year-old
 							programmer. I started my programming journey in 2020
-							after discovering Harvard's CS50 course.
+							after discovering Harvard&apos;s CS50 course.
 						</p>
 
 						<p
 							data-aos="fade-up"
 							className="pb-4 text-lg md:font-light md:text-3xl max-w-[55ch]"
 						>
-							Currently pursuing a Bachelor's degree in Applied Computer
+							Currently pursuing a Bachelor&apos;s degree in Applied Computer
 							Science with a specialization in AI.
 							{/* Additionally, I
 							am taking Finance and Statistics courses to prepare

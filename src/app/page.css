@@ -1,0 +1,32 @@
+html {
+	scroll-behavior: smooth;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+	display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
+
+	/* background-color: #161a22; */
+	/* background-color: #1f232b; */
+	/* background-color: #10101a; */
+
+	/* background: linear-gradient(#10101a, #161a22); */
+	background-color: #050716;
+}
+
+#INTRO {
+	background: url("../components/portfolio/images/herobg-compressed.webp");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: bottom;
+}
+
+#BODY {
+	background: linear-gradient(#050716, #10101a);
+}

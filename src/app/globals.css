@@ -1,3 +1,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer utilities {
+	.border-gradient {
+		border-width: 0.25rem;
+		border-image: linear-gradient(to right, #aa63b1, #5396fa) 1;
+		border-image-slice: 1;
+		animation: rotateBorder 4s linear infinite;
+	}
+
+	.border-gradient-skinny {
+		border-width: 0.125rem;
+		border-image: linear-gradient(to right, #aa63b1, #5396fa) 1;
+		border-image-slice: 1;
+		animation: rotateBorder 4s linear infinite;
+	}
+
+	@keyframes rotateBorder {
+		0% {
+			border-image: linear-gradient(to right, #aa63b1, #5396fa) 1;
+		}
+		50% {
+			border-image: linear-gradient(to left, #aa63b1, #5396fa) 1;
+		}
+		100% {
+			border-image: linear-gradient(to right, #aa63b1, #5396fa) 1;
+		}
+	}
+}

@@ -1,0 +1,27 @@
+{
+	"short_name": "Harman Singh",
+	"name": "Developer Portfolio of Harman Singh",
+	"author": "Harman Singh",
+	"icons": [
+		{
+			"src": "NAME_WHITE_BG.ico",
+			"sizes": "64x64 32x32 24x24 16x16",
+			"type": "image/x-icon"
+		},
+		{
+			"src": "NAME_192.png",
+			"type": "image/png",
+			"sizes": "192x192"
+		},
+		{
+			"src": "NAME_512.png",
+			"type": "image/png",
+			"sizes": "512x512",
+			"purpose": "maskable"
+		}
+	],
+	"start_url": ".",
+	"display": "standalone",
+	"theme_color": "#000000",
+	"background_color": "#ffffff"
+}

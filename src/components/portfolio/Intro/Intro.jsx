@@ -7,6 +7,7 @@ import robot from "./img/robot-purple-compressed.webp";
 import CTA from "./CTA";
 
 import "./styles.css";
+import Image from "next/image";
 
 const navigation = [
 	{ name: "Projects", href: "#PROJECTS", id: "project" },
@@ -45,11 +46,10 @@ export default function Intro(props) {
 								<div className="flex flex-shrink-0 flex-grow items-center lg:flex-grow-0">
 									<div className="flex w-full items-center justify-between md:w-auto">
 										<a href="#ABOUT">
-											<img
-												alt="Workflow"
-												className="h-8 w-8 sm:h-16 sm:w-16"
-												src={NAME}
-											/>
+											<Image 
+											alt="Workflow" 
+											className="h-8 w-8 sm:h-16 sm:w-16" 
+											src={NAME} />
 										</a>
 										<div className="-mr-2 flex items-center md:hidden">
 											<Popover.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-orange-500">
@@ -91,7 +91,7 @@ export default function Intro(props) {
 								<div className="overflow-hidden rounded-lg bg-[#1d1d29] shadow-md ring-1 ring-black ring-opacity-5">
 									<div className="flex items-center justify-between px-5 pt-4">
 										<div>
-											<img
+											<Image
 												className="h-8 w-auto"
 												src={NAME}
 												alt=""
@@ -178,7 +178,7 @@ export default function Intro(props) {
 				id="ROBOT"
 				className="hidden lg:flex flex-col lg:absolute right-0  lg:top-36 justify-center"
 			>
-				<img
+				<Image
 					className="aspect-[0.99258] w-[28rem] xl:w-[36rem] 2xl:w-[42rem]"
 					src={robot}
 					alt="the arm of a robot holding up holograms of credit cards"
