@@ -2,7 +2,7 @@
 
 ## Welcome to the GitHub repository of my Portfolio Website
 
-**[Live Deployment](https://harmanpsingh.vercel.app/)**
+**[Live Deployment](https://www.harmansingh.nl/)**
 
 ### **Technologies used**
 
@@ -20,6 +20,6 @@ I will still update the portfolio if needed:
 
 &nbsp;
 
-**[Live Deployment](https://harmanpsingh.vercel.app/)**
+**[Live Deployment](https://www.harmansingh.nl/)**
 
-README last updated: 7 Dec 2023
+README last updated: 1 Feb 2024
