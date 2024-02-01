@@ -1,0 +1,8 @@
+{
+	"name": "harmansingh.nl",
+	"private": true,
+	"workspaces": [
+		"main",
+		"portfolio"
+	]
+}
