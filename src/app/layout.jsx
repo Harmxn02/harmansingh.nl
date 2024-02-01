@@ -10,6 +10,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
+    // you can remove `className={inter.className}`, and it will look exactly the same as the old version
     <html lang="en">
       <body className={inter.className}>{children}</body>
     </html>
