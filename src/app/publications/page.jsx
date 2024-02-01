@@ -1,11 +1,22 @@
-import React from 'react'
+import React from "react";
+import publications from "./publications.json";
+import Publication from "./Publication";
 
 const page = () => {
-  return (
-    <div>
-        <h1>Publications</h1>
-    </div>
-  )
-}
+	return (
+		<div className="max-w-2xl m-10">
+			<div>
+				{publications.map((publication) => {
+					return (
+						<Publication
+							key={publication.key}
+							publication={publication}
+						/>
+					);
+				})}
+			</div>
+		</div>
+	);
+};
 
-export default page
+export default page;
