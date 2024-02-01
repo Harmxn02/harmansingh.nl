@@ -7,14 +7,25 @@ caches.keys().then(function (names) {
 
 this.addEventListener("install", (event) => {
 	event.waitUntil(
-		caches.open(CACHE_NAME).then((cache) => cache.add(start_url)),
+		caches.open(CACHE_NAME).then((cache) => cache.add(start_url))
 	);
 });
 
 this.addEventListener("fetch", (event) => {
 	event.respondWith(
-		caches
-			.match(event.request)
-			.then((response) => response || fetch(event.request)),
+		caches.match(event.request).then((response) => {
+			// If a cached response is found, return it
+			if (response) {
+				return response;
+			}
+
+			// Otherwise, try fetching the resource from the network
+			return fetch(event.request).catch(() => {
+				// If fetch fails, provide a fallback response here
+				return new Response("Fallback response goes here", {
+					headers: { "Content-Type": "text/plain" },
+				});
+			});
+		})
 	);
 });
