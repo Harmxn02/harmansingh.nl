@@ -97,7 +97,7 @@ export default function Contact() {
 							<Label htmlFor="name1" value="Your name">
 								Your name
 							</Label>
-							<LabelHint>or your company's name</LabelHint>
+							<LabelHint>or your company&apos;s name</LabelHint>
 						</div>
 
 						<Input
