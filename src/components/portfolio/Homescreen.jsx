@@ -17,9 +17,6 @@ import FooterSection from "./Footer/Footer";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-import { inject } from "@vercel/analytics";
-inject();
-
 const Homescreen = () => {
 	useEffect(() => {
 		AOS.init({
