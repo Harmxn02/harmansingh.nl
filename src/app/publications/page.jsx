@@ -45,7 +45,7 @@ const Page = () => {
 		<div>
 			<Header />
 			<div className="flex m-10">
-				<div className="max-w-2xl">
+				<div className="max-w-3xl">
 					{filteredPublications.map((publication) => {
 						return (
 							<Publication
@@ -56,8 +56,8 @@ const Page = () => {
 					})}
 				</div>
 
-				<div className="ml-10">
-					<p className="font-bold my-2">Categories:</p>
+				<div className="ml-10 hidden md:block">
+					<p className="font-bold my-2 ">Categories:</p>
 					<ul>
 						<li
 							onClick={() => handleCategoryClick("")}
