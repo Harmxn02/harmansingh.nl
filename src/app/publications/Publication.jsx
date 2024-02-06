@@ -30,38 +30,35 @@ const Publication = ({ publication }) => {
 				<p>{formattedDate}</p>
 				<p>{publication.author}</p>
 			</div>
+
 			{/* Article */}
-			<div key={publication.key} className="border-b py-6">
-				<h1 className="font-bold text-xl hover:cursor-pointer hover:underline">
-					{publication.URL ? (
-						<Link href={publication.URL} legacyBehavior passHref>
-							<a target="_blank" rel="noopener noreferrer">
-								{publication.title}
-							</a>
-						</Link>
-					) : (
-						<span>{publication.title}</span>
-					)}
-				</h1>
-				<p className="font-serif max-w-prose">{truncatedDescription}</p>
-				{/* Metadata - UNDER */} {/* shown before MD (mobile) */}
-				<div key={publication.key} className="lg:hidden pt-4 text-xs">
-					<p>{formattedDate}</p>
-					<p>{publication.author}</p>
-				</div>
-				<ul className="flex gap-1 mt-4">
-					{publication.themes.map((theme, index) => {
-						return (
-							<li
-								key={`theme-${index}`}
-								className="bg-slate-100 text-sm rounded-full px-2 py-1"
-							>
-								{theme}
-							</li>
-						);
-					})}
-				</ul>
-			</div>
+			<Link href={publication.URL} legacyBehavior passHref>	
+				<a target="_blank" rel="noopener noreferrer group">
+					<div key={publication.key} className="border-b py-6">
+						<h1 className="font-bold text-xl">
+							{publication.title}
+						</h1>
+						<p className="font-serif max-w-prose">{truncatedDescription}</p>
+						{/* Metadata - UNDER */} {/* shown before MD (mobile) */}
+						<div key={publication.key} className="lg:hidden pt-4 text-xs">
+							<p>{formattedDate}</p>
+							<p>{publication.author}</p>
+						</div>
+						<ul className="flex gap-1 mt-4">
+							{publication.themes.map((theme, index) => {
+								return (
+									<li
+										key={`theme-${index}`}
+										className="bg-slate-100 text-sm rounded-full px-2 py-1"
+									>
+										{theme}
+									</li>
+								);
+							})}
+						</ul>
+					</div>
+				</a>
+			</Link>
 		</div>
 	);
 };

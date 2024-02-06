@@ -5,9 +5,9 @@ const Header = () => {
 		<div className="min-h-[15vh] bg-[#2c3e50] text-white p-10">
 			<h2 className="text-3xl">Harman Singh</h2>
 			<h1 className="text-lg">Me geeking out over numbers</h1>
-			<p className="text-xs italic">
+			<p className="text-xs italic sr-only">
 				if you&apos;ve found this page somehow, the articles were just
-				dummy ones made for the development of this page-route. I was craving cookies if you could&apos;t tell
+				dummy ones made for the development of this page-route. I was craving cookies if you couldn&apos;t tell
 			</p>
 		</div>
 	);
