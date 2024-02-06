@@ -44,7 +44,7 @@ const Page = () => {
 	return (
 		<div>
 			<Header />
-			<div className="flex m-10">
+			<div className="flex flex-col-reverse md:flex-row m-10">
 				<div className="max-w-3xl">
 					{filteredPublications.map((publication) => {
 						return (
@@ -56,9 +56,9 @@ const Page = () => {
 					})}
 				</div>
 
-				<div className="ml-10 hidden md:block">
+				<div className="md:ml-10 border md:border-none p-2 md:p-0">
 					<p className="font-bold my-2 ">Categories:</p>
-					<ul>
+					<ul className="flex md:flex-col flex-wrap gap-3 md:gap-0">
 						<li
 							onClick={() => handleCategoryClick("")}
 							className={
@@ -79,6 +79,7 @@ const Page = () => {
 							>
 								{category} ({articlesPerCategory[category]})
 							</li>
+							
 						))}
 					</ul>
 				</div>
