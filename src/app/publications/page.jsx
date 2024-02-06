@@ -6,6 +6,16 @@ import Publication from "./Publication";
 
 import Header from "./Header";
 
+
+const truncateListElement = (text) => {
+	const maxLength = 14;
+	if (text.length > maxLength) {
+		return text.slice(0, maxLength) + " ...";
+	}
+	return text;
+}
+
+
 const DropdownButton = ({
 	activeSelection,
 	handleCategoryClick,
@@ -22,7 +32,7 @@ const DropdownButton = ({
 		<div className="relative inline-block text-left">
 			<button
 				type="button"
-				className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+				className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center"
 				onClick={toggleDropdown}
 			>
 				{text}{" "}
@@ -125,7 +135,7 @@ const Page = () => {
 	return (
 		<div>
 			<Header />
-			<div className="flex flex-col-reverse md:flex-row m-10">
+			<div className="flex flex-col-reverse md:flex-row m-10 ">
 				<div className="max-w-3xl">
 					{filteredPublications.map((publication) => {
 						return (
@@ -149,7 +159,7 @@ const Page = () => {
 					/>
 				</div>
 
-				<div className="md:ml-10 hidden md:block">
+				<div className="md:ml-10 hidden md:block min-w-fit">
 					<p className="font-bold my-2 ">Categories:</p>
 					<ul>
 						<li
@@ -170,7 +180,7 @@ const Page = () => {
 										: "cursor-pointer"
 								}
 							>
-								{category} ({articlesPerCategory[category]})
+								{truncateListElement(category)} ({articlesPerCategory[category]})
 							</li>
 							
 						))}
