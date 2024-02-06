@@ -102,6 +102,8 @@ const Page = () => {
 	const [activeSelection, setActiveSelection] = useState("");
 
 	const countArticlesPerCategory = () => {
+		
+		const ARTICLES_NEEDED_TO_SHOW_AS_CATEGORY = 2;
 		const categoryCount = {};
 
 		publications.forEach((publication) => {
@@ -114,6 +116,15 @@ const Page = () => {
 					categoryCount[category] = 1;
 				}
 			});
+		});
+
+		
+
+		// Remove categories with less than 2 articles from the sorting options
+		Object.keys(categoryCount).forEach((category) => {
+			if (categoryCount[category] < ARTICLES_NEEDED_TO_SHOW_AS_CATEGORY) {
+				delete categoryCount[category];
+			}
 		});
 
 		return categoryCount;
