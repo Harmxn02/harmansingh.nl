@@ -4,6 +4,8 @@ import React, { useState } from "react";
 import publications from "./publications.json";
 import Publication from "./Publication";
 
+import Header from "./Header";
+
 const page = () => {
 	const [selectedCategory, setSelectedCategory] = useState("");
 	const [activeSelection, setActiveSelection] = useState("");
@@ -30,6 +32,7 @@ const page = () => {
 
 	const handleCategoryClick = (category) => {
 		setSelectedCategory(category);
+		setActiveSelection(category);
 	};
 
 	const filteredPublications = selectedCategory
@@ -40,14 +43,7 @@ const page = () => {
 
 	return (
 		<div>
-			<div className="min-h-[15vh] bg-[#2c3e50] text-white p-10">
-				<h2 className="text-3xl">Harman Singh</h2>
-				<h1 className="text-lg">Me geeking out over numbers</h1>
-				<p className="text-xs italic">
-					if you&apos;ve found this page somehow, the articles were
-					just dummy ones made for the development of this page-route
-				</p>
-			</div>
+			<Header />
 			<div className="flex m-10">
 				<div className="max-w-2xl">
 					{filteredPublications.map((publication) => {
@@ -63,13 +59,23 @@ const page = () => {
 				<div className="ml-10">
 					<p className="font-bold my-2">Categories:</p>
 					<ul>
-						<li onClick={() => handleCategoryClick("")}>
+						<li
+							onClick={() => handleCategoryClick("")}
+							className={
+								activeSelection === "" ? "font-bold underline underline-offset-1" : ""
+							}
+						>
 							All ({publications.length})
 						</li>
 						{Object.keys(articlesPerCategory).map((category) => (
 							<li
 								key={category}
 								onClick={() => handleCategoryClick(category)}
+								className={
+									activeSelection === category
+										? "font-bold underline underline-offset-1"
+										: "cursor-pointer"
+								}
 							>
 								{category} ({articlesPerCategory[category]})
 							</li>
