@@ -6,7 +6,7 @@ import Publication from "./Publication";
 
 import Header from "./Header";
 
-const page = () => {
+const Page = () => {
 	const [selectedCategory, setSelectedCategory] = useState("");
 	const [activeSelection, setActiveSelection] = useState("");
 
@@ -87,4 +87,4 @@ const page = () => {
 	);
 };
 
-export default page;
+export default Page;
