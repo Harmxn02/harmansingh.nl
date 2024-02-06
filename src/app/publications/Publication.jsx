@@ -44,7 +44,7 @@ const Publication = ({ publication }) => {
 							<p>{formattedDate}</p>
 							<p>{publication.author}</p>
 						</div>
-						<ul className="flex gap-1 mt-4">
+						<ul className="flex flex-wrap gap-1 mt-4">
 							{publication.themes.map((theme, index) => {
 								return (
 									<li
