@@ -1,10 +1,13 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import publications from "./publications.json";
 import Publication from "./Publication";
 
 const page = () => {
+	const [selectedCategory, setSelectedCategory] = useState("");
+	const [activeSelection, setActiveSelection] = useState("");
+
 	const countArticlesPerCategory = () => {
 		const categoryCount = {};
 
@@ -20,11 +23,20 @@ const page = () => {
 			});
 		});
 
-		console.log(categoryCount);
 		return categoryCount;
 	};
 
 	const articlesPerCategory = countArticlesPerCategory();
+
+	const handleCategoryClick = (category) => {
+		setSelectedCategory(category);
+	};
+
+	const filteredPublications = selectedCategory
+		? publications.filter((publication) =>
+				publication.themes.includes(selectedCategory)
+		  )
+		: publications;
 
 	return (
 		<div>
@@ -38,10 +50,10 @@ const page = () => {
 			</div>
 			<div className="flex m-10">
 				<div className="max-w-2xl">
-					{publications.map((publication) => {
+					{filteredPublications.map((publication) => {
 						return (
 							<Publication
-								key={publication.key}
+								key={publication.id}
 								publication={publication}
 							/>
 						);
@@ -50,12 +62,16 @@ const page = () => {
 
 				<div className="ml-10">
 					<p className="font-bold my-2">Categories:</p>
-					<ul className="">
-						<li>All &#40;{publications.length}&#41;</li>
+					<ul>
+						<li onClick={() => handleCategoryClick("")}>
+							All ({publications.length})
+						</li>
 						{Object.keys(articlesPerCategory).map((category) => (
-							<li key={category}>
-								{category} &#40;{articlesPerCategory[category]}
-								&#41;
+							<li
+								key={category}
+								onClick={() => handleCategoryClick(category)}
+							>
+								{category} ({articlesPerCategory[category]})
 							</li>
 						))}
 					</ul>

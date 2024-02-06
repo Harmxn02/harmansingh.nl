@@ -7,9 +7,9 @@ const Publication = ({ publication }) => {
 			<p className="font-serif max-w-prose">{publication.description}</p>
 
 			<ul className="flex gap-1 mt-4">
-                {publication.themes.map((theme) => {
+                {publication.themes.map((theme, index) => {
                     return (
-                        <li key={publication.theme} className="bg-slate-100 text-sm rounded-full px-2 py-1">{theme}</li>
+                        <li key={`theme-${index}`} className="bg-slate-100 text-sm rounded-full px-2 py-1">{theme}</li>
                     )
                 } )}
             </ul>
