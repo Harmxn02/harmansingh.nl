@@ -85,7 +85,9 @@ const Page = () => {
 						<li
 							onClick={() => handleCategoryClick("")}
 							className={
-								activeSelection === "" ? "font-bold underline underline-offset-1" : ""
+								activeSelection === ""
+									? "font-bold underline underline-offset-1"
+									: ""
 							}
 						>
 							All ({publications.length})
