@@ -1,14 +1,15 @@
 "use client";
 
 import React, { useState } from "react";
-import publications from "./publications.json";
-import Publication from "./Publication";
+import publications from "./data/publications.json";
+import Publication from "./components/Publication";
 
-import Header from "./Header";
+import Header from "./components/Header";
 
+import _CONFIG from "./config/config.json"
 
 const truncateListElement = (text) => {
-	const maxLength = 14;
+	const maxLength = _CONFIG.CATEGORY_MAX_CH_LENGTH;
 	if (text.length > maxLength) {
 		return text.slice(0, maxLength) + " ...";
 	}
@@ -102,8 +103,6 @@ const Page = () => {
 	const [activeSelection, setActiveSelection] = useState("");
 
 	const countArticlesPerCategory = () => {
-		
-		const ARTICLES_NEEDED_TO_SHOW_AS_CATEGORY = 2;
 		const categoryCount = {};
 
 		publications.forEach((publication) => {
@@ -122,7 +121,7 @@ const Page = () => {
 
 		// Remove categories with less than 2 articles from the sorting options
 		Object.keys(categoryCount).forEach((category) => {
-			if (categoryCount[category] < ARTICLES_NEEDED_TO_SHOW_AS_CATEGORY) {
+			if (categoryCount[category] < _CONFIG.MIN_ARTICLES_FOR_CATEGORY) {
 				delete categoryCount[category];
 			}
 		});
