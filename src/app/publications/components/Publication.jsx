@@ -1,23 +1,7 @@
 import React from "react";
 
 import Link from "next/link";
-
-const formatDate = (dateString) => {
-	const [day, month, year] = dateString.split("-");
-	const parsedDate = new Date(`${year}-${month}-${day}T00:00:00Z`);
-
-	const options = { year: "numeric", month: "short", day: "numeric" };
-	const formattedDate = parsedDate.toLocaleDateString("en-US", options);
-	return formattedDate;
-};
-
-const truncateDescription = (description) => {
-	const maxLength = 250;
-	if (description.length > maxLength) {
-		return description.slice(0, maxLength) + " ...";
-	}
-	return description;
-};
+import truncate from "../util/truncate";
 
 const Publication = ({ publication }) => {
 	const formattedDate = formatDate(publication.date);
@@ -38,7 +22,7 @@ const Publication = ({ publication }) => {
 						<h1 className="font-bold text-xl">
 							{publication.title}
 						</h1>
-						<p className="font-serif max-w-prose">{truncatedDescription}</p>
+						<p className="font-serif max-w-prose">{truncate(publication.description, _CONFIG.DESC_MAX_LENGTH)}</p>
 						{/* Metadata - UNDER */} {/* shown before MD (mobile) */}
 						<div key={publication.key} className="lg:hidden pt-4 text-xs">
 							<p>{formattedDate}</p>

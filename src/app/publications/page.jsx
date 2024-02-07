@@ -8,14 +8,7 @@ import Header from "./components/Header";
 
 import _CONFIG from "./config/config.json"
 
-const truncateListElement = (text) => {
-	const maxLength = _CONFIG.CATEGORY_MAX_CH_LENGTH;
-	if (text.length > maxLength) {
-		return text.slice(0, maxLength) + " ...";
-	}
-	return text;
-}
-
+import truncate from "./util/truncate";
 
 const DropdownButton = ({
 	activeSelection,
