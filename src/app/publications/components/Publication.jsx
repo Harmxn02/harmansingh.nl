@@ -2,10 +2,11 @@ import React from "react";
 
 import Link from "next/link";
 import truncate from "../util/truncate";
+import formatDate from "../util/formatDate";
+
 
 const Publication = ({ publication }) => {
 	const formattedDate = formatDate(publication.date);
-	const truncatedDescription = truncateDescription(publication.description);
 
 	return (
 		<div className="flex items-baseline gap-4">
