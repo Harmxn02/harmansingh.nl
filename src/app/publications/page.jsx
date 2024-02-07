@@ -6,7 +6,7 @@ import Publication from "./components/Publication";
 
 import Header from "./components/Header";
 
-import _CONFIG from "./config/config.json"
+import _CONFIG from "./config/config.json";
 
 import truncate from "./util/truncate";
 
@@ -183,9 +183,12 @@ const Page = () => {
 										: "cursor-pointer"
 								}
 							>
-								{truncateListElement(category)} ({articlesPerCategory[category]})
+								{truncate(
+									category,
+									_CONFIG.CATEGORY_MAX_LENGTH
+								)}{" "}
+								({articlesPerCategory[category]})
 							</li>
-							
 						))}
 					</ul>
 				</div>

@@ -4,6 +4,7 @@ import Link from "next/link";
 import truncate from "../util/truncate";
 import formatDate from "../util/formatDate";
 
+import _CONFIG from "../config/config.json";
 
 const Publication = ({ publication }) => {
 	const formattedDate = formatDate(publication.date);
