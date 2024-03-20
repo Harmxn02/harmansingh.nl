@@ -1,5 +1,6 @@
 import SectionHeader from "../SectionHeader";
 // import bongo from "../images/bongo.jpg";
+// import Image from "next/image";
 
 const projects = [
 	{
@@ -10,8 +11,9 @@ const projects = [
 		domain: "TBD",
 		description:
 			"Currently empty because I have not made any portfolio-worthy projects yet.",
-		source: "https://github.com/Harmxn02",
-		live: "https://github.com/Harmxn02",
+		repository: "https://github.com/Harmxn02",
+		deployment: "https://github.com/Harmxn02",
+		button_text: ["Live Deployment", "Code Repository"]
 	},
 	{
 		id: 2,
@@ -21,8 +23,9 @@ const projects = [
 		domain: "TBD",
 		description:
 			"Currently empty because I have not made any portfolio-worthy projects yet.",
-		source: "https://github.com/Harmxn02",
-		live: "https://github.com/Harmxn02",
+		repository: "https://github.com/Harmxn02",
+		deployment: "https://github.com/Harmxn02",
+		button_text: ["Live Deployment", "Code Repository"]
 	},
 	{
 		id: 3,
@@ -32,15 +35,16 @@ const projects = [
 		domain: "TBD",
 		description:
 			"Currently empty because I have not made any portfolio-worthy projects yet.",
-		source: "https://github.com/Harmxn02",
-		live: "https://github.com/Harmxn02",
+		repository: "https://github.com/Harmxn02",
+		deployment: "https://github.com/Harmxn02",
+		button_text: ["Live Deployment", "Code Repository"]
 	},
 ];
 
 const ProjectCard = ({ project }) => (
 	<div data-aos="fade-up" key={project.id} className="group relative pb-16">
 		<div className="min-h-80 lg:aspect-w-1 aspect-w-2 aspect-h-1 lg:aspect-none w-full overflow-hidden lg:h-80">
-			{/* <img
+			{/* <Image
         src={project.imageSrc}
         alt={project.imageAlt}
         className="h-full w-full bg-brandBackground] text-transparent border-gradient-skinny object-cover object-center lg:h-full lg:w-full"
@@ -67,10 +71,10 @@ const ProjectCard = ({ project }) => (
 			data-aos="fade-up"
 			className="grid grid-cols-1 justify-center gap-4 pt-6 text-center sm:grid-cols-2"
 		>
-			{["Live Deployment", "Code Repository"].map((text, index) => (
+			{project.button_text.map((text, index) => (
 				<a
 					key={index}
-					href={index === 0 ? project.live : project.source}
+					href={index === 0 ? project.deployment : project.repository}
 					target="_blank"
 					rel="noreferrer"
 					className="rounded-sm border-[1px] border-projectButtonBorder bg-projectButtonBG p-2 font-semibold text-white transition-all duration-300 hover:border-projectButtonBorderHOVER"
