@@ -28,7 +28,7 @@ export default function FooterSection(props) {
 			<div className="w-full">
 				<div className="w-full bg-gradient-to-r from-[#10101a] via-[#15161a] to-[#10101a] py-6 px-4 sm:flex sm:items-center sm:justify-between">
 					<p className="text-gray-400 text-sm font-medium">
-						© {getCurrentYear()} Harman Singh
+						© {getCurrentYear()} Harman Singh Nahal
 					</p>
 					<div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center">
 						{socialMediaLinks.map((socialMedia, index) => (
