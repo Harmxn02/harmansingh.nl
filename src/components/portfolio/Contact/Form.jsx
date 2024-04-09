@@ -114,7 +114,7 @@ export default function Contact() {
 								Your email
 							</Label>
 							<LabelHint>
-								You will receive a copy on this address
+								so I can get back in touch with you
 							</LabelHint>
 						</div>
 
