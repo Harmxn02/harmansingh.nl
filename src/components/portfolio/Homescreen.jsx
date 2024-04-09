@@ -29,7 +29,7 @@ const Homescreen = () => {
 		<div className="App selection:bg-[#7e7dd680]">
 			<Banner
 				colour="gradient"
-				content="I am available for Software Engineering Internships 💪"
+				content="I'm available for SWE, Data Science & AI Internships 💪"
 			/>
 			<Intro section="INTRO"></Intro>
 
