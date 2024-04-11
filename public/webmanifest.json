@@ -1,0 +1,23 @@
+{
+	"name": "Harman Singh - harmansingh.nl",
+	"short_name": "Harman Singh",
+	"description": "Personal website of Harman Singh",
+	"start_url": "/",
+	"display": "standalone",
+	"orientation": "portrait",
+	"theme_color": "#5695f8",
+	"background_color": "#a865b3",
+	"icons": [
+		{
+			"src": "./NAME_192.png",
+			"sizes": "192x192",
+			"type": "image/png"
+		},
+		{
+			"src": "./NAME_512.png",
+			"sizes": "512x512",
+			"type": "image/png"
+		}
+	],
+	"scope": "/"
+}
