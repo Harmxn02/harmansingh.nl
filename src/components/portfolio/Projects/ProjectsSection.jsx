@@ -5,15 +5,15 @@ import SectionHeader from "../SectionHeader";
 const projects = [
 	{
 		id: 1,
-		name: "Project Alpha",
+		name: "Hotel client screening",
 		// imageSrc: bongo,
 		imageAlt: "Preview of project Alpha",
-		domain: "TBD",
+		domain: "ML/AI",
 		description:
-			"Currently empty because I have not made any portfolio-worthy projects yet.",
-		repository: "https://github.com/Harmxn02",
-		deployment: "https://github.com/Harmxn02",
-		button_text: ["Live Deployment", "Code Repository"]
+			"I applied supervised learning techniques to screen the 500 optimal clients for an exclusive (imaginary) hotel.",
+		repository: "https://github.com/Harmxn02/ML-Project",
+		deployment: "https://drive.google.com/file/d/1L3vT-fNBQ-yBKA0TwXJN-ProcwJ8PSmc/view?usp=sharing",
+		button_text: ["Report", "Code Repository"]
 	},
 	{
 		id: 2,
