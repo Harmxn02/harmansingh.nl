@@ -1,19 +1,21 @@
 import SectionHeader from "../SectionHeader";
 // import bongo from "../images/bongo.jpg";
-// import Image from "next/image";
+import Image from "next/image";
+import AlphaPreview from "./previews/Alpha2.webp";
 
 const projects = [
 	{
 		id: 1,
 		name: "Hotel client screening",
-		// imageSrc: bongo,
+		imageSrc: AlphaPreview,
 		imageAlt: "Preview of project Alpha",
 		domain: "ML/AI",
 		description:
 			"I applied supervised learning techniques to screen the 500 optimal clients for an exclusive (imaginary) hotel.",
 		repository: "https://github.com/Harmxn02/ML-Project",
-		deployment: "https://drive.google.com/file/d/1L3vT-fNBQ-yBKA0TwXJN-ProcwJ8PSmc/view?usp=sharing",
-		button_text: ["Report", "Code Repository"]
+		deployment:
+			"https://drive.google.com/file/d/1L3vT-fNBQ-yBKA0TwXJN-ProcwJ8PSmc/view?usp=sharing",
+		button_text: ["Report", "Code Repository"],
 	},
 	{
 		id: 2,
@@ -25,7 +27,7 @@ const projects = [
 			"Currently empty because I have not made any portfolio-worthy projects yet.",
 		repository: "https://github.com/Harmxn02",
 		deployment: "https://github.com/Harmxn02",
-		button_text: ["Live Deployment", "Code Repository"]
+		button_text: ["Live Deployment", "Code Repository"],
 	},
 	{
 		id: 3,
@@ -37,20 +39,22 @@ const projects = [
 			"Currently empty because I have not made any portfolio-worthy projects yet.",
 		repository: "https://github.com/Harmxn02",
 		deployment: "https://github.com/Harmxn02",
-		button_text: ["Live Deployment", "Code Repository"]
+		button_text: ["Live Deployment", "Code Repository"],
 	},
 ];
 
 const ProjectCard = ({ project }) => (
 	<div data-aos="fade-up" key={project.id} className="group relative pb-16">
 		<div className="min-h-80 lg:aspect-w-1 aspect-w-2 aspect-h-1 lg:aspect-none w-full overflow-hidden lg:h-80">
-			{/* <Image
-        src={project.imageSrc}
-        alt={project.imageAlt}
-        className="h-full w-full bg-brandBackground] text-transparent border-gradient-skinny object-cover object-center lg:h-full lg:w-full"
-      /> */}
-			{/* ! REPLACE THIS DIV WITH THE IMAGE ONCE YOU HAVE PROJECTS */}
-			<div className="h-full w-full text-transparent border-gradient-skinny object-cover object-center lg:h-full lg:w-full"></div>
+			{project.imageSrc ? (
+				<Image
+					src={project.imageSrc}
+					alt={project.imageAlt}
+					className="h-full w-full bg-brandBackground text-transparent border-gradient-skinny object-cover object-center lg:h-full lg:w-full"
+				/>
+			) : (
+				<div className="h-full w-full text-transparent border-gradient-skinny object-cover object-center lg:h-full lg:w-full"></div>
+			)}
 		</div>
 		<div className="mt-4 GRID">
 			<div data-aos="fade-up">
