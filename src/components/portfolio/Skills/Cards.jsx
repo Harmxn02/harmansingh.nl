@@ -108,20 +108,22 @@ export default function SkillsCards() {
 								<Skill content="Python" />
 								<Skill content="R" />
 								{/* <span className="flex items-center text-gray-400" >/</span> */}
-								<Skill content="scikit-learn" />
 								<Skill content="TensorFlow" />
+								<Skill content="Keras" />
 								<Skill content="PyTorch" />
+								<Skill content="scikit-learn" />
 								<Skill content="pandas" />
 								<Skill content="Polars" />
-								<Skill content="numpy" />
+								<Skill content="NumPy" />
 							</div>
 						</div>
 
 						<div>
-							<Subtitle>Data Analytics</Subtitle>
+							<Subtitle>Data Analytics, Data Engineering</Subtitle>
 							<div className="flex flex-wrap gap-2">
 								<Skill content="Excel" />
 								<Skill content="SQL" />
+								<Skill content="Neo4J" />
 								<Skill content="Tableau" />
 								<Skill content="Power BI" />
 								<Skill content="Google Data Studio" />
@@ -132,10 +134,8 @@ export default function SkillsCards() {
 							<Subtitle>Data Visualization</Subtitle>
 							<div className="flex flex-wrap gap-2">
 								<Skill content="seaborn" />
-								<Skill content="matplotlib" />
-								<Skill content="Patsy" />
+								<Skill content="Matplotlib" />
 								<Skill content="Tableau" />
-								<Skill content="statsmodel" />
 							</div>
 						</div>
 					</Container>
