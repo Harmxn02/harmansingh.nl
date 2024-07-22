@@ -31,7 +31,8 @@ export default function Experience() {
 			<div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-16">
 				<div data-aos="fade-up">
 					<div className="h-fit max-w-5xl  space-y-4 rounded-md  py-8 px-4 text-white">
-						<div className="bg-[#282a3a] max-w-fit rounded-md px-4">
+						{/* Code WHO AM I */}
+						{/* <div className="bg-[#282a3a] max-w-fit rounded-md px-4">
 							<div className="flex gap-1 lg:gap-2 pt-4">
 								<div className="h-3 lg:h-4 aspect-1 bg-red-500 rounded-full"></div>
 								<div className="h-3 lg:h-4 aspect-1 bg-yellow-500 rounded-full"></div>
@@ -44,13 +45,13 @@ export default function Experience() {
 								{" "}
 								<code>C:\Users\Harman{">"} <span className="text-white">whoami</span> </code> {" "}
 							</h2>
-						</div>
+						</div> */}
 						<p
 							data-aos="fade-up"
 							className="pb-4 text-lg md:font-light md:text-3xl max-w-[55ch]"
 						>
 							My name is Harman and I am a {getAge()}-year-old
-							Software Engineer / ML engineer. 
+							Software Engineer / Data Scientist.
 							{/* I started my programming journey in 2020
 							after discovering Harvard&apos;s CS50 course. */}
 						</p>
@@ -59,8 +60,9 @@ export default function Experience() {
 							data-aos="fade-up"
 							className="pb-4 text-lg md:font-light md:text-3xl max-w-[55ch]"
 						>
-							I&apos;m currently pursuing a Bachelor&apos;s degree in Applied Computer
-							Science with a specialization in AI.
+							I&apos;m currently pursuing a Bachelor&apos;s degree
+							in Applied Computer Science with a specialization in
+							AI.
 							{/* Additionally, I
 							am taking Finance and Statistics courses to prepare
 							for a career in quantitative analysis and data
@@ -75,7 +77,7 @@ export default function Experience() {
 								href="https://www.linkedin.com/in/harmanpnahal/"
 								target="_blank"
 								rel="noreferrer"
-								className="mt-2 w-full flex items-center justify-center px-4 py-5 text-base font-medium rounded-md text-white bg-brandPurple hover:bg-brandPurpleFade transition-colors duration-300 md:py-4 md:text-lg md:px-10"
+								className="mt-2 w-fit flex items-center justify-center px-6 py-5 text-base font-medium rounded-md text-white bg-brandPurple hover:bg-brandPurpleFade transition-colors duration-300 md:py-4 md:text-lg md:px-6"
 							>
 								<svg
 									className="w-6 h-6 mr-4"
@@ -87,7 +89,8 @@ export default function Experience() {
 									<title>Find out more on my LinkedIn!</title>
 									<path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
 								</svg>
-								Find out more on my LinkedIn!
+								<span className="hidden md:block">Find out more on my LinkedIn!</span>
+								<span className="md:hidden">More on my LinkedIn</span>
 							</a>
 						</div>
 					</div>
