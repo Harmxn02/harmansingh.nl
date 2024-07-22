@@ -1,14 +1,29 @@
 import SectionHeader from "../SectionHeader";
 
+const Suffix = ({ href }) => {
+	return (
+		<span className="text-[#9f4fd9]">
+			<a
+				className="hover:text-white px-1 transition-colors duration-500 "
+				href={href}
+			>
+				.
+			</a>
+		</span>
+	);
+};
+
+
 const Title = ({ content }) => {
 	return (
-		<p
+		<h3
 			data-aos="fade-up"
 			// className="text-xl font-medium text-white border-gradient-skinny max-w-fit py-2 px-6"
-			className="text-xl font-semibold bg-gradient-to-r from-[#aa63b1] to-brandPurple rounded max-w-fit py-2 px-4"
+			className="text-2xl font-semibold max-w-fit py-2 "
 		>
 			{content}
-		</p>
+			<Suffix />	
+		</h3>
 	);
 };
 
@@ -33,7 +48,7 @@ const Skill = ({ content }) => {
 
 const Container = ({ children }) => {
 	return (
-		<div className="flex flex-wrap gap-4 max-w-lg mt-6" data-aos="fade-up">
+		<div className="grid gap-4 max-w-lg mt-6" data-aos="fade-up">
 			{children}
 		</div>
 	);
@@ -54,7 +69,7 @@ export default function SkillsCards() {
 				section="SKILLS"
 				type=""
 				title="Skills"
-				// desc="Frontend, backend and data."
+				desc="Only the stuff I am completely comfortable with"
 			/>
 
 			<div className="text-white flex flex-col lg:flex-row pt-12 md:pt-24 gap-16">
@@ -71,17 +86,17 @@ export default function SkillsCards() {
 								<Skill content="JavaScript" />
 								<Skill content="TypeScript" />
 								<Skill content="React" />
-								<Skill content="Vue.js" />
+								{/* <Skill content="Vue.js" /> */}
 								<Skill content="Next.js" />
 								<Skill content="Tailwind CSS" />
-								<Skill content="SASS" />
+								{/* <Skill content="SASS" /> */}
 							</div>
 						</div>
 
 						<div>
 							<Subtitle>Back End</Subtitle>
 							<div className="flex flex-wrap gap-2">
-								<Skill content="Java (Vert.x)" />
+								<Skill content="Java" />
 								<Skill content="PHP (Laravel)" />
 								<Skill content="Node.js" />
 							</div>
@@ -91,9 +106,9 @@ export default function SkillsCards() {
 							<Subtitle>Databases</Subtitle>
 							<div className="flex flex-wrap gap-2">
 								<Skill content="MySQL" />
-								<Skill content="PostgreSQL" />
+								{/* <Skill content="PostgreSQL" /> */}
 								<Skill content="MongoDB" />
-								<Skill content="GraphQL" />
+								{/* <Skill content="GraphQL" /> */}
 							</div>
 						</div>
 					</Container>
@@ -106,7 +121,7 @@ export default function SkillsCards() {
 							<Subtitle>Data Science</Subtitle>
 							<div className="flex flex-wrap gap-2">
 								<Skill content="Python" />
-								<Skill content="R" />
+								{/* <Skill content="R" /> */}
 								{/* <span className="flex items-center text-gray-400" >/</span> */}
 								<Skill content="TensorFlow" />
 								<Skill content="Keras" />
@@ -123,10 +138,10 @@ export default function SkillsCards() {
 							<div className="flex flex-wrap gap-2">
 								<Skill content="Excel" />
 								<Skill content="SQL" />
-								<Skill content="Neo4J" />
-								<Skill content="Tableau" />
-								<Skill content="Power BI" />
-								<Skill content="Google Data Studio" />
+								{/* <Skill content="Neo4J" /> */}
+								{/* <Skill content="Tableau" /> */}
+								{/* <Skill content="Power BI" /> */}
+								{/* <Skill content="Google Data Studio" /> */}
 							</div>
 						</div>
 
@@ -135,7 +150,7 @@ export default function SkillsCards() {
 							<div className="flex flex-wrap gap-2">
 								<Skill content="seaborn" />
 								<Skill content="Matplotlib" />
-								<Skill content="Tableau" />
+								{/* <Skill content="Tableau" /> */}
 							</div>
 						</div>
 					</Container>
