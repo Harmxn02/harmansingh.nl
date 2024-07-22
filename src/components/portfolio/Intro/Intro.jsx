@@ -131,15 +131,15 @@ export default function Intro(props) {
 								data-aos="fade-up"
 								className="flex flex-col gap-2 text-white"
 							>
-								<h1 className="block max-w-[16ch] font-bold sm:mx-auto text-4xl sm:text-5xl md:text-7xl lg:mx-0 xl:inline">
+								<h1 className="block max-w-[16ch] font-bold sm:mx-auto text-4xl sm:text-5xl md:text-6xl lg:mx-0 xl:inline">
 									Building the{" "}
 									<span className="bg-[#7f7dd6]">future</span>{" "}
 									with{" "}
 									<span
-										data-tooltip="Software Engineering"
+										// data-tooltip="Software Engineering"
 										className="bg-clip-text text-transparent bg-gradient-to-br from-[#A3469D] to-[#B799D5]"
 									>
-										SWE
+										code
 									</span>{" "}
 									&{" "}
 									<span
@@ -152,15 +152,15 @@ export default function Intro(props) {
 							</div>
 							<div data-aos="fade-up">
 								<p className="max-w-[60ch] my-6  text-base text-gray-300 sm:text-lg sm:mx-auto  md:text-xl lg:mx-0">
-									Hi I am Harman, and I am a Software Engineer
-									/ ML Engineer
+									Hi, I am Harman, and I am a Software
+									Engineer / Data Scientist
 								</p>
 							</div>
 
 							<div className="gap-4 sm:flex sm:justify-center lg:justify-start">
 								<CTA
 									colour="purple"
-									content="My Projects"
+									content="My projects"
 									href="#PROJECTS"
 								/>
 								<CTA
