@@ -26,7 +26,7 @@ export default function FooterSection(props) {
 	return (
 		<footer className="relative" id={props.section}>
 			<div className="w-full">
-				<div className="w-full bg-gradient-to-r from-[#10101a] via-[#15161a] to-[#10101a] py-6 px-4 sm:flex sm:items-center sm:justify-between">
+				<div className="w-full bg-[#050716] py-6 px-4 sm:flex sm:items-center sm:justify-between">
 					<p className="text-gray-400 text-sm font-medium">
 						© {getCurrentYear()} Harman Singh Nahal
 					</p>
