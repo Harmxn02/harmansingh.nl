@@ -2,7 +2,8 @@ import SectionHeader from "../SectionHeader";
 // import bongo from "../images/bongo.jpg";
 import Image from "next/image";
 import AlphaPreview from "./previews/Alpha2.webp";
-import BetaPreview from "./previews/roundabout-env.gif"
+import BetaPreview from "./previews/roundabout-env.gif";
+import GammaPreview from "./previews/harmansingh.nl.png";
 
 const projects = [
 	{
@@ -32,14 +33,14 @@ const projects = [
 	},
 	{
 		id: 3,
-		name: "Project Gamma",
-		// imageSrc: bongo,
+		name: "harmansingh.nl",
+		imageSrc: GammaPreview,
 		imageAlt: "Preview of project Gamma.",
-		domain: "TBD",
+		domain: "Frontend",
 		description:
-			"Currently empty because I have not made any portfolio-worthy projects yet.",
-		repository: "https://github.com/Harmxn02",
-		deployment: "https://github.com/Harmxn02",
+			"The website you are currently looking at was coded from scratch using Next.js and Tailwind CSS.",
+		repository: "https://github.com/Harmxn02/harmansingh.nl",
+		deployment: "https://www.harmansingh.nl",
 		button_text: ["Live Deployment", "Code Repository"],
 	},
 ];
@@ -63,7 +64,7 @@ const ProjectCard = ({ project }) => (
 					<h1 className="text-md text-left font-semibold text-gray-400">
 						{project.name}
 					</h1>
-					<p className="text-xs xl:text-sm font-medium max-w-fit bg-gray-600 text-white h-fit p-1 rounded">
+					<p className="text-xs xl:text-sm font-medium max-w-fit bg-gray-600 text-white h-fit px-1.5 py-1 rounded">
 						{project.domain}
 					</p>
 				</div>
