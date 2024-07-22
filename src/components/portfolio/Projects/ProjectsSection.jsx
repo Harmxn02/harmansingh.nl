@@ -27,8 +27,8 @@ const projects = [
 		description:
 			"I used several Stable-Baselines3 models to teach an AI to drive on a simulated highway environment.",
 		repository: "https://github.com/Harmxn02/RL-Project-highway",
-		deployment: "",
-		button_text: ["", "Code Repository"],
+		button_text: ["Code Repository"],
+		// this one only has the code repository available, so you only put 1 element in the 'button_text' array
 	},
 	{
 		id: 3,
