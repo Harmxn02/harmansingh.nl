@@ -2,6 +2,7 @@ import SectionHeader from "../SectionHeader";
 // import bongo from "../images/bongo.jpg";
 import Image from "next/image";
 import AlphaPreview from "./previews/Alpha2.webp";
+import BetaPreview from "./previews/roundabout-env.gif"
 
 const projects = [
 	{
@@ -19,15 +20,15 @@ const projects = [
 	},
 	{
 		id: 2,
-		name: "Project Beta",
-		// imageSrc: bongo,
+		name: "AI learns to drive",
+		imageSrc: BetaPreview,
 		imageAlt: "Preview of project Beta.",
-		domain: "TBD",
+		domain: "ML/AI",
 		description:
-			"Currently empty because I have not made any portfolio-worthy projects yet.",
-		repository: "https://github.com/Harmxn02",
-		deployment: "https://github.com/Harmxn02",
-		button_text: ["Live Deployment", "Code Repository"],
+			"I used several Stable-Baselines3 models to teach an AI to drive on a simulated highway environment.",
+		repository: "https://github.com/Harmxn02/RL-Project-highway",
+		deployment: "",
+		button_text: ["", "Code Repository"],
 	},
 	{
 		id: 3,
