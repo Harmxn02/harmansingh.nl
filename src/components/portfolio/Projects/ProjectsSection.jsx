@@ -17,7 +17,7 @@ const projects = [
 		repository: "https://github.com/Harmxn02/ML-Project",
 		deployment:
 			"https://drive.google.com/file/d/1L3vT-fNBQ-yBKA0TwXJN-ProcwJ8PSmc/view?usp=sharing",
-		button_text: ["Report", "Code Repository"],
+		button_text: ["Code Repository","Report"],
 	},
 	{
 		id: 2,
@@ -41,7 +41,7 @@ const projects = [
 			"The website you are currently looking at was coded from scratch using Next.js and Tailwind CSS.",
 		repository: "https://github.com/Harmxn02/harmansingh.nl",
 		deployment: "https://www.harmansingh.nl",
-		button_text: ["Live Deployment", "Code Repository"],
+		button_text: ["Code Repository","Live Deployment"],
 	},
 ];
 
@@ -80,7 +80,7 @@ const ProjectCard = ({ project }) => (
 			{project.button_text.map((text, index) => (
 				<a
 					key={index}
-					href={index === 0 ? project.deployment : project.repository}
+					href={index === 0 ? project.repository : project.deployment}
 					target="_blank"
 					rel="noreferrer"
 					className="rounded-sm border-[1px] border-projectButtonBorder bg-projectButtonBG p-2 font-semibold text-white transition-all duration-300 hover:border-projectButtonBorderHOVER"
