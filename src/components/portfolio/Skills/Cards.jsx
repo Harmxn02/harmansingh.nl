@@ -3,16 +3,12 @@ import SectionHeader from "../SectionHeader";
 const Suffix = ({ href }) => {
 	return (
 		<span className="text-[#9f4fd9]">
-			<a
-				className="hover:text-white px-1 transition-colors duration-500 "
-				href={href}
-			>
+			<p className="hover:text-white px-1 transition-colors duration-500 ">
 				.
-			</a>
+			</p>
 		</span>
 	);
 };
-
 
 const Title = ({ content }) => {
 	return (
@@ -22,7 +18,7 @@ const Title = ({ content }) => {
 			className="text-2xl font-semibold max-w-fit py-2 "
 		>
 			{content}
-			<Suffix />	
+			<Suffix />
 		</h3>
 	);
 };
@@ -134,7 +130,9 @@ export default function SkillsCards() {
 						</div>
 
 						<div>
-							<Subtitle>Data Analytics, Data Engineering</Subtitle>
+							<Subtitle>
+								Data Analytics, Data Engineering
+							</Subtitle>
 							<div className="flex flex-wrap gap-2">
 								<Skill content="Excel" />
 								<Skill content="SQL" />
