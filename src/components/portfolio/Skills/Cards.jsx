@@ -15,7 +15,7 @@ const Title = ({ content }) => {
 		<h3
 			data-aos="fade-up"
 			// className="text-xl font-medium text-white border-gradient-skinny max-w-fit py-2 px-6"
-			className="text-2xl font-semibold max-w-fit py-2 "
+			className="text-2xl font-semibold max-w-fit py-2 inline-flex"
 		>
 			{content}
 			<Suffix />
