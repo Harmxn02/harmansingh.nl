@@ -12,12 +12,17 @@ const projects = [
 		imageSrc: AlphaPreview,
 		imageAlt: "Preview of project Alpha",
 		domain: "ML/AI",
+		technologies: [
+			"Python",
+			"pandas",
+			"scikit-learn",
+		],
 		description:
 			"I applied supervised learning techniques to screen the 500 optimal clients for an exclusive (imaginary) hotel.",
 		repository: "https://github.com/Harmxn02/ML-Project",
 		deployment:
 			"https://drive.google.com/file/d/1L3vT-fNBQ-yBKA0TwXJN-ProcwJ8PSmc/view?usp=sharing",
-		button_text: ["Code Repository","Report"],
+		button_text: ["Code Repository", "Report"],
 	},
 	{
 		id: 2,
@@ -25,6 +30,11 @@ const projects = [
 		imageSrc: BetaPreview,
 		imageAlt: "Preview of project Beta.",
 		domain: "ML/AI",
+		technologies: [
+			"Python",
+			"Stable-Baselines3",
+			"TensorFlow",
+		],
 		description:
 			"I used several Stable-Baselines3 models to teach an AI to drive on a simulated highway environment.",
 		repository: "https://github.com/Harmxn02/RL-Project-highway",
@@ -37,11 +47,16 @@ const projects = [
 		imageSrc: GammaPreview,
 		imageAlt: "Preview of project Gamma.",
 		domain: "Frontend",
+		technologies: [
+			"Next.js",
+			"Tailwind CSS",
+			"Node.js",
+		],
 		description:
 			"The website you are currently looking at was coded from scratch using Next.js and Tailwind CSS.",
 		repository: "https://github.com/Harmxn02/harmansingh.nl",
 		deployment: "https://www.harmansingh.nl",
-		button_text: ["Code Repository","Live Deployment"],
+		button_text: ["Code Repository", "Live Deployment"],
 	},
 ];
 
@@ -71,6 +86,13 @@ const ProjectCard = ({ project }) => (
 				<p className="mt-1 text-left text-sm text-gray-200 min-h-[2.75rem]">
 					{project.description}
 				</p>
+				<ul className="mt-2 flex flex-wrap gap-1">
+					{project.technologies.map((tech, index) => (
+						<li key={index} className="text-xs font-medium max-w-fit bg-gray-800 text-gray-100 h-fit px-1.5 py-1 rounded">
+							{tech}
+						</li>
+					))}
+				</ul>
 			</div>
 		</div>
 		<div
