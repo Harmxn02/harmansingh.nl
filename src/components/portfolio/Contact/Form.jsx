@@ -47,10 +47,10 @@ function LabelHint(props) {
 	return <p className="text-xs text-gray-300 ">{props.children}</p>;
 }
 
-function copyEmail() {
-	navigator.clipboard.writeText("harman.pnahal@gmail.com");
-	toast("✅ Email copied to clipboard");
-}
+// function copyEmail() {
+// 	navigator.clipboard.writeText("harman.pnahal@gmail.com");
+// 	toast("✅ Email copied to clipboard");
+// }
 
 export default function Contact() {
 	const form = useRef();
@@ -162,7 +162,8 @@ export default function Contact() {
 					Or send a regular email:{" "}
 					<a
 						className="font-medium text-brandPurple hover:text-brandPurpleFade hover:underline underline-offset-2 transition-colors duration-500"
-						href="mailto:harman.pnahal@gmail.com" onClick={copyEmail}
+						href="mailto:harman.pnahal@gmail.com"
+						// onClick={copyEmail}
 					>
 						harman.pnahal@gmail.com
 					</a>
