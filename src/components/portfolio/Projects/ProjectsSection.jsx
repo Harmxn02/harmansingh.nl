@@ -51,7 +51,6 @@ const projects = [
 		technologies: [
 			"Next.js",
 			"Tailwind CSS",
-			"Node.js",
 		],
 		description:
 			"The website you are currently looking at was coded from scratch using Next.js and Tailwind CSS.",
@@ -68,7 +67,6 @@ const projects = [
 		technologies: [
 			"Next.js",
 			"Tailwind CSS",
-			"Node.js",
 		],
 		description:
 			"A website that showcases all of my social media links in 1 place. I use it instead of Linktree because I didn't like it's limited customization options.",
