@@ -5,7 +5,6 @@ import AlphaPreview from "./previews/Alpha2.webp";
 import BetaPreview from "./previews/roundabout-env.gif";
 import GammaPreview from "./previews/harmansingh.nl.png";
 import DeltaPreview from "./previews/links.harmansingh.nl-square.png";
-import EpsilonPreview from "./previews/predicting-salary-based-on-applicant-information.png";
 
 const projects = [
 	{
