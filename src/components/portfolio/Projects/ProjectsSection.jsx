@@ -11,6 +11,7 @@ import ZetaPreview from "./previews/vanguard-fund-comparison.png";
 const projects = [
 	{
 		id: 1,
+		highlighted: false,
 		name: "Hotel client screening",
 		imageSrc: AlphaPreview,
 		imageAlt: "Preview of project Alpha",
@@ -29,6 +30,7 @@ const projects = [
 	},
 	{
 		id: 2,
+		highlighted: false,
 		name: "AI learns to drive",
 		imageSrc: BetaPreview,
 		imageAlt: "Preview of project Beta.",
@@ -46,6 +48,7 @@ const projects = [
 	},
 	{
 		id: 3,
+		highlighted: false,
 		name: "harmansingh.nl",
 		imageSrc: GammaPreview,
 		imageAlt: "Preview of project Gamma.",
@@ -62,6 +65,7 @@ const projects = [
 	},
 	{
 		id: 4,
+		highlighted: false,
 		name: "links.harmansingh.nl",
 		imageSrc: DeltaPreview,
 		imageAlt: "Preview of project Delta.",
@@ -78,6 +82,7 @@ const projects = [
 	},
 	{
 		id: 5,
+		highlighted: false,
 		name: "Salary Prediction Model",
 		imageSrc: EpsilonPreview,
 		imageAlt: "Preview of project Epsilon.",
@@ -96,6 +101,7 @@ const projects = [
 	},
 	{
 		id: 6,
+		highlighted: false,
 		name: "Vanguard Fund Comparison",
 		imageSrc: ZetaPreview,
 		imageAlt: "Preview of project Zeta.",
@@ -114,6 +120,18 @@ const projects = [
 
 const ProjectCard = ({ project }) => (
 	<div data-aos="fade-up" key={project.id} className="group relative pb-16">
+		
+
+		{/* Highlight Badge */}
+		{project.highlighted && (
+			<div className="absolute top-2 left-2 z-50 bg-yellow-500 text-white text-xs font-semibold py-1 px-2 rounded-md">
+				⭐ Highlighted
+			</div>
+		)}
+		
+		
+		
+		
 		<div className="min-h-80 lg:aspect-w-1 aspect-w-2 aspect-h-1 lg:aspect-none w-full overflow-hidden lg:h-80">
 			{project.imageSrc ? (
 				<Image
