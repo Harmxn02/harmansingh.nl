@@ -79,25 +79,6 @@ const projects = [
 		deployment: "https://links.harmansingh.nl",
 		button_text: ["Code Repository", "Live Deployment"],
 	},
-	{
-		id: 5,
-		highlighted: false,
-		name: "Salary Prediction Model",
-		imageSrc: EpsilonPreview,
-		imageAlt: "Preview of project Epsilon.",
-		domain: "ML/AI",
-		technologies: [
-			"Python",
-			"Polars",
-			"scikit-learn",
-			"TensorFlow",
-			"Streamlit"
-		],
-		description:
-			"Streamlit app that allows job-seekers to enter their information and get a salary estimate.",
-		repository: "https://github.com/Harmxn02/Predicting-Salary-Based-on-Applicant-Information",
-		button_text: ["Code Repository"],
-	},
 ];
 
 const ProjectCard = ({ project }) => (
