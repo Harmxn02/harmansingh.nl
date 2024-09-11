@@ -71,7 +71,7 @@ const projects = [
 			"Tailwind CSS",
 		],
 		description:
-			"A website that showcases all of my social media links in 1 place. I use it instead of Linktree because I didn't like it's limited customization options.",
+			"A website that showcases all of my social media links in 1 place.",
 		repository: "https://github.com/Harmxn02/links.harmansingh.nl",
 		deployment: "https://links.harmansingh.nl",
 		button_text: ["Code Repository", "Live Deployment"],
@@ -90,7 +90,7 @@ const projects = [
 			"Streamlit"
 		],
 		description:
-			"Streamlit app that allows job-seekers to enter their information and get a salary estimate. The model was trained on terrible data, so results are extremely bad.",
+			"Streamlit app that allows job-seekers to enter their information and get a salary estimate.",
 		repository: "https://github.com/Harmxn02/Predicting-Salary-Based-on-Applicant-Information",
 		button_text: ["Code Repository"],
 	},
