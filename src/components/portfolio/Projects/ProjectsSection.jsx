@@ -5,6 +5,7 @@ import AlphaPreview from "./previews/Alpha2.webp";
 import BetaPreview from "./previews/roundabout-env.gif";
 import GammaPreview from "./previews/harmansingh.nl.png";
 import DeltaPreview from "./previews/links.harmansingh.nl-square.png";
+import EpsilonPreview from "./previews/predicting-salary-based-on-applicant-information.png";
 
 const projects = [
 	{
@@ -73,6 +74,24 @@ const projects = [
 		repository: "https://github.com/Harmxn02/links.harmansingh.nl",
 		deployment: "https://links.harmansingh.nl",
 		button_text: ["Code Repository", "Live Deployment"],
+	},
+	{
+		id: 5,
+		name: "Salary Prediction Model",
+		imageSrc: EpsilonPreview,
+		imageAlt: "Preview of project Epsilon.",
+		domain: "ML/AI",
+		technologies: [
+			"Python",
+			"Polars",
+			"scikit-learn",
+			"TensorFlow",
+			"Streamlit"
+		],
+		description:
+			"Streamlit app that allows job-seekers to enter their information and get a salary estimate. The model was trained on terrible data, so results are extremely bad.",
+		repository: "https://github.com/Harmxn02/Predicting-Salary-Based-on-Applicant-Information",
+		button_text: ["Code Repository"],
 	},
 ];
 
