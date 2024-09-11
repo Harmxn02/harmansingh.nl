@@ -6,6 +6,7 @@ import BetaPreview from "./previews/roundabout-env.gif";
 import GammaPreview from "./previews/harmansingh.nl.png";
 import DeltaPreview from "./previews/links.harmansingh.nl-square.png";
 import EpsilonPreview from "./previews/predicting-salary-based-on-applicant-information.png";
+import ZetaPreview from "./previews/vanguard-fund-comparison.png";
 
 const projects = [
 	{
@@ -91,6 +92,22 @@ const projects = [
 		description:
 			"Streamlit app that allows job-seekers to enter their information and get a salary estimate. The model was trained on terrible data, so results are extremely bad.",
 		repository: "https://github.com/Harmxn02/Predicting-Salary-Based-on-Applicant-Information",
+		button_text: ["Code Repository"],
+	},
+	{
+		id: 6,
+		name: "Vanguard Fund Comparison",
+		imageSrc: ZetaPreview,
+		imageAlt: "Preview of project Zeta.",
+		domain: "Finance",
+		technologies: [
+			"Python",
+			"pandas",
+			"Streamlit"
+		],
+		description:
+			"Streamlit app that allows investors to quickly compare two Vanguard Index Funds.",
+		repository: "https://github.com/Harmxn02/Vanguard-Fund-Comparison",
 		button_text: ["Code Repository"],
 	},
 ];
