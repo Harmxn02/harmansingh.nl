@@ -5,6 +5,7 @@ import AlphaPreview from "./previews/Alpha2.webp";
 import BetaPreview from "./previews/roundabout-env.gif";
 import GammaPreview from "./previews/harmansingh.nl.png";
 import DeltaPreview from "./previews/links.harmansingh.nl-square.png";
+import EpsilonPreview from "./previews/art_style_transfer_model.png";
 
 const projects = [
 	{
@@ -78,6 +79,19 @@ const projects = [
 		deployment: "https://links.harmansingh.nl",
 		button_text: ["Code Repository", "Live Deployment"],
 	},
+	{
+		id: 5,
+		highlighted: false,
+		name: "Art Style Transfer Model",
+		imageSrc: EpsilonPreview,
+		imageAlt: "Preview of project Epsilon",
+		domain: "ML/AI",
+		technologies: ["Python", "TensorFlow"],
+		description:
+			"Used the pre-trained VGG19 model to transfer the style of one painting to another.",
+		repository: "https://github.com/Harmxn02/Art-Style-Transfer-Model",
+		button_text: ["Code Repository"],
+	}
 ];
 
 const ProjectCard = ({ project }) => (
