@@ -6,6 +6,7 @@ import BetaPreview from "./previews/roundabout-env.gif";
 import GammaPreview from "./previews/harmansingh.nl.png";
 import DeltaPreview from "./previews/links.harmansingh.nl-square.png";
 import EpsilonPreview from "./previews/art_style_transfer_model.png";
+import ZetaPreview from "./previews/animal_detection_using_yolov5.png";
 
 const projects = [
 	{
@@ -91,7 +92,21 @@ const projects = [
 			"Used the pre-trained VGG19 model to transfer the style of one painting to another.",
 		repository: "https://github.com/Harmxn02/Art-Style-Transfer-Model",
 		button_text: ["Code Repository"],
-	}
+	},
+	{
+		id: 5,
+		highlighted: false,
+		name: "Animal Detection using YOLOv5",
+		imageSrc: ZetaPreview,
+		imageAlt: "Preview of project Zeta",
+		domain: "ML/AI",
+		technologies: ["Python", "YOLOv5", "OpenCV", "PyTorch"],
+		description:
+			"Used YOLOv5 to detect and classify animals using video footage from National Geographic.",
+		repository: "https://github.com/Harmxn02/Animal-Detection-using-YOLOv5",
+		deployment: "https://www.youtube.com/watch?v=b7o9Njpe0Lw",
+		button_text: ["Code Repository", "YouTube Video"],
+	},
 ];
 
 const ProjectCard = ({ project }) => (
