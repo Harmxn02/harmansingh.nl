@@ -94,7 +94,7 @@ const projects = [
 		button_text: ["Code Repository"],
 	},
 	{
-		id: 5,
+		id: 6,
 		highlighted: false,
 		name: "Animal Detection using YOLOv5",
 		imageSrc: ZetaPreview,
