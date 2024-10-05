@@ -22,16 +22,16 @@ body {
 	height: 100%;
 	width: 100%;
 	background-image: radial-gradient(#1f1b44 1px, transparent 1px);
-	background-size: 16px 16px;
+	background-size: 32px 32px;
 }
 
-#INTRO {
-	/* background: url("../components/portfolio/images/herobg-compressed.webp");
+/* #INTRO {
+	background: url("../components/portfolio/images/herobg-compressed.webp");
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-position: bottom; */
+	background-position: bottom;
 }
 
 #BODY {
-	/* background: linear-gradient(#050716, #10101a); */
-}
+	background: linear-gradient(#050716, #10101a);
+} */
