@@ -7,6 +7,7 @@ import GammaPreview from "./previews/harmansingh.nl.png";
 import DeltaPreview from "./previews/links.harmansingh.nl-square.png";
 import EpsilonPreview from "./previews/art_style_transfer_model.png";
 import ZetaPreview from "./previews/animal_detection_using_yolov5.png";
+import EtaPreview from "./previews/nsl-kdd.jpg";
 
 const projects = [
 	{
@@ -106,6 +107,19 @@ const projects = [
 		repository: "https://github.com/Harmxn02/Animal-Detection-using-YOLOv5",
 		deployment: "https://www.youtube.com/watch?v=b7o9Njpe0Lw",
 		button_text: ["Code Repository", "YouTube Video"],
+	},
+	{
+		id: 7,
+		highlighted: false,
+		name: "NSL-KDD Intrusion Detection",
+		imageSrc: EtaPreview,
+		imageAlt: "Preview of project Eta",
+		domain: "ML/AI",
+		technologies: ["Python", "Deep Learning", "PyTorch"],
+		description:
+			"Trained a model on the NSL-KDD dataset to detect and classifiy cyber security attacks.",
+		repository: "https://github.com/Harmxn02/NSL-KDD-IntrusionDectection",
+		button_text: ["Code Repository"],
 	},
 ];
 
