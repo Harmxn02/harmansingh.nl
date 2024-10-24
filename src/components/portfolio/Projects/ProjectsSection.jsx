@@ -8,6 +8,7 @@ import DeltaPreview from "./previews/links.harmansingh.nl-square.png";
 import EpsilonPreview from "./previews/art_style_transfer_model.png";
 import ZetaPreview from "./previews/animal_detection_using_yolov5.png";
 import EtaPreview from "./previews/nsl-kdd.jpg";
+import ThetaPreview from "./previews/text_classification_transformers.png";
 
 const projects = [
 	{
@@ -119,6 +120,19 @@ const projects = [
 		description:
 			"Trained a model on the NSL-KDD dataset to detect and classifiy cyber security attacks.",
 		repository: "https://github.com/Harmxn02/NSL-KDD-IntrusionDectection",
+		button_text: ["Code Repository"],
+	},
+	{
+		id: 8,
+		highlighted: false,
+		name: "Text Classification using Transformers",
+		imageSrc: ThetaPreview,
+		imageAlt: "Preview of project Theta",
+		domain: "ML/AI",
+		technologies: ["Python", "Transformers", "NLP", "Hugging Face", "PyTorch"],
+		description:
+			"Compared several pre-trained models to classify text data.",
+		repository: "https://github.com/Harmxn02/Text-Classification-with-Transformer-Models",
 		button_text: ["Code Repository"],
 	},
 ];
