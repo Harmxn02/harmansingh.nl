@@ -34,7 +34,7 @@ const Subtitle = ({ children }) => {
 const Skill = ({ content }) => {
 	return (
 		<p
-			className="rounded max-w-fit bg-gray-300 p-2 text-xs font-medium text-gray-600"
+			className="rounded-sm max-w-fit bg-gray-300 p-2 text-xs font-medium text-gray-600"
 			data-aos="fade-up"
 		>
 			{content}

@@ -18,11 +18,7 @@ const projects = [
 		imageSrc: AlphaPreview,
 		imageAlt: "Preview of project Alpha",
 		domain: "ML/AI",
-		technologies: [
-			"Python",
-			"pandas",
-			"scikit-learn",
-		],
+		technologies: ["Python", "pandas", "scikit-learn"],
 		description:
 			"I applied supervised learning techniques to screen the 500 optimal clients for an exclusive (imaginary) hotel.",
 		repository: "https://github.com/Harmxn02/ML-Project",
@@ -37,11 +33,7 @@ const projects = [
 		imageSrc: BetaPreview,
 		imageAlt: "Preview of project Beta.",
 		domain: "ML/AI",
-		technologies: [
-			"Python",
-			"Stable-Baselines3",
-			"TensorFlow",
-		],
+		technologies: ["Python", "Stable-Baselines3", "TensorFlow"],
 		description:
 			"I used several Stable-Baselines3 models to teach an AI to drive on a simulated highway environment.",
 		repository: "https://github.com/Harmxn02/RL-Project-highway",
@@ -55,10 +47,7 @@ const projects = [
 		imageSrc: GammaPreview,
 		imageAlt: "Preview of project Gamma.",
 		domain: "Frontend",
-		technologies: [
-			"Next.js",
-			"Tailwind CSS",
-		],
+		technologies: ["Next.js", "Tailwind CSS"],
 		description:
 			"The website you are currently looking at was coded from scratch using Next.js and Tailwind CSS.",
 		repository: "https://github.com/Harmxn02/harmansingh.nl",
@@ -72,10 +61,7 @@ const projects = [
 		imageSrc: DeltaPreview,
 		imageAlt: "Preview of project Delta.",
 		domain: "Frontend",
-		technologies: [
-			"Next.js",
-			"Tailwind CSS",
-		],
+		technologies: ["Next.js", "Tailwind CSS"],
 		description:
 			"A website that showcases all of my social media links in 1 place.",
 		repository: "https://github.com/Harmxn02/links.harmansingh.nl",
@@ -129,34 +115,36 @@ const projects = [
 		imageSrc: ThetaPreview,
 		imageAlt: "Preview of project Theta",
 		domain: "ML/AI",
-		technologies: ["Python", "Transformers", "NLP", "Hugging Face", "PyTorch"],
+		technologies: [
+			"Python",
+			"Transformers",
+			"NLP",
+			"Hugging Face",
+			"PyTorch",
+		],
 		description:
 			"Compared several pre-trained models to classify text data.",
-		repository: "https://github.com/Harmxn02/Text-Classification-with-Transformer-Models",
+		repository:
+			"https://github.com/Harmxn02/Text-Classification-with-Transformer-Models",
 		button_text: ["Code Repository"],
 	},
 ];
 
 const ProjectCard = ({ project }) => (
 	<div data-aos="fade-up" key={project.id} className="group relative pb-16">
-		
-
 		{/* Highlight Badge */}
 		{project.highlighted && (
 			<div className="absolute top-2 left-2 z-50 bg-yellow-500 text-white text-xs font-semibold py-1 px-2 rounded-md">
 				⭐ Highlighted
 			</div>
 		)}
-		
-		
-		
-		
+
 		<div className="min-h-80 lg:aspect-w-1 aspect-w-2 aspect-h-1 lg:aspect-none w-full overflow-hidden lg:h-80">
 			{project.imageSrc ? (
 				<Image
 					src={project.imageSrc}
 					alt={project.imageAlt}
-					className="h-full w-full bg-brandBackground text-transparent border-gradient-skinny object-cover object-center lg:h-full lg:w-full"
+					className="h-full w-full bg-brand-background text-transparent border-gradient-skinny object-cover object-center lg:h-full lg:w-full"
 				/>
 			) : (
 				<div className="h-full w-full text-transparent border-gradient-skinny object-cover object-center lg:h-full lg:w-full"></div>
@@ -168,7 +156,7 @@ const ProjectCard = ({ project }) => (
 					<h1 className="text-md text-left font-semibold text-gray-400">
 						{project.name}
 					</h1>
-					<p className="text-xs xl:text-sm font-medium max-w-fit bg-gray-600 text-white h-fit px-1.5 py-1 rounded">
+					<p className="text-xs xl:text-sm font-medium max-w-fit bg-gray-600 text-white h-fit px-1.5 py-1 rounded-sm">
 						{project.domain}
 					</p>
 				</div>
@@ -177,7 +165,10 @@ const ProjectCard = ({ project }) => (
 				</p>
 				<ul className="mt-2 flex flex-wrap gap-1">
 					{project.technologies.map((tech, index) => (
-						<li key={index} className="text-xs font-medium max-w-fit bg-gray-800 text-gray-100 h-fit px-1.5 py-1 rounded">
+						<li
+							key={index}
+							className="text-xs font-medium max-w-fit bg-gray-800 text-gray-100 h-fit px-1.5 py-1 rounded-sm"
+						>
 							{tech}
 						</li>
 					))}
@@ -194,7 +185,7 @@ const ProjectCard = ({ project }) => (
 					href={index === 0 ? project.repository : project.deployment}
 					target="_blank"
 					rel="noreferrer"
-					className="rounded-sm border-[1px] border-projectButtonBorder bg-projectButtonBG p-2 font-semibold text-white transition-all duration-300 hover:border-projectButtonBorderHOVER"
+					className="rounded-xs border-[1px] border-project-button-border bg-project-button-bG p-2 font-semibold text-white transition-all duration-300 hover:border-project-button-border-hOVER"
 				>
 					{text}
 				</a>

@@ -3,7 +3,7 @@ import React from "react";
 const MailIcon = () => {
 	return (
 		<svg
-			className="w-5 h-5 hover:fill-brandIconFade transition-colors duration-500"
+			className="w-5 h-5 hover:fill-brand-icon-fade transition-colors duration-500"
 			fill="#6b7280"
 			role="img"
 			viewBox="0 0 24 24"
