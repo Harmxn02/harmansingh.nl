@@ -63,7 +63,7 @@ export default function Contact() {
 				"service_rcvjl4h",
 				"contact_form",
 				form.current,
-				"qx8-vBmAm9yCXji1-"
+				"qx8-vBmAm9yCXji1-",
 			)
 			.then(
 				(result) => {
@@ -73,9 +73,9 @@ export default function Contact() {
 				(error) => {
 					console.log(error);
 					toast(
-						"❌ Something went wrong with sending the email. Please try again"
+						"❌ Something went wrong with sending the email. Please try again",
 					);
-				}
+				},
 			);
 	};
 
@@ -150,7 +150,7 @@ export default function Contact() {
 					<div>
 						<Toaster />
 						<button
-							className="bg-brandPurple text-sm rounded-lg font-medium text-white p-3 w-full hover:bg-brandPurpleFade transition-colors duration-500"
+							className="bg-brand-purple text-sm rounded-lg font-medium text-white p-3 w-full hover:bg-brand-purple-fade transition-colors duration-500"
 							type="submit"
 							value="send"
 						>
@@ -161,7 +161,7 @@ export default function Contact() {
 				<p className="text-white text-center pt-8">
 					Or send a regular email:{" "}
 					<a
-						className="font-medium text-brandPurple hover:text-brandPurpleFade hover:underline underline-offset-2 transition-colors duration-500"
+						className="font-medium text-brand-purple hover:text-brand-purple-fade hover:underline underline-offset-2 transition-colors duration-500"
 						href="mailto:harman.pnahal@gmail.com"
 						// onClick={copyEmail}
 					>

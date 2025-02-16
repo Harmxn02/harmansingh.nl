@@ -1,7 +1,7 @@
 export default function CTA({ colour, href, content }) {
 	const colorStyles = {
 		pink: "bg-[#D94F70] text-white hover:bg-[#D94F70da]",
-		purple: "bg-brandPurple text-white hover:bg-brandPurpleFade",
+		purple: "bg-brand-purple text-white hover:bg-brand-purple-fade",
 		white: "bg-white",
 		default:
 			"text-white border border-[#ffffff33] hover:border-[#ffffff59]",
