@@ -29,7 +29,7 @@ const Homescreen = () => {
 		<div className="App selection:bg-[#7e7dd680]">
 			<Banner
 				colour="gradient"
-				content="I'm available for SWE, Data Science & AI Internships 💪"
+				content="I'm available and interesting in Junior Data Science, Data Engineering and ML positions starting from September 💪"
 			/>
 			<Intro section="INTRO"></Intro>
 
