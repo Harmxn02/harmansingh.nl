@@ -134,40 +134,40 @@ const ProjectCard = ({ project }) => (
 	<div data-aos="fade-up" key={project.id} className="group relative pb-16">
 		{/* Highlight Badge */}
 		{project.highlighted && (
-			<div className="absolute top-2 left-2 z-50 bg-yellow-500 text-white text-xs font-semibold py-1 px-2 rounded-md">
+			<div className="absolute top-2 left-2 z-50 rounded-md bg-yellow-500 px-2 py-1 text-xs font-semibold text-white">
 				⭐ Highlighted
 			</div>
 		)}
 
-		<div className="min-h-80 lg:aspect-w-1 aspect-w-2 aspect-h-1 lg:aspect-none w-full overflow-hidden lg:h-80">
+		<div className="lg:aspect-w-1 aspect-w-2 aspect-h-1 lg:aspect-none min-h-80 w-full overflow-hidden lg:h-80">
 			{project.imageSrc ? (
 				<Image
 					src={project.imageSrc}
 					alt={project.imageAlt}
-					className="h-full w-full bg-brand-background text-transparent border-gradient-skinny object-cover object-center lg:h-full lg:w-full"
+					className="bg-brand-background border-gradient-skinny h-full w-full object-cover object-center text-transparent lg:h-full lg:w-full"
 				/>
 			) : (
-				<div className="h-full w-full text-transparent border-gradient-skinny object-cover object-center lg:h-full lg:w-full"></div>
+				<div className="border-gradient-skinny h-full w-full object-cover object-center text-transparent lg:h-full lg:w-full"></div>
 			)}
 		</div>
-		<div className="mt-4 GRID">
+		<div className="GRID mt-4">
 			<div data-aos="fade-up">
 				<div className="flex justify-between">
 					<h1 className="text-md text-left font-semibold text-gray-400">
 						{project.name}
 					</h1>
-					<p className="text-xs xl:text-sm font-medium max-w-fit bg-gray-600 text-white h-fit px-1.5 py-1 rounded-sm">
+					<p className="h-fit max-w-fit rounded-sm bg-gray-600 px-1.5 py-1 text-xs font-medium text-white xl:text-sm">
 						{project.domain}
 					</p>
 				</div>
-				<p className="mt-1 text-left text-sm text-gray-200 min-h-[2.75rem]">
+				<p className="mt-1 min-h-[2.75rem] text-left text-sm text-gray-200">
 					{project.description}
 				</p>
 				<ul className="mt-2 flex flex-wrap gap-1">
 					{project.technologies.map((tech, index) => (
 						<li
 							key={index}
-							className="text-xs font-medium max-w-fit bg-gray-800 text-gray-100 h-fit px-1.5 py-1 rounded-sm"
+							className="h-fit max-w-fit rounded-sm bg-gray-800 px-1.5 py-1 text-xs font-medium text-gray-100"
 						>
 							{tech}
 						</li>
@@ -185,7 +185,7 @@ const ProjectCard = ({ project }) => (
 					href={index === 0 ? project.repository : project.deployment}
 					target="_blank"
 					rel="noreferrer"
-					className="rounded-xs border-[1px] border-project-button-border bg-project-button-bG p-2 font-semibold text-white transition-all duration-300 hover:border-project-button-border-hOVER"
+					className="border-project-button-border bg-project-button-bG hover:border-project-button-border-hOVER rounded-xs border-[1px] p-2 font-semibold text-white transition-all duration-300"
 				>
 					{text}
 				</a>
@@ -197,8 +197,8 @@ const ProjectCard = ({ project }) => (
 const ProjectsSection = () => (
 	<div className="min-h-screen" id="PROJECTS">
 		<SectionHeader section="PROJECTS" type="" title="Projects" />
-		<div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
-			<div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-1 lg:grid-cols-3 xl:gap-x-8">
+		<div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+			<div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-1 lg:grid-cols-3 xl:gap-x-8">
 				{projects.map((project) => (
 					<ProjectCard key={project.id} project={project} />
 				))}

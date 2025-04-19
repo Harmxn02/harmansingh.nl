@@ -12,7 +12,7 @@ function Input(props) {
 			placeholder={props.placeholder}
 			name={props.name}
 			required={true}
-			className="bg-[#f9fafb] w-full p-3 focus:outline-0 text-sm border border-[#d1d5db] rounded-lg"
+			className="w-full rounded-lg border border-[#d1d5db] bg-[#f9fafb] p-3 text-sm focus:outline-0"
 		/>
 	);
 }
@@ -25,7 +25,7 @@ function TextArea(props) {
 			rows={4}
 			name={props.name}
 			required={true}
-			className="bg-[#f9fafb] w-full p-3 text-sm border border-[#d1d5db]  rounded-lg"
+			className="w-full rounded-lg border border-[#d1d5db] bg-[#f9fafb] p-3 text-sm"
 		/>
 	);
 }
@@ -34,7 +34,7 @@ function Label(props) {
 	return (
 		<label
 			// className="text-[#111827] font-semibold text-sm"
-			className="text-white font-semibold text-sm"
+			className="text-sm font-semibold text-white"
 			htmlFor={props.htmlFor}
 			value={props.value}
 		>
@@ -44,7 +44,7 @@ function Label(props) {
 }
 
 function LabelHint(props) {
-	return <p className="text-xs text-gray-300 ">{props.children}</p>;
+	return <p className="text-xs text-gray-300">{props.children}</p>;
 }
 
 // function copyEmail() {
@@ -90,7 +90,7 @@ export default function Contact() {
 
 			<div
 				data-aos="fade-up"
-				className="mt-12 pb-24 p-6 rounded-xl max-w-4xl mx-auto"
+				className="mx-auto mt-12 max-w-4xl rounded-xl p-6 pb-24"
 			>
 				<form
 					ref={form}
@@ -98,7 +98,7 @@ export default function Contact() {
 					className="flex flex-col gap-4"
 				>
 					<div>
-						<div className="mb-2 flex flex-col sm:flex-row sm:items-center justify-between ">
+						<div className="mb-2 flex flex-col justify-between sm:flex-row sm:items-center">
 							<Label htmlFor="name1" value="Your name">
 								Your name
 							</Label>
@@ -114,7 +114,7 @@ export default function Contact() {
 						/>
 					</div>
 					<div>
-						<div className="mb-2 flex flex-col sm:flex-row sm:items-center justify-between ">
+						<div className="mb-2 flex flex-col justify-between sm:flex-row sm:items-center">
 							<Label htmlFor="email1" value="Your email">
 								Your email
 							</Label>
@@ -150,7 +150,7 @@ export default function Contact() {
 					<div>
 						<Toaster />
 						<button
-							className="bg-brand-purple text-sm rounded-lg font-medium text-white p-3 w-full hover:bg-brand-purple-fade transition-colors duration-500"
+							className="bg-brand-purple hover:bg-brand-purple-fade w-full rounded-lg p-3 text-sm font-medium text-white transition-colors duration-500"
 							type="submit"
 							value="send"
 						>
@@ -158,10 +158,10 @@ export default function Contact() {
 						</button>
 					</div>
 				</form>
-				<p className="text-white text-center pt-8">
+				<p className="pt-8 text-center text-white">
 					Or send a regular email:{" "}
 					<a
-						className="font-medium text-brand-purple hover:text-brand-purple-fade hover:underline underline-offset-2 transition-colors duration-500"
+						className="text-brand-purple hover:text-brand-purple-fade font-medium underline-offset-2 transition-colors duration-500 hover:underline"
 						href="mailto:harman.pnahal@gmail.com"
 						// onClick={copyEmail}
 					>

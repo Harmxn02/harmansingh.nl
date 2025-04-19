@@ -9,14 +9,14 @@ const navigation = [
 
 const HoveringNavigation = () => {
 	return (
-		<div className="fixed z-50 top-0 left-0 hidden ml-16 min-h-screen 2xl:flex justify-center items-center">
+		<div className="fixed top-0 left-0 z-50 ml-16 hidden min-h-screen items-center justify-center 2xl:flex">
 			<ul className="flex flex-col space-y-4">
 				{navigation.map((item) => (
 					<a
 						key={item.name}
 						href={item.href}
 						id={item.id}
-						className="text-4xl list-item font-black text-white transition-all duration-500 hover:text-[#B799D5]"
+						className="list-item text-4xl font-black text-white transition-all duration-500 hover:text-[#B799D5]"
 					>
 						{item.name}
 					</a>

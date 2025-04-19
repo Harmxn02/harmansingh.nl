@@ -21,7 +21,7 @@ const NavigationLink = ({ item }) => (
 		key={item.name}
 		href={item.href}
 		id={item.id}
-		className="font-medium text-white transition-all duration-500 hover:text-[#B799D5] hover:underline underline-offset-4"
+		className="font-medium text-white underline-offset-4 transition-all duration-500 hover:text-[#B799D5] hover:underline"
 	>
 		{item.name}
 	</a>
@@ -33,12 +33,12 @@ export default function Intro(props) {
 	return (
 		<div
 			id={props.section}
-			className="relative lg:min-h-screen overflow-hidden"
+			className="relative overflow-hidden lg:min-h-screen"
 		>
 			<div className="mx-auto max-w-7xl">
 				<div className="relative z-10 pb-8 sm:pb-16 md:pb-20 lg:w-full lg:pb-28 xl:pb-32">
 					<Popover>
-						<div className="relative px-4 mt-6 py-6 sm:px-6 lg:px-8">
+						<div className="relative mt-6 px-4 py-6 sm:px-6 lg:px-8">
 							<nav
 								className="relative flex items-center justify-between sm:h-10 lg:justify-between"
 								aria-label="Global"
@@ -53,7 +53,7 @@ export default function Intro(props) {
 											/>
 										</a>
 										<div className="-mr-2 flex items-center md:hidden">
-											<Popover.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:text-gray-500 focus:outline-hidden focus:ring-2 focus:ring-inset focus:ring-orange-500">
+											<Popover.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:text-gray-500 focus:ring-2 focus:ring-orange-500 focus:outline-hidden focus:ring-inset">
 												<span className="sr-only">
 													Open main menu
 												</span>
@@ -89,7 +89,7 @@ export default function Intro(props) {
 								focus
 								className="absolute inset-x-0 top-0 z-10 origin-top-right transform p-2 transition md:hidden"
 							>
-								<div className="overflow-hidden rounded-lg bg-[#1d1d29] shadow-md ring-1 ring-black ring-opacity-5">
+								<div className="ring-opacity-5 overflow-hidden rounded-lg bg-[#1d1d29] ring-1 shadow-md ring-black">
 									<div className="flex items-center justify-between px-5 pt-4">
 										<div>
 											<Image
@@ -99,7 +99,7 @@ export default function Intro(props) {
 											/>
 										</div>
 										<div className="-mr-2">
-											<Popover.Button className="inline-flex items-center justify-center rounded-md bg-brand-background p-2 text-gray-400 hover:bg-slate-900 hover:text-gray-500 focus:outline-hidden focus:ring-2 focus:ring-inset focus:ring-orange-500">
+											<Popover.Button className="bg-brand-background inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-slate-900 hover:text-gray-500 focus:ring-2 focus:ring-orange-500 focus:outline-hidden focus:ring-inset">
 												<span className="sr-only">
 													Close main menu
 												</span>
@@ -115,7 +115,7 @@ export default function Intro(props) {
 											<a
 												key={item.name}
 												href={item.href}
-												className="block rounded-md px-3 py-2 text-base font-medium text-white  hover:bg-slate-700"
+												className="block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-slate-700"
 											>
 												{item.name}
 											</a>
@@ -132,21 +132,21 @@ export default function Intro(props) {
 								data-aos="fade-up"
 								className="flex flex-col gap-2 text-white"
 							>
-								<h1 className="block max-w-[16ch] font-bold sm:mx-auto text-4xl sm:text-5xl md:text-6xl lg:mx-0 xl:inline">
+								<h1 className="block max-w-[16ch] text-4xl font-bold sm:mx-auto sm:text-5xl md:text-6xl lg:mx-0 xl:inline">
 									Building the{" "}
 									<span className="bg-[#7f7dd6]">future</span>{" "}
 									with{" "}
-									<span className="bg-clip-text text-transparent bg-linear-to-br from-[#A3469D] to-[#B799D5]">
+									<span className="bg-linear-to-br from-[#A3469D] to-[#B799D5] bg-clip-text text-transparent">
 										code
 									</span>{" "}
 									&{" "}
-									<span className="bg-clip-text text-transparent bg-linear-to-br from-[#3385FF] to-[#91B7F0]">
+									<span className="bg-linear-to-br from-[#3385FF] to-[#91B7F0] bg-clip-text text-transparent">
 										AI
 									</span>
 								</h1>
 							</div>
 							<div data-aos="fade-up">
-								<p className="max-w-[60ch] my-6  text-base text-gray-300 sm:text-lg sm:mx-auto  md:text-xl lg:mx-0">
+								<p className="my-6 max-w-[60ch] text-base text-gray-300 sm:mx-auto sm:text-lg md:text-xl lg:mx-0">
 									Hi, I am Harman, and I am a Software
 									Engineer / Data Scientist
 								</p>
@@ -171,7 +171,7 @@ export default function Intro(props) {
 			<div
 				data-aos="fade-up"
 				id="ROBOT"
-				className="hidden lg:flex flex-col lg:absolute right-0  lg:top-36 justify-center"
+				className="right-0 hidden flex-col justify-center lg:absolute lg:top-36 lg:flex"
 			>
 				<Image
 					className="aspect-[0.99258] w-[28rem] xl:w-[36rem] 2xl:w-[42rem]"

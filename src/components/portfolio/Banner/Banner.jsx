@@ -15,7 +15,7 @@ export default function Banner(props) {
 			<div className="relative flex items-center justify-center">
 				<p>{props.content}</p>
 				<button
-					className="absolute right-2 font-bold font-mono"
+					className="absolute right-2 font-mono font-bold"
 					onClick={props.onClose}
 				>
 					X
