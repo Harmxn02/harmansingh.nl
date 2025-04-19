@@ -46,10 +46,11 @@ export default function Intro(props) {
 								<div className="flex shrink-0 grow items-center lg:grow-0">
 									<div className="flex w-full items-center justify-between md:w-auto">
 										<a href="#ABOUT">
-											<Image 
-											alt="Workflow" 
-											className="h-8 w-8 sm:h-16 sm:w-16" 
-											src={NAME} />
+											<Image
+												alt="Workflow"
+												className="h-8 w-8 sm:h-16 sm:w-16"
+												src={NAME}
+											/>
 										</a>
 										<div className="-mr-2 flex items-center md:hidden">
 											<Popover.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:text-gray-500 focus:outline-hidden focus:ring-2 focus:ring-inset focus:ring-orange-500">
@@ -135,17 +136,11 @@ export default function Intro(props) {
 									Building the{" "}
 									<span className="bg-[#7f7dd6]">future</span>{" "}
 									with{" "}
-									<span
-										// data-tooltip="Software Engineering"
-										className="bg-clip-text text-transparent bg-linear-to-br from-[#A3469D] to-[#B799D5]"
-									>
+									<span className="bg-clip-text text-transparent bg-linear-to-br from-[#A3469D] to-[#B799D5]">
 										code
 									</span>{" "}
 									&{" "}
-									<span
-										data-tooltip="Artificial Intelligence"
-										className="bg-clip-text text-transparent bg-linear-to-br from-[#3385FF] to-[#91B7F0]"
-									>
+									<span className="bg-clip-text text-transparent bg-linear-to-br from-[#3385FF] to-[#91B7F0]">
 										AI
 									</span>
 								</h1>
