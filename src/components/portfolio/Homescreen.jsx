@@ -34,7 +34,7 @@ const Homescreen = () => {
 			{showBanner && (
 				<Banner
 					colour="gradient"
-					content="I'm available for SWE, Data Science & AI Internships 💪"
+					content="I'm available for SWE, Data Science & AI positions starting from July"
 					onClose={handleCloseBanner}
 				/>
 			)}
