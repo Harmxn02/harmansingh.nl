@@ -12,7 +12,15 @@ export default function Banner(props) {
 
 	return (
 		<div className={classStyle}>
-			<p>{props.content}</p>
+			<div className="relative flex items-center justify-center">
+				<p>{props.content}</p>
+				<button
+					className="absolute right-2 font-mono font-bold"
+					onClick={props.onClose}
+				>
+					X
+				</button>
+			</div>
 		</div>
 	);
 }

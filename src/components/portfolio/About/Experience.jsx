@@ -21,7 +21,7 @@ export default function Experience() {
 	}
 
 	return (
-		<div className="flex min-h-screen flex-col flex-wrap justify-center  px-4 pt-12 pb-64">
+		<div className="flex min-h-screen flex-col flex-wrap justify-center px-4 pt-12 pb-64">
 			<SectionHeader
 				section="ABOUT"
 				type=""
@@ -30,7 +30,7 @@ export default function Experience() {
 			/>
 			<div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-16">
 				<div data-aos="fade-up">
-					<div className="h-fit max-w-5xl  space-y-4 rounded-md  py-8 px-4 text-white">
+					<div className="h-fit max-w-5xl space-y-4 rounded-md px-4 py-8 text-white">
 						{/* Code WHO AM I */}
 						{/* <div className="bg-[#282a3a] max-w-fit rounded-md px-4">
 							<div className="flex gap-1 lg:gap-2 pt-4">
@@ -48,7 +48,7 @@ export default function Experience() {
 						</div> */}
 						<p
 							data-aos="fade-up"
-							className="pb-4 text-lg md:font-light md:text-3xl max-w-[55ch]"
+							className="max-w-[55ch] pb-4 text-lg md:text-3xl md:font-light"
 						>
 							My name is Harman and I am a {getAge()}-year-old
 							Software Engineer / Data Scientist.
@@ -58,7 +58,7 @@ export default function Experience() {
 
 						<p
 							data-aos="fade-up"
-							className="pb-4 text-lg md:font-light md:text-3xl max-w-[55ch]"
+							className="max-w-[55ch] pb-4 text-lg md:text-3xl md:font-light"
 						>
 							I&apos;m currently pursuing a Bachelor&apos;s degree
 							in Applied Computer Science with a specialization in
@@ -77,10 +77,10 @@ export default function Experience() {
 								href="https://www.linkedin.com/in/harmanpnahal/"
 								target="_blank"
 								rel="noreferrer"
-								className="mt-2 w-fit flex items-center justify-center px-6 py-5 text-base font-medium rounded-md text-white bg-brand-purple hover:bg-brand-purpleFade transition-colors duration-300 md:py-4 md:text-lg md:px-6"
+								className="bg-brand-purple hover:bg-brand-purpleFade mt-2 flex w-fit items-center justify-center rounded-md px-6 py-5 text-base font-medium text-white transition-colors duration-300 md:px-6 md:py-4 md:text-lg"
 							>
 								<svg
-									className="w-6 h-6 mr-4"
+									className="mr-4 h-6 w-6"
 									fill="white"
 									role="img"
 									viewBox="0 0 24 24"

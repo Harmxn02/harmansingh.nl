@@ -2,7 +2,7 @@ const Suffix = ({ href }) => {
 	return (
 		<span className="text-[#9f4fd9]">
 			<a
-				className="hover:text-white px-1 transition-colors duration-500 "
+				className="px-1 transition-colors duration-500 hover:text-white"
 				href={href}
 			>
 				.
@@ -17,7 +17,7 @@ function SectionHeader(props) {
 	return (
 		<div id={props.section} className="mx-auto max-w-[80vw]">
 			<div data-aos="fade-up" className="flex flex-col pt-24">
-				<h1 className="font-black text-center text-4xl text-white sm:mb-5 sm:text-5xl">
+				<h1 className="text-center text-4xl font-black text-white sm:mb-5 sm:text-5xl">
 					{props.title}
 					<Suffix href={sectionHref} />
 				</h1>
