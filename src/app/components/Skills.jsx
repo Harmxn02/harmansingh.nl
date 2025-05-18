@@ -1,4 +1,15 @@
 import React from "react";
+import { FaCode, FaDatabase, FaTools } from "react-icons/fa";
+import { IoLanguage } from "react-icons/io5";
+import { TbMathSymbols } from "react-icons/tb";
+
+const categoryIcons = {
+	webDevelopment: <FaCode className="text-xl text-white" />,
+	dataScience: <TbMathSymbols className="text-xl text-white" />,
+	tools: <FaTools className="text-xl text-white" />,
+	databases: <FaDatabase className="text-xl text-white" />,
+	languages: <IoLanguage className="text-xl text-white" />,
+};
 
 const skills = {
 	webDevelopment: [
@@ -37,14 +48,16 @@ const SectionTitle = () => {
 const Skills = () => {
 	return (
 		<div className="mx-auto max-w-(--breakpoint-2xl) bg-black px-8 py-24 text-white 2xl:px-1">
-			<SectionTitle />
-
+			<SectionTitle />{" "}
 			<div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
 				{Object.entries(skills).map(([category, categorySkills]) => (
 					<div
 						key={category}
-						className="rounded-md border border-gray-800 p-6"
+						className="relative rounded-md border border-gray-800 p-6"
 					>
+						<div className="absolute top-5 right-5">
+							{categoryIcons[category]}
+						</div>
 						<h3 className="mb-4 text-xl font-medium capitalize">
 							{category.replace(/([A-Z])/g, " $1").trim()}
 						</h3>
