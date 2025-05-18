@@ -3,6 +3,7 @@
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Skills from "./components/Skills";
+import Projects from "./components/Projects";
 import IntroAnimation from "./components/IntroAnimation";
 
 import { useState } from "react";
@@ -23,8 +24,9 @@ export default function Home() {
 			{showHero && (
 				<>
 					<Hero />
-					<About />
+					<Projects />
 					<Skills />
+					<About />
 				</>
 			)}
 		</div>
