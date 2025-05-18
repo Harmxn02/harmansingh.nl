@@ -1,0 +1,26 @@
+{
+  "name": "opening-animation-harman",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "14.2.8",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-simple-typewriter": "^5.0.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.4",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.8",
+    "postcss": "^8",
+    "prettier": "^3.5.3",
+    "prettier-plugin-tailwindcss": "^0.6.11",
+    "tailwindcss": "^4.1.4"
+  }
+}
