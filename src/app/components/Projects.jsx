@@ -82,7 +82,7 @@ const SectionTitle = () => {
 
 const ProjectCard = ({ project }) => {
 	return (
-		<div className="flex flex-col overflow-hidden rounded-lg border border-gray-800 bg-black transition-all duration-300 hover:border-gray-700 hover:shadow-lg">
+		<div className="flex flex-col overflow-hidden rounded-lg border border-pillPrimary bg-black transition-all duration-300 hover:shadow-lg">
 			<div className="relative h-48 w-full overflow-hidden">
 				<img
 					src={project.imageSrc}
@@ -98,12 +98,14 @@ const ProjectCard = ({ project }) => {
 					<h3 className="mb-2 text-xl font-semibold">
 						{project.name}
 					</h3>
-					<p className="mb-4 text-gray-300">{project.description}</p>
+					<p className="text-textPrimary mb-4">
+						{project.description}
+					</p>
 					<div className="mb-4 flex flex-wrap gap-2">
 						{project.technologies.map((tech) => (
 							<span
 								key={tech}
-								className="rounded-full bg-gray-500/30 px-3 py-1 text-xs"
+								className="bg-pillPrimary rounded-full px-3 py-1 text-xs"
 							>
 								{tech}
 							</span>
@@ -117,7 +119,7 @@ const ProjectCard = ({ project }) => {
 								href={project.repository}
 								target="_blank"
 								rel="noreferrer"
-								className="rounded-md border border-gray-700 bg-gray-900 px-4 py-2 text-sm font-medium text-white transition-all hover:bg-gray-800"
+								className="bg-buttonPrimaryHover rounded-md px-4 py-2 text-sm font-medium text-white transition-all"
 							>
 								{project.button_text[0]}
 							</a>
@@ -127,7 +129,7 @@ const ProjectCard = ({ project }) => {
 							href={project.deployment}
 							target="_blank"
 							rel="noreferrer"
-							className="rounded-md bg-white px-4 py-2 text-sm font-medium text-black transition-all hover:bg-gray-200"
+							className="bg-buttonSecondary rounded-md px-4 py-2 text-sm font-medium text-black transition-all"
 						>
 							{project.button_text[1]}
 						</a>
@@ -170,7 +172,7 @@ const Projects = () => {
 						className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
 							selectedDomain === domain
 								? "bg-white text-black"
-								: "bg-gray-800 text-white hover:bg-gray-700"
+								: "bg-buttonPrimary hover:bg-pillPrimary cursor-pointer text-white"
 						}`}
 					>
 						{domain}

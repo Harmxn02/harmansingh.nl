@@ -9,6 +9,9 @@
 	--color-buttonPrimaryHover: #202020;
 	--color-buttonSecondary: white;
 	--color-buttonSecondaryHover: #cecece;
+
+	--color-pillPrimary: rgba(106, 114, 130, 0.3);
+	--color-textPrimary: #d1d5dc;
 }
 
 /*

@@ -53,7 +53,7 @@ const Skills = () => {
 				{Object.entries(skills).map(([category, categorySkills]) => (
 					<div
 						key={category}
-						className="relative rounded-md border border-gray-800 p-6"
+						className="relative rounded-md border border-pillPrimary p-6"
 					>
 						<div className="absolute top-5 right-5">
 							{categoryIcons[category]}
@@ -65,7 +65,7 @@ const Skills = () => {
 							{categorySkills.map((skill) => (
 								<span
 									key={skill}
-									className="rounded-full bg-gray-500/30 px-3 py-1.5 text-sm"
+									className="bg-pillPrimary rounded-full px-3 py-1.5 text-sm"
 								>
 									{skill}
 								</span>

@@ -27,18 +27,18 @@ const About = () => {
 
 			<div className="grid gap-8 md:grid-cols-2">
 				<div className="space-y-6">
-					<p className="text-lg leading-relaxed text-gray-300">
+					<p className="text-textPrimary text-lg leading-relaxed">
 						Hello! I'm Harman Singh, a Software Engineer / Data
 						Scientist based in Belgium 🇧🇪.
 					</p>
-					<p className="text-lg leading-relaxed text-gray-300">
+					<p className="text-textPrimary text-lg leading-relaxed">
 						My journey in tech started all the way back in 2020,
 						when during the COVID-19 Lockdown I discovered a new
 						interest in programming. I started with CS50's
 						introduction to programming course, and I have not
 						stopped learning since.
 					</p>
-					<p className="text-lg leading-relaxed text-gray-300">
+					<p className="text-textPrimary text-lg leading-relaxed">
 						At the moment I am finishing up my bachelor's in Applied
 						Computer Science at Howest University of Applied
 						Sciences. I recently finished an internship there as an
@@ -75,7 +75,7 @@ const About = () => {
 									Feb 2025 - May 2025
 								</span>
 							</p>
-							<p className="text-gray-300">
+							<p className="text-textPrimary">
 								Howest University of Applied Sciences
 							</p>
 						</div>
@@ -91,7 +91,7 @@ const About = () => {
 									June 2025
 								</span>
 							</p>
-							<p className="text-gray-300">
+							<p className="text-textPrimary">
 								Howest University of Applied Sciences
 							</p>
 						</div>{" "}
