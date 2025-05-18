@@ -88,7 +88,7 @@ const About = () => {
 									Bachelor, Applied Computer Science
 								</span>
 								<span className="text-sm text-gray-400">
-									2021 - 2025
+									June 2025
 								</span>
 							</p>
 							<p className="text-gray-300">
