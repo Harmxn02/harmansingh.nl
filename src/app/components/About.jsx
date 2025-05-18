@@ -1,30 +1,5 @@
 import React from "react";
 
-const skills = {
-	webDevelopment: [
-		"HTML",
-		"CSS",
-		"Responsive design",
-		"React",
-		"Next.js",
-		"TailwindCSS",
-		"Node.js",
-	],
-	dataScience: [
-		"TensorFlow",
-		"PyTorch",
-		"scikit-learn",
-		"pandas",
-		"Polars",
-		"NumPy",
-		"Matplotlib",
-		"Seaborn",
-	],
-	tools: ["Git", "Docker"],
-	databases: ["MySQL", "MongoDB", "PostgreSQL"],
-	languages: ["Python", "JavaScript", "TypeScript", "SQL", "Java", "PHP"],
-};
-
 const SectionTitle = () => {
 	return (
 		<div className="mb-8">
@@ -119,32 +94,7 @@ const About = () => {
 							<p className="text-gray-300">
 								Howest University of Applied Sciences
 							</p>
-						</div>
-					</div>{" "}
-					<div className="rounded-md border-dashed py-4">
-						<h3 className="mb-4 text-xl font-medium">Skills</h3>
-
-						{Object.entries(skills).map(
-							([category, categorySkills]) => (
-								<div key={category} className="mb-4">
-									<h4 className="text-md mb-2 text-gray-300 capitalize">
-										{category
-											.replace(/([A-Z])/g, " $1")
-											.trim()}
-									</h4>
-									<div className="mb-3 flex flex-wrap gap-1">
-										{categorySkills.map((skill) => (
-											<span
-												key={skill}
-												className="rounded-full bg-gray-500/30 px-3 py-1.5 text-sm"
-											>
-												{skill}
-											</span>
-										))}
-									</div>
-								</div>
-							),
-						)}
+						</div>{" "}
 					</div>
 				</div>
 			</div>

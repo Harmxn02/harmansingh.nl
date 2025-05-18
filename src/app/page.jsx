@@ -2,6 +2,7 @@
 
 import Hero from "./components/Hero";
 import About from "./components/About";
+import Skills from "./components/Skills";
 import IntroAnimation from "./components/IntroAnimation";
 
 import { useState } from "react";
@@ -23,6 +24,7 @@ export default function Home() {
 				<>
 					<Hero />
 					<About />
+					<Skills />
 				</>
 			)}
 		</div>

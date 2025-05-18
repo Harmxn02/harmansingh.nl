@@ -1,0 +1,68 @@
+import React from "react";
+
+const skills = {
+	webDevelopment: [
+		"HTML",
+		"CSS",
+		"Responsive design",
+		"React",
+		"Next.js",
+		"TailwindCSS",
+		"Node.js",
+	],
+	dataScience: [
+		"TensorFlow",
+		"PyTorch",
+		"scikit-learn",
+		"pandas",
+		"Polars",
+		"NumPy",
+		"Matplotlib",
+		"Seaborn",
+	],
+	tools: ["Git", "Docker", "Jupyter Notebook", "Postman", "Figma"],
+	databases: ["MySQL", "MongoDB", "PostgreSQL"],
+	languages: ["Python", "JavaScript", "TypeScript", "SQL", "Java", "PHP"],
+};
+
+const SectionTitle = () => {
+	return (
+		<div className="mb-8">
+			<h2 className="text-4xl font-semibold tracking-tight">Skills</h2>
+			<div className="mt-2 h-1 w-24 bg-white"></div>
+		</div>
+	);
+};
+
+const Skills = () => {
+	return (
+		<div className="mx-auto max-w-(--breakpoint-2xl) bg-black px-8 py-24 text-white 2xl:px-1">
+			<SectionTitle />
+
+			<div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+				{Object.entries(skills).map(([category, categorySkills]) => (
+					<div
+						key={category}
+						className="rounded-md border border-gray-800 p-6"
+					>
+						<h3 className="mb-4 text-xl font-medium capitalize">
+							{category.replace(/([A-Z])/g, " $1").trim()}
+						</h3>
+						<div className="flex flex-wrap gap-2">
+							{categorySkills.map((skill) => (
+								<span
+									key={skill}
+									className="rounded-full bg-gray-500/30 px-3 py-1.5 text-sm"
+								>
+									{skill}
+								</span>
+							))}
+						</div>
+					</div>
+				))}
+			</div>
+		</div>
+	);
+};
+
+export default Skills;
