@@ -1,10 +1,28 @@
 import React from "react";
 
 const skills = {
-	webDevelopment: ["React", "Next.js", "TailwindCSS", "Node.js"],
-	dataScience: ["Pandas", "PyTorch", "Data Visualization"],
-	tools: ["Git", "Docker", "VS Code"],
-	languages: ["JavaScript", "TypeScript", "Python", "SQL"],
+	webDevelopment: [
+		"HTML",
+		"CSS",
+		"Responsive design",
+		"React",
+		"Next.js",
+		"TailwindCSS",
+		"Node.js",
+	],
+	dataScience: [
+		"TensorFlow",
+		"PyTorch",
+		"scikit-learn",
+		"pandas",
+		"Polars",
+		"NumPy",
+		"Matplotlib",
+		"Seaborn",
+	],
+	tools: ["Git", "Docker"],
+	databases: ["MySQL", "MongoDB", "PostgreSQL"],
+	languages: ["Python", "JavaScript", "TypeScript", "SQL", "Java", "PHP"],
 };
 
 const SectionTitle = () => {
@@ -90,7 +108,7 @@ const About = () => {
 										{categorySkills.map((skill) => (
 											<span
 												key={skill}
-												className="rounded-full bg-gray-400/30 px-3 py-1.5 text-sm"
+												className="rounded-full bg-gray-500/30 px-3 py-1.5 text-sm"
 											>
 												{skill}
 											</span>
