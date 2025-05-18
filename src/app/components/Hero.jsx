@@ -1,4 +1,5 @@
 import React from "react";
+import CTA from "./shared/CTA";
 
 const TopLogo = () => {
 	return (
@@ -7,17 +8,6 @@ const TopLogo = () => {
 				Harman.
 			</h1>
 		</div>
-	);
-};
-
-const CTA = ({ content, url, children }) => {
-	return (
-		<button className="bg-buttonSecondary hover:bg-buttonSecondaryHover flex items-center gap-2 rounded-full px-5 py-3 font-medium text-black transition-colors duration-500">
-			<a href={url} target="_blank" className="text-sm md:text-base">
-				{content}
-			</a>
-			{children}
-		</button>
 	);
 };
 

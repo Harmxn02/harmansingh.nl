@@ -1,22 +1,13 @@
 import React from "react";
 
+import CTA from "./shared/CTA";
+
 const SectionTitle = () => {
 	return (
 		<div className="mb-8">
 			<h2 className="text-4xl font-semibold tracking-tight">About Me</h2>
 			<div className="mt-2 h-1 w-24 bg-white"></div>
 		</div>
-	);
-};
-
-const CTA = ({ content, url, children }) => {
-	return (
-		<button className="bg-buttonSecondary hover:bg-buttonSecondaryHover flex items-center gap-2 rounded-full px-5 py-3 font-medium text-black transition-colors duration-500">
-			<a href={url} target="_blank" className="text-sm md:text-base">
-				{content}
-			</a>
-			{children}
-		</button>
 	);
 };
 
