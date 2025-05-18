@@ -40,10 +40,13 @@ const Link = ({ content, url, children }) => {
 const MainContent = () => {
 	return (
 		<div className="flex min-h-[80vh] flex-col justify-center space-y-8">
-			<div className="flex w-full items-end space-x-2">
-				<h1 className="text-[5rem] leading-none font-semibold tracking-[-0.25rem] sm:text-[8rem] sm:tracking-[-0.5rem] md:text-[10rem] md:tracking-[-0.75rem] lg:text-[14rem] lg:tracking-[-1rem]">
-					Harman <br></br> Singh
+			<div className="flex w-full flex-col space-y-1 space-x-2">
+				<h1 className="text-[2.5rem] leading-none font-semibold tracking-[-0.125rem] sm:text-[4rem] sm:tracking-[-0.25rem] md:text-[5rem] md:tracking-[-0.375rem] lg:text-[7rem] lg:tracking-[-0.5rem]">
+					Harman Singh
 				</h1>
+				<p className="pl-2 text-[1rem] sm:text-[1.1rem] md:text-[1.3rem] lg:text-[1.5rem]">
+					Software Engineer & Data Scientist
+				</p>
 				{/* <div className="w-2 mb-[24px] sm:w-4 sm:mb-[14px] md:w-6 md:mb-[18px] lg:mb-[22px] xl:mb-[26px] 2xl:mb-[30px] aspect-square bg-white"></div> */}
 			</div>
 			<div className="flex items-baseline space-y-2 space-x-2">
@@ -54,10 +57,6 @@ const MainContent = () => {
 				<Link
 					content="GitHub"
 					url="https://github.com/Harmxn02/"
-				></Link>
-				<Link
-					content="Portfolio"
-					url="https://www.harmansingh.nl"
 				></Link>
 			</div>
 		</div>
