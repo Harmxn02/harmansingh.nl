@@ -61,6 +61,10 @@ const Skills = () => {
 					</div>
 				))}
 			</div>
+			<p className="mt-6">
+				In addition to these I am currently learning
+				<strong> Rust</strong> and <strong>Go</strong>!
+			</p>
 		</div>
 	);
 };
