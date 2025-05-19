@@ -34,8 +34,7 @@ const MainContent = () => {
 				<h1 className="text-[2.5rem] leading-none font-semibold tracking-[-0.125rem] sm:text-[4rem] sm:tracking-[-0.25rem] md:text-[5rem] md:tracking-[-0.375rem] lg:text-[7rem] lg:tracking-[-0.5rem]">
 					Harman Singh
 				</h1>
-				<p className="pl-2 text-[1rem] sm:text-[1.1rem] md:text-[1.3rem] lg:text-[1.5rem]">
-					Software Engineer & Data Scientist
+				<p className="md:pl-1 lg:pl-2 text-[1rem] sm:text-[1.1rem] md:text-[1.3rem] lg:text-[1.5rem]">Software Engineer & Data Scientist
 				</p>
 				{/* <div className="w-2 mb-[24px] sm:w-4 sm:mb-[14px] md:w-6 md:mb-[18px] lg:mb-[22px] xl:mb-[26px] 2xl:mb-[30px] aspect-square bg-white"></div> */}
 			</div>
