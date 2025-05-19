@@ -22,12 +22,12 @@ export default function Home() {
 		<div className="bg-black font-[family-name:var(--font-geist-sans)] text-white">
 			{showIntro && <IntroAnimation onEnd={handleIntroEnd} />}
 			{showHero && (
-				<>
+				<div className="lg:mx-8">
 					<Hero />
 					<Projects />
 					<Skills />
 					<About />
-				</>
+				</div>
 			)}
 		</div>
 	);
