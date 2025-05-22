@@ -13,12 +13,12 @@ const TopLogo = () => {
 
 const Link = ({ content, url, children }) => {
 	return (
-		<button className="bg-buttonPrimaryHover hover:bg-pillSecondary flex items-center gap-2 rounded-md px-5 py-3 font-medium text-white transition-colors duration-500">
+		<button className="bg-buttonPrimaryHover hover:bg-pillSecondary flex items-center gap-2 rounded-md font-medium text-white transition-colors duration-500">
 			<a
 				href={url}
 				target="_blank"
 				rel="noreferrer"
-				className="text-sm md:text-base"
+				className="px-5 py-3 text-sm md:text-base"
 			>
 				{content}
 			</a>
