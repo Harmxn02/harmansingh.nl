@@ -34,7 +34,7 @@ export default function Navigation() {
 
 	return (
 		// to hide the navigation bar on mobile put `hidden` in the className right below this comment`
-		<nav className="fixed bottom-8 left-1/2 z-50 -translate-x-1/2 transform md:block">
+		<nav className="fixed bottom-8 left-1/2 z-50 hidden -translate-x-1/2 transform sm:block">
 			<div className="flex items-center space-x-4 rounded-full border border-zinc-800 bg-zinc-900/80 px-6 py-3 backdrop-blur-md">
 				<ul className="flex items-center space-x-8">
 					<li>
