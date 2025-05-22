@@ -12,8 +12,22 @@ const projects = [
 		domain: "Frontend",
 		technologies: ["Next.js", "Tailwind CSS"],
 		description:
-			"The website you are currently looking at was coded from scratch using Next.js and Tailwind CSS.",
+			"My portfolio website was coded from scratch using Next.js and Tailwind CSS.",
 		repository: "https://github.com/Harmxn02/harmansingh.nl",
+		deployment: "https://www.harmansingh.nl",
+		button_text: ["Code Repository", "Live Deployment"],
+	},
+	{
+		id: 2,
+		highlighted: false,
+		name: "dev.harmansingh.nl",
+		imageSrc: "https://placehold.co/600x400/?text=New+Portfolio+Website",
+		imageAlt: "Preview of project Gamma.",
+		domain: "Frontend",
+		technologies: ["Next.js", "Tailwind CSS"],
+		description:
+			"The website you are currently looking at was also coded from scratch using Next.js and Tailwind CSS.",
+		repository: "https://github.com/Harmxn02/dev.harmansingh.nl",
 		deployment: "https://www.harmansingh.nl",
 		button_text: ["Code Repository", "Live Deployment"],
 	},

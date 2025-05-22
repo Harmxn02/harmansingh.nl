@@ -10,8 +10,8 @@ import Navigation from "./components/Navigation";
 import { useState } from "react";
 
 export default function Home() {
-	const [showIntro, setShowIntro] = useState(true);
-	const [showHero, setShowHero] = useState(false);
+	const [showIntro, setShowIntro] = useState(false);
+	const [showHero, setShowHero] = useState(true);
 
 	// Callback to remove the intro animation from the DOM
 	const handleIntroEnd = () => {
