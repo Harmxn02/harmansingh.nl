@@ -12,6 +12,15 @@
 
 	--color-pillPrimary: rgba(106, 114, 130, 0.3);
 	--color-textPrimary: #d1d5dc;
+
+	/* Theme colours: purple */
+	--color-pillSecondary: rgba(153, 125, 182, 0.3);
+	--color-purple-lighter: #958ab5;
+	--color-purple-light: #997db6;
+	/* unused */
+	--color-purple-medium: #755eac;
+	--color-purple-dark: #574c9c;
+	--color-purple-darker: #382f5d;
 }
 
 /*

@@ -1,19 +1,20 @@
 import React from "react";
 
 import CTA from "./shared/CTA";
+import HeadingUnderline from "./shared/HeadingUnderline";
 
 const SectionTitle = () => {
 	return (
 		<div className="mb-8">
 			<h2 className="text-4xl font-semibold tracking-tight">About Me</h2>
-			<div className="mt-2 h-1 w-24 bg-white"></div>
+			<HeadingUnderline />
 		</div>
 	);
 };
 
 const About = () => {
 	return (
-		<div className="mx-auto max-w-(--breakpoint-2xl) bg-black px-8 py-24 text-white 2xl:px-1">
+		<div className="bg-backgroundPrimary mx-auto max-w-(--breakpoint-2xl) px-8 py-24 text-white 2xl:px-1">
 			<SectionTitle />
 
 			<div className="grid gap-8 md:grid-cols-2">
@@ -52,10 +53,9 @@ const About = () => {
 							/>
 						</svg>
 					</CTA>
-				</div>
-
+				</div>{" "}
 				<div className="space-y-6">
-					<div className="rounded-md border-dashed py-4">
+					<div className="border-pillSecondary rounded-md border px-4 py-4">
 						<h3 className="mb-4 text-xl font-medium">Experience</h3>
 						<div className="space-y-2">
 							<p className="flex items-center justify-between">
@@ -70,8 +70,8 @@ const About = () => {
 								Howest University of Applied Sciences
 							</p>
 						</div>
-					</div>
-					<div className="rounded-md border-dashed py-4">
+					</div>{" "}
+					<div className="border-pillSecondary rounded-md border px-4 py-4">
 						<h3 className="mb-4 text-xl font-medium">Education</h3>
 						<div className="space-y-2">
 							<p className="flex items-center justify-between">

@@ -13,7 +13,7 @@ const TopLogo = () => {
 
 const Link = ({ content, url, children }) => {
 	return (
-		<button className="bg-buttonPrimary hover:bg-buttonPrimaryHover flex items-center gap-2 rounded-md px-5 py-3 font-medium text-white transition-colors duration-500">
+		<button className="bg-buttonPrimaryHover hover:bg-pillSecondary flex items-center gap-2 rounded-md px-5 py-3 font-medium text-white transition-colors duration-500">
 			<a
 				href={url}
 				target="_blank"
@@ -55,7 +55,7 @@ const MainContent = () => {
 
 const Hero = () => {
 	return (
-		<div className="mx-auto min-h-screen max-w-(--breakpoint-2xl) bg-black pt-8 pr-8 pl-8 text-white 2xl:pr-1 2xl:pl-1">
+		<div className="bg-backgroundPrimary mx-auto min-h-screen max-w-(--breakpoint-2xl) pt-8 pr-8 pl-8 text-white 2xl:pr-1 2xl:pl-1">
 			<div className="flex items-center justify-between">
 				<TopLogo />
 				<CTA content="Contact" url="mailto:harman.pnahal@gmail.com">

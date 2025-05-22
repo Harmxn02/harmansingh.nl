@@ -2,6 +2,7 @@ import React from "react";
 import { FaCode, FaDatabase, FaTools } from "react-icons/fa";
 import { IoLanguage } from "react-icons/io5";
 import { TbMathSymbols } from "react-icons/tb";
+import HeadingUnderline from "./shared/HeadingUnderline";
 
 const categoryIcons = {
 	webDevelopment: <FaCode className="text-xl text-white" />,
@@ -40,20 +41,20 @@ const SectionTitle = () => {
 	return (
 		<div className="mb-8">
 			<h2 className="text-4xl font-semibold tracking-tight">Skills</h2>
-			<div className="mt-2 h-1 w-24 bg-white"></div>
+			<HeadingUnderline />
 		</div>
 	);
 };
 
 const Skills = () => {
 	return (
-		<div className="mx-auto max-w-(--breakpoint-2xl) bg-black px-8 py-24 text-white 2xl:px-1">
+		<div className="bg-backgroundSecondary mx-auto max-w-(--breakpoint-2xl) px-8 py-24 text-white 2xl:px-1">
 			<SectionTitle />{" "}
 			<div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
 				{Object.entries(skills).map(([category, categorySkills]) => (
 					<div
 						key={category}
-						className="relative rounded-md border border-pillPrimary p-6"
+						className="border-pillSecondary relative rounded-md border p-6"
 					>
 						<div className="absolute top-5 right-5">
 							{categoryIcons[category]}
@@ -73,10 +74,11 @@ const Skills = () => {
 						</div>
 					</div>
 				))}
-			</div>
+			</div>{" "}
 			<p className="mt-6">
 				In addition to these I am currently learning
-				<strong> Rust</strong> and <strong>Go</strong>!
+				<strong className="text-purple-light"> Rust</strong> and{" "}
+				<strong className="text-purple-light">Go</strong>!
 			</p>
 		</div>
 	);

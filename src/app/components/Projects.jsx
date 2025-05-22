@@ -1,4 +1,5 @@
 import React, { useState, useMemo } from "react";
+import HeadingUnderline from "./shared/HeadingUnderline";
 
 // Import projects data
 const projects = [
@@ -75,14 +76,14 @@ const SectionTitle = () => {
 	return (
 		<div className="mb-8">
 			<h2 className="text-4xl font-semibold tracking-tight">Projects</h2>
-			<div className="mt-2 h-1 w-24 bg-white"></div>
+			<HeadingUnderline />
 		</div>
 	);
 };
 
 const ProjectCard = ({ project }) => {
 	return (
-		<div className="flex flex-col overflow-hidden rounded-lg border border-pillPrimary bg-black transition-all duration-300 hover:shadow-lg">
+		<div className="border-pillSecondary flex flex-col overflow-hidden rounded-md border bg-black transition-all duration-300 hover:shadow-lg">
 			<div className="relative h-48 w-full overflow-hidden">
 				<img
 					src={project.imageSrc}
@@ -119,7 +120,7 @@ const ProjectCard = ({ project }) => {
 								href={project.repository}
 								target="_blank"
 								rel="noreferrer"
-								className="bg-buttonPrimaryHover rounded-md px-4 py-2 text-sm font-medium text-white transition-all"
+								className="bg-pillPrimary hover:bg-pillSecondary rounded-md px-4 py-2 text-sm font-medium text-white transition-all"
 							>
 								{project.button_text[0]}
 							</a>
@@ -129,7 +130,7 @@ const ProjectCard = ({ project }) => {
 							href={project.deployment}
 							target="_blank"
 							rel="noreferrer"
-							className="bg-buttonSecondary rounded-md px-4 py-2 text-sm font-medium text-black transition-all"
+							className="bg-buttonSecondary hover:bg-buttonSecondaryHover rounded-md px-4 py-2 text-sm font-medium text-black transition-all"
 						>
 							{project.button_text[1]}
 						</a>
@@ -169,10 +170,10 @@ const Projects = () => {
 					<button
 						key={domain}
 						onClick={() => setSelectedDomain(domain)}
-						className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
+						className={`rounded-md px-4 py-2 text-sm font-medium transition-colors ${
 							selectedDomain === domain
-								? "bg-white text-black"
-								: "bg-buttonPrimary hover:bg-pillPrimary cursor-pointer text-white"
+								? "bg-purple-lighter text-black"
+								: "bg-pillPrimary hover:bg-pillSecondary cursor-pointer text-white"
 						}`}
 					>
 						{domain}
