@@ -72,7 +72,7 @@ export default function Navigation() {
 						>
 							Skills
 						</button>
-					</li>
+					</li>{" "}
 					<li>
 						<button
 							onClick={() => scrollToSection("about")}
@@ -83,6 +83,18 @@ export default function Navigation() {
 							}`}
 						>
 							About
+						</button>
+					</li>
+					<li>
+						<button
+							onClick={() => scrollToSection("contact")}
+							className={`text-sm font-medium transition-colors ${
+								activeSection === "contact"
+									? "text-white"
+									: "text-zinc-400 hover:text-zinc-200"
+							}`}
+						>
+							Contact
 						</button>
 					</li>
 				</ul>

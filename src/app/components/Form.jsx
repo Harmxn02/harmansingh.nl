@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
-
 import toast, { Toaster } from "react-hot-toast";
+import HeadingUnderline from "./shared/HeadingUnderline";
 
 function Input(props) {
 	return (
@@ -11,7 +11,7 @@ function Input(props) {
 			placeholder={props.placeholder}
 			name={props.name}
 			required={true}
-			className="w-full rounded-lg border border-[#d1d5db] bg-[#f9fafb] p-3 text-sm focus:outline-0"
+			className="focus:border-purple-light focus:ring-purple-light w-full rounded-md border border-zinc-800 bg-zinc-900/80 p-3 text-sm text-white placeholder-zinc-400 focus:ring-1 focus:outline-0"
 		/>
 	);
 }
@@ -24,7 +24,7 @@ function TextArea(props) {
 			rows={4}
 			name={props.name}
 			required={true}
-			className="w-full rounded-lg border border-[#d1d5db] bg-[#f9fafb] p-3 text-sm"
+			className="focus:border-purple-light focus:ring-purple-light w-full rounded-md border border-zinc-800 bg-zinc-900/80 p-3 text-sm text-white placeholder-zinc-400 focus:ring-1 focus:outline-0"
 		/>
 	);
 }
@@ -51,6 +51,15 @@ function LabelHint(props) {
 // 	toast("✅ Email copied to clipboard");
 // }
 
+const SectionTitle = () => {
+	return (
+		<div className="mb-8">
+			<h2 className="text-4xl font-semibold tracking-tight">Contact</h2>
+			<HeadingUnderline />
+		</div>
+	);
+};
+
 export default function Contact() {
 	const form = useRef();
 
@@ -62,7 +71,7 @@ export default function Contact() {
 				process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
 				process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
 				form.current,
-				process.env.NEXT_PUBLIC_EMAILJS_USER_ID
+				process.env.NEXT_PUBLIC_EMAILJS_USER_ID,
 			)
 
 			.then(
@@ -78,13 +87,13 @@ export default function Contact() {
 				},
 			);
 	};
-
 	return (
-		<div>
-			<div
-				data-aos="fade-up"
-				className="mx-auto mt-12 max-w-4xl rounded-xl p-6 pb-24"
-			>
+		<section
+			id="contact"
+			className="mx-auto max-w-(--breakpoint-2xl) px-8 py-24 text-white 2xl:px-1"
+		>
+			<SectionTitle />
+			<div className="mt-12 max-w-4xl rounded-md border border-zinc-800 bg-zinc-900/40 p-6 pb-24 backdrop-blur-sm">
 				<form
 					ref={form}
 					onSubmit={sendEmail}
@@ -141,20 +150,20 @@ export default function Contact() {
 					</div>
 
 					<div>
-						<Toaster />
+						<Toaster />{" "}
 						<button
-							className="bg-brand-purple hover:bg-brand-purple-fade w-full rounded-lg p-3 text-sm font-medium text-white transition-colors duration-500"
+							className="w-full rounded-md bg-[#755eac] p-3 text-sm font-medium text-white transition-colors duration-500 hover:bg-[#997db6]"
 							type="submit"
 							value="send"
 						>
 							Send
 						</button>
 					</div>
-				</form>
-				<p className="pt-8 text-center text-white">
+				</form>{" "}
+				<p className="pt-8 text-white">
 					Or send a regular email:{" "}
 					<a
-						className="text-brand-purple hover:text-brand-purple-fade font-medium underline-offset-2 transition-colors duration-500 hover:underline"
+						className="font-medium text-[#997db6] underline-offset-2 transition-colors duration-500 hover:text-[#958ab5] hover:underline"
 						href="mailto:harman.pnahal@gmail.com"
 						// onClick={copyEmail}
 					>
@@ -162,6 +171,6 @@ export default function Contact() {
 					</a>
 				</p>
 			</div>
-		</div>
+		</section>
 	);
 }
