@@ -97,7 +97,7 @@ const SectionTitle = () => {
 
 const ProjectCard = ({ project }) => {
 	return (
-		<div className="border-pillSecondary flex flex-col overflow-hidden rounded-md border bg-black transition-all duration-300 hover:shadow-lg">
+		<div className="border-pillSecondary flex flex-col overflow-hidden rounded-md border transition-all duration-300 hover:shadow-lg">
 			<div className="relative h-48 w-full overflow-hidden">
 				<img
 					src={project.imageSrc}
@@ -176,7 +176,7 @@ const Projects = () => {
 	return (
 		<section
 			id="projects"
-			className="mx-auto max-w-(--breakpoint-2xl) bg-black px-8 py-24 text-white 2xl:px-1"
+			className="mx-auto max-w-(--breakpoint-2xl) px-8 py-24 text-white 2xl:px-1"
 		>
 			<SectionTitle />
 

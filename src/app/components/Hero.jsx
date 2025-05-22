@@ -57,7 +57,7 @@ const Hero = () => {
 	return (
 		<section
 			id="hero"
-			className="bg-backgroundPrimary mx-auto min-h-screen max-w-(--breakpoint-2xl) pt-8 pr-8 pl-8 text-white 2xl:pr-1 2xl:pl-1"
+			className="mx-auto min-h-screen max-w-(--breakpoint-2xl) pt-8 pr-8 pl-8 text-white 2xl:pr-1 2xl:pl-1"
 		>
 			<div className="flex items-center justify-between">
 				<TopLogo />

@@ -16,7 +16,7 @@ const About = () => {
 	return (
 		<section
 			id="about"
-			className="bg-backgroundPrimary mx-auto max-w-(--breakpoint-2xl) px-8 py-24 text-white 2xl:px-1"
+			className="mx-auto max-w-(--breakpoint-2xl) px-8 py-24 text-white 2xl:px-1"
 		>
 			<SectionTitle />
 
