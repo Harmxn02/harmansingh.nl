@@ -1,9 +1,20 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Navigation() {
 	const [activeSection, setActiveSection] = useState("hero");
+
+	// Initialize AOS
+	useEffect(() => {
+		AOS.init({
+			duration: 800,
+			once: true,
+			easing: "ease-in-out",
+		});
+	}, []);
 
 	// Update active section based on scroll position
 	useEffect(() => {
@@ -34,7 +45,12 @@ export default function Navigation() {
 
 	return (
 		// to hide the navigation bar on mobile put `hidden` in the className right below this comment`
-		<nav className="fixed bottom-8 left-1/2 z-50 hidden -translate-x-1/2 transform sm:block">
+		<nav
+			className="fixed bottom-8 left-1/2 z-50 hidden -translate-x-1/2 transform sm:block"
+			data-aos="fade-up"
+			data-aos-offset="0"
+			data-aos-delay="800"
+		>
 			<div className="flex items-center space-x-4 rounded-full border border-zinc-800 bg-zinc-900/80 px-6 py-3 backdrop-blur-md">
 				<ul className="flex items-center space-x-8">
 					<li>

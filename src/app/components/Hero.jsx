@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import CTA from "./shared/CTA";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const TopLogo = () => {
 	return (
-		<div className="flex max-w-fit items-end space-x-1">
+		<div className="flex max-w-fit items-end space-x-1" data-aos="fade-up">
 			<h1 className="text-2xl font-semibold text-white md:text-3xl">
 				Harman.
 			</h1>
@@ -29,7 +31,11 @@ const Link = ({ content, url, children }) => {
 
 const MainContent = () => {
 	return (
-		<div className="flex flex-col justify-center space-y-8 pt-[10vh] pb-[10vh] md:min-h-[80vh]">
+		<div
+			className="flex flex-col justify-center space-y-8 pt-[10vh] pb-[10vh] md:min-h-[80vh]"
+			data-aos="fade-up"
+			data-aos-delay="100"
+		>
 			<div className="flex w-full flex-col space-y-1 space-x-2">
 				<h1 className="text-[2.5rem] leading-none font-semibold tracking-[-0.125rem] sm:text-[4rem] sm:tracking-[-0.25rem] md:text-[5rem] md:tracking-[-0.375rem] lg:text-[7rem] lg:tracking-[-0.5rem]">
 					Harman Singh
@@ -39,7 +45,11 @@ const MainContent = () => {
 				</p>
 				{/* <div className="w-2 mb-[24px] sm:w-4 sm:mb-[14px] md:w-6 md:mb-[18px] lg:mb-[22px] xl:mb-[26px] 2xl:mb-[30px] aspect-square bg-white"></div> */}
 			</div>
-			<div className="flex items-baseline space-y-2 space-x-2">
+			<div
+				className="flex items-baseline space-y-2 space-x-2"
+				data-aos="fade-up"
+				data-aos-delay="200"
+			>
 				<Link
 					content="LinkedIn"
 					url="https://www.linkedin.com/in/harmanpnahal/"
@@ -54,14 +64,29 @@ const MainContent = () => {
 };
 
 const Hero = () => {
+	// Initialize AOS
+	useEffect(() => {
+		AOS.init({
+			duration: 800,
+			once: true,
+			easing: "ease-in-out",
+		});
+	}, []);
+
 	return (
 		<section
 			id="hero"
 			className="mx-auto max-w-(--breakpoint-2xl) pt-8 pr-8 pl-8 text-white md:min-h-screen 2xl:pr-1 2xl:pl-1"
+			data-aos="fade-up"
 		>
 			<div className="flex items-center justify-between">
 				<TopLogo />
-				<CTA content="Contact" url="mailto:harman.pnahal@gmail.com">
+				<CTA
+					content="Contact"
+					url="mailto:harman.pnahal@gmail.com"
+					data-aos="fade-up"
+					data-aos-delay="50"
+				>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						viewBox="0 0 24 24"

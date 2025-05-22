@@ -1,8 +1,11 @@
 import React from "react";
 
-const CTA = ({ content, url, children }) => {
+const CTA = ({ content, url, children, ...props }) => {
 	return (
-		<button className="bg-buttonSecondary hover:bg-buttonSecondaryHover flex items-center gap-2 rounded-full pr-5 font-medium text-black transition-colors duration-500">
+		<button
+			className="bg-buttonSecondary hover:bg-buttonSecondaryHover flex items-center gap-2 rounded-full pr-5 font-medium text-black transition-colors duration-500"
+			{...props}
+		>
 			<a
 				href={url}
 				target="_blank"

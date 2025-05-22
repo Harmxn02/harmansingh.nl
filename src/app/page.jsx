@@ -8,11 +8,23 @@ import IntroAnimation from "./components/IntroAnimation";
 import Navigation from "./components/Navigation";
 import Form from "./components/Form";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Home() {
 	const [showIntro, setShowIntro] = useState(false);
 	const [showHero, setShowHero] = useState(true);
+
+	// Initialize AOS globally
+	useEffect(() => {
+		AOS.init({
+			duration: 800,
+			once: true,
+			easing: "ease-in-out",
+			offset: 100,
+		});
+	}, []);
 
 	// Callback to remove the intro animation from the DOM
 	const handleIntroEnd = () => {

@@ -1,7 +1,9 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import toast, { Toaster } from "react-hot-toast";
 import HeadingUnderline from "./shared/HeadingUnderline";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function Input(props) {
 	return (
@@ -53,7 +55,7 @@ function LabelHint(props) {
 
 const SectionTitle = () => {
 	return (
-		<div className="mb-8">
+		<div className="mb-8" data-aos="fade-up">
 			<h2 className="text-4xl font-semibold tracking-tight">Contact</h2>
 			<HeadingUnderline />
 		</div>
@@ -62,6 +64,15 @@ const SectionTitle = () => {
 
 export default function Contact() {
 	const form = useRef();
+
+	// Initialize AOS
+	useEffect(() => {
+		AOS.init({
+			duration: 800,
+			once: true,
+			easing: "ease-in-out",
+		});
+	}, []);
 
 	const sendEmail = (e) => {
 		e.preventDefault();
@@ -91,15 +102,20 @@ export default function Contact() {
 		<section
 			id="contact"
 			className="mx-auto max-w-(--breakpoint-2xl) px-8 py-24 text-white 2xl:px-1"
+			data-aos="fade-up"
 		>
 			<SectionTitle />
-			<div className="mt-12 max-w-4xl rounded-md border border-zinc-800 bg-zinc-900/40 p-6 pb-24 backdrop-blur-sm">
+			<div
+				className="mt-12 max-w-4xl rounded-md border border-zinc-800 bg-zinc-900/40 p-6 pb-24 backdrop-blur-sm"
+				data-aos="fade-up"
+				data-aos-delay="100"
+			>
 				<form
 					ref={form}
 					onSubmit={sendEmail}
 					className="flex flex-col gap-4"
 				>
-					<div>
+					<div data-aos="fade-up" data-aos-delay="150">
 						<div className="mb-2 flex flex-col justify-between sm:flex-row sm:items-center">
 							<Label htmlFor="name1" value="Your name">
 								Your name
@@ -115,7 +131,7 @@ export default function Contact() {
 							name="from_name"
 						/>
 					</div>
-					<div>
+					<div data-aos="fade-up" data-aos-delay="200">
 						<div className="mb-2 flex flex-col justify-between sm:flex-row sm:items-center">
 							<Label htmlFor="email1" value="Your email">
 								Your email
@@ -133,7 +149,7 @@ export default function Contact() {
 							name="from_email"
 						/>
 					</div>
-					<div id="textarea">
+					<div id="textarea" data-aos="fade-up" data-aos-delay="250">
 						<div className="mb-2 block">
 							<Label htmlFor="comment" value="Your message">
 								Your message
@@ -149,7 +165,7 @@ export default function Contact() {
 						/>
 					</div>
 
-					<div>
+					<div data-aos="fade-up" data-aos-delay="300">
 						<Toaster />{" "}
 						<button
 							className="w-full rounded-md bg-[#755eac] p-3 text-sm font-medium text-white transition-colors duration-500 hover:bg-[#997db6]"
@@ -160,7 +176,11 @@ export default function Contact() {
 						</button>
 					</div>
 				</form>{" "}
-				<p className="pt-8 text-white">
+				<p
+					className="pt-8 text-white"
+					data-aos="fade-up"
+					data-aos-delay="350"
+				>
 					Or send a regular email:{" "}
 					<a
 						className="font-medium text-[#997db6] underline-offset-2 transition-colors duration-500 hover:text-[#958ab5] hover:underline"

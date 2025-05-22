@@ -2,10 +2,21 @@
 
 import React, { useState, useEffect } from "react";
 import { Typewriter } from "react-simple-typewriter";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const IntroAnimation = ({ onEnd }) => {
 	const [shrinkText, setShrinkText] = useState(false);
 	const [moveOut, setMoveOut] = useState(false);
+
+	// Initialize AOS
+	useEffect(() => {
+		AOS.init({
+			duration: 800,
+			once: true,
+			easing: "ease-in-out",
+		});
+	}, []);
 
 	useEffect(() => {
 		const shrinkText = setTimeout(() => {
@@ -31,9 +42,12 @@ const IntroAnimation = ({ onEnd }) => {
 		<div>
 			<div
 				className={`flex min-h-screen items-center justify-center bg-black transition-all duration-1000 ${moveOut ? "-translate-y-full" : "items-center"}`}
+				data-aos="fade-in"
 			>
 				<div
 					className={`absolute flex items-end space-x-1 transition-all duration-1000 md:space-x-2 ${shrinkText ? "scale-50 transform" : ""}`}
+					data-aos="zoom-in"
+					data-aos-duration="1000"
 				>
 					<h1 className="text-5xl font-semibold tracking-tighter text-white md:text-9xl md:tracking-tight">
 						<Typewriter

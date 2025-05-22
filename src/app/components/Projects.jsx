@@ -1,5 +1,7 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 import HeadingUnderline from "./shared/HeadingUnderline";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 // Import projects data
 const projects = [
@@ -88,16 +90,20 @@ const projects = [
 
 const SectionTitle = () => {
 	return (
-		<div className="mb-8">
+		<div className="mb-8" data-aos="fade-up">
 			<h2 className="text-4xl font-semibold tracking-tight">Projects</h2>
 			<HeadingUnderline />
 		</div>
 	);
 };
 
-const ProjectCard = ({ project }) => {
+const ProjectCard = ({ project, index }) => {
 	return (
-		<div className="border-pillSecondary flex flex-col overflow-hidden rounded-md border transition-all duration-300 hover:shadow-lg">
+		<div
+			className="border-pillSecondary flex flex-col overflow-hidden rounded-md border transition-all duration-300 hover:shadow-lg"
+			data-aos="fade-up"
+			data-aos-delay={index * 100}
+		>
 			<div className="relative h-48 w-full overflow-hidden">
 				<img
 					src={project.imageSrc}
@@ -158,6 +164,15 @@ const ProjectCard = ({ project }) => {
 const Projects = () => {
 	const [selectedDomain, setSelectedDomain] = useState("All");
 
+	// Initialize AOS
+	useEffect(() => {
+		AOS.init({
+			duration: 800,
+			once: true,
+			easing: "ease-in-out",
+		});
+	}, []);
+
 	// Extract unique domains and add "All" option
 	const domains = useMemo(() => {
 		const uniqueDomains = [
@@ -177,11 +192,16 @@ const Projects = () => {
 		<section
 			id="projects"
 			className="mx-auto max-w-(--breakpoint-2xl) px-8 py-24 text-white 2xl:px-1"
+			data-aos="fade-up"
 		>
 			<SectionTitle />
 
 			{/* Filter buttons */}
-			<div className="mb-8 flex flex-wrap gap-3">
+			<div
+				className="mb-8 flex flex-wrap gap-3"
+				data-aos="fade-up"
+				data-aos-delay="100"
+			>
 				{domains.map((domain) => (
 					<button
 						key={domain}
@@ -199,11 +219,18 @@ const Projects = () => {
 
 			<div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
 				{filteredProjects.length > 0 ? (
-					filteredProjects.map((project) => (
-						<ProjectCard key={project.id} project={project} />
+					filteredProjects.map((project, index) => (
+						<ProjectCard
+							key={project.id}
+							project={project}
+							index={index}
+						/>
 					))
 				) : (
-					<div className="col-span-full py-10 text-center">
+					<div
+						className="col-span-full py-10 text-center"
+						data-aos="fade-up"
+					>
 						<p className="text-lg text-gray-400">
 							No projects found in this category.
 						</p>
