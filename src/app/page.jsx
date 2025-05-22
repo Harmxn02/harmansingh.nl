@@ -6,6 +6,7 @@ import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import IntroAnimation from "./components/IntroAnimation";
 import Navigation from "./components/Navigation";
+import Form from "./components/Form";
 
 import { useState } from "react";
 
@@ -28,6 +29,7 @@ export default function Home() {
 					<Projects />
 					<Skills />
 					<About />
+					<Form />
 					<Navigation />
 				</>
 			)}
