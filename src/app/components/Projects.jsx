@@ -159,9 +159,11 @@ const Projects = () => {
 		}
 		return projects.filter((project) => project.domain === selectedDomain);
 	}, [selectedDomain]);
-
 	return (
-		<div className="mx-auto max-w-(--breakpoint-2xl) bg-black px-8 py-24 text-white 2xl:px-1">
+		<section
+			id="projects"
+			className="mx-auto max-w-(--breakpoint-2xl) bg-black px-8 py-24 text-white 2xl:px-1"
+		>
 			<SectionTitle />
 
 			{/* Filter buttons */}
@@ -194,7 +196,7 @@ const Projects = () => {
 					</div>
 				)}
 			</div>
-		</div>
+		</section>
 	);
 };
 

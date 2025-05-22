@@ -5,6 +5,7 @@ import About from "./components/About";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import IntroAnimation from "./components/IntroAnimation";
+import Navigation from "./components/Navigation";
 
 import { useState } from "react";
 
@@ -19,7 +20,7 @@ export default function Home() {
 	};
 
 	return (
-		<div className="selection:bg-purple-300/40 bg-black font-[family-name:var(--font-geist-sans)] text-white">
+		<div className="bg-black font-[family-name:var(--font-geist-sans)] text-white selection:bg-purple-300/40">
 			{showIntro && <IntroAnimation onEnd={handleIntroEnd} />}
 			{showHero && (
 				<>
@@ -27,6 +28,7 @@ export default function Home() {
 					<Projects />
 					<Skills />
 					<About />
+					<Navigation />
 				</>
 			)}
 		</div>

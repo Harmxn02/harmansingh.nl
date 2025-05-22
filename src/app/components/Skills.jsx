@@ -48,7 +48,10 @@ const SectionTitle = () => {
 
 const Skills = () => {
 	return (
-		<div className="bg-backgroundSecondary mx-auto max-w-(--breakpoint-2xl) px-8 py-24 text-white 2xl:px-1">
+		<section
+			id="skills"
+			className="bg-backgroundSecondary mx-auto max-w-(--breakpoint-2xl) px-8 py-24 text-white 2xl:px-1"
+		>
 			<SectionTitle />{" "}
 			<div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
 				{Object.entries(skills).map(([category, categorySkills]) => (
@@ -80,7 +83,7 @@ const Skills = () => {
 				<strong className="text-purple-light"> Rust</strong> and{" "}
 				<strong className="text-purple-light">Go</strong>!
 			</p>
-		</div>
+		</section>
 	);
 };
 

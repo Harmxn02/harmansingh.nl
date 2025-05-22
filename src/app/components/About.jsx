@@ -14,7 +14,10 @@ const SectionTitle = () => {
 
 const About = () => {
 	return (
-		<div className="bg-backgroundPrimary mx-auto max-w-(--breakpoint-2xl) px-8 py-24 text-white 2xl:px-1">
+		<section
+			id="about"
+			className="bg-backgroundPrimary mx-auto max-w-(--breakpoint-2xl) px-8 py-24 text-white 2xl:px-1"
+		>
 			<SectionTitle />
 
 			<div className="grid gap-8 md:grid-cols-2">
@@ -89,7 +92,7 @@ const About = () => {
 					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 	);
 };
 
