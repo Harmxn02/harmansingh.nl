@@ -23,18 +23,18 @@ const About = () => {
 			<div className="grid gap-8 md:grid-cols-2">
 				<div className="space-y-6">
 					<p className="text-textPrimary text-lg leading-relaxed">
-						Hello! I'm Harman Singh, a Software Engineer / Data
+						Hello! I&apos;m Harman Singh, a Software Engineer / Data
 						Scientist based in Belgium 🇧🇪.
 					</p>
 					<p className="text-textPrimary text-lg leading-relaxed">
 						My journey in tech started all the way back in 2020,
 						when during the COVID-19 Lockdown I discovered a new
-						interest in programming. I started with CS50's
+						interest in programming. I started with CS50&apos;s
 						introduction to programming course, and I have not
 						stopped learning since.
 					</p>
 					<p className="text-textPrimary text-lg leading-relaxed">
-						At the moment I am finishing up my bachelor's in Applied
+						At the moment I am finishing up my bachelor&apos;s in Applied
 						Computer Science at Howest University of Applied
 						Sciences. I recently finished an internship there as an
 						Applied AI Researcher (more about that on my LinkedIn)
