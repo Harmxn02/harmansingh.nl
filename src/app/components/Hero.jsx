@@ -29,7 +29,7 @@ const Link = ({ content, url, children }) => {
 
 const MainContent = () => {
 	return (
-		<div className="flex min-h-[80vh] flex-col justify-center space-y-8">
+		<div className="flex flex-col justify-center space-y-8 pt-[10vh] pb-[10vh] md:min-h-[80vh]">
 			<div className="flex w-full flex-col space-y-1 space-x-2">
 				<h1 className="text-[2.5rem] leading-none font-semibold tracking-[-0.125rem] sm:text-[4rem] sm:tracking-[-0.25rem] md:text-[5rem] md:tracking-[-0.375rem] lg:text-[7rem] lg:tracking-[-0.5rem]">
 					Harman Singh
@@ -57,7 +57,7 @@ const Hero = () => {
 	return (
 		<section
 			id="hero"
-			className="mx-auto min-h-screen max-w-(--breakpoint-2xl) pt-8 pr-8 pl-8 text-white 2xl:pr-1 2xl:pl-1"
+			className="mx-auto max-w-(--breakpoint-2xl) pt-8 pr-8 pl-8 text-white md:min-h-screen 2xl:pr-1 2xl:pl-1"
 		>
 			<div className="flex items-center justify-between">
 				<TopLogo />
