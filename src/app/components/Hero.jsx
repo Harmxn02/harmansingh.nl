@@ -133,11 +133,13 @@ const Hero = () => {
 							clipRule="evenodd"
 						/>
 					</svg>
-				</CTA>
+				</CTA>{" "}
 			</div>{" "}
-			<div className="flex flex-col md:flex-row md:items-center md:justify-between">
+			<div className="flex w-full flex-col md:flex-row md:items-center">
 				<MainContent />
-				<AnimatedPattern />
+				<div className="w-1/2">
+					<AnimatedPattern />
+				</div>
 			</div>
 		</section>
 	);
