@@ -29,6 +29,40 @@ const Link = ({ content, url, children }) => {
 	);
 };
 
+const AnimatedPattern = () => {
+	return (
+		<div
+			className="hidden md:flex md:h-full md:items-center md:justify-center"
+			data-aos="fade-left"
+			data-aos-delay="300"
+		>
+			<div className="relative h-[250px] w-[250px] lg:h-[350px] lg:w-[350px] xl:h-[400px] xl:w-[400px]">
+				{/* Main circle */}
+				<div className="border-purple-light absolute inset-0 animate-pulse rounded-full border-2 opacity-20"></div>
+
+				{/* Rotating squares */}
+				<div className="animate-spin-slow absolute inset-0">
+					<div className="border-purple-lighter absolute top-1/2 left-1/2 h-3/4 w-3/4 -translate-x-1/2 -translate-y-1/2 rotate-45 transform border-2 opacity-30"></div>
+				</div>
+
+				{/* Orbiting dot */}
+				<div className="animate-orbit absolute top-0 left-1/2 h-3 w-3 -translate-x-1/2 rounded-full bg-white"></div>
+
+				{/* Gradient sphere */}
+				<div className="from-buttonPrimaryHover to-purple-darker absolute inset-[15%] rounded-full bg-gradient-to-br opacity-60"></div>
+
+				{/* Code-like lines */}
+				<div className="absolute inset-0 flex flex-col items-center justify-center">
+					<div className="bg-purple-light mb-1 h-[1px] w-1/2 opacity-20"></div>
+					<div className="bg-purple-light mb-1 h-[1px] w-3/4 opacity-30"></div>
+					<div className="bg-purple-light mb-1 h-[1px] w-2/3 opacity-25"></div>
+					<div className="bg-purple-light h-[1px] w-1/3 opacity-15"></div>
+				</div>
+			</div>
+		</div>
+	);
+};
+
 const MainContent = () => {
 	return (
 		<div
@@ -101,7 +135,10 @@ const Hero = () => {
 					</svg>
 				</CTA>
 			</div>{" "}
-			<MainContent />
+			<div className="flex flex-col md:flex-row md:items-center md:justify-between">
+				<MainContent />
+				<AnimatedPattern />
+			</div>
 		</section>
 	);
 };
