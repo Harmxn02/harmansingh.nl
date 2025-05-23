@@ -3,6 +3,8 @@ import HeadingUnderline from "./shared/HeadingUnderline";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
+import Image from "next/image";
+
 // Import projects data
 const projects = [
 	{
@@ -105,9 +107,11 @@ const ProjectCard = ({ project, index }) => {
 			data-aos-delay={index * 100}
 		>
 			<div className="relative h-48 w-full overflow-hidden">
-				<img
+				<Image
 					src={project.imageSrc}
 					alt={project.imageAlt}
+					width={600}
+					height={400}
 					className="h-full w-full object-cover"
 				/>
 				<div className="absolute top-2 right-2 rounded-full bg-black/80 px-3 py-1 text-xs font-medium text-white">
