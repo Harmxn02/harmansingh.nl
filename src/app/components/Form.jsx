@@ -106,7 +106,7 @@ export default function Contact() {
 		>
 			<SectionTitle />
 			<div
-				className="mt-12 max-w-4xl rounded-md border border-zinc-800 bg-zinc-900/40 p-6 pb-24 backdrop-blur-sm"
+				className="mt-12 max-w-4xl rounded-md border border-zinc-800 bg-zinc-900/40 p-6 pb-12 backdrop-blur-sm"
 				data-aos="fade-up"
 				data-aos-delay="100"
 			>
