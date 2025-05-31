@@ -55,6 +55,23 @@ const About = () => {
 						Sciences. I recently finished an internship there as an
 						Applied AI Researcher (more about that on my LinkedIn)
 					</p>
+
+					<p className="text-textPrimary text-lg leading-relaxed italic">
+						p.s. I also have a blog (
+						<strong>
+							<a
+								href="https://ti.harmansingh.nl"
+								target="_blank"
+								rel="noopener noreferrer"
+								aria-label="Harman Singh's blog"
+								className="text-purple-light underline"
+							>
+								ti.harmansingh.nl
+							</a>
+						</strong>
+						). I made it for a course in my bachelor&apos;s degree
+						programme, but it's still up.
+					</p>
 					<CTA
 						content="LinkedIn"
 						url="https://www.linkedin.com/in/harmanpnahal/"
