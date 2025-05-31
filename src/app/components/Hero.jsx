@@ -117,7 +117,8 @@ const Hero = () => {
 				<TopLogo />
 				<CTA
 					content="Contact"
-					url="mailto:harman.pnahal@gmail.com"
+					url="#contact"
+					redirect={false}
 					data-aos="fade-up"
 					data-aos-delay="50"
 				>

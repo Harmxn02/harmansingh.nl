@@ -1,21 +1,29 @@
 import React from "react";
 
-const CTA = ({ content, url, children, ...props }) => {
+const CTA = ({ icon, redirect, content, url, children, ...props }) => {
+	let target;
+	let rel;
+
+	if (redirect) {
+		target = "_blank";
+		rel = "noreferrer";
+	} else {
+		target = "_self";
+		rel = "noopener";
+	}
+
 	return (
-		<button
-			className="bg-buttonSecondary hover:bg-buttonSecondaryHover flex items-center gap-2 rounded-full pr-5 font-medium text-black transition-colors duration-500"
+		<a
+			href={url}
 			{...props}
+			target={target}
+			rel={rel}
+			className="bg-buttonSecondary hover:bg-buttonSecondaryHover flex w-fit items-center gap-2 rounded-full py-3 pr-5 pl-5 text-sm font-medium text-black transition-colors duration-500 md:text-base"
 		>
-			<a
-				href={url}
-				target="_blank"
-				rel="noreferrer"
-				className="py-3 pl-5 text-sm md:text-base"
-			>
-				{content}
-			</a>
+			{icon && <span className="text-2xl">{icon}</span>}
+			{content}
 			{children}
-		</button>
+		</a>
 	);
 };
 
