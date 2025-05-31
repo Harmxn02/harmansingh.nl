@@ -1,5 +1,5 @@
 import React, { useState, useMemo, useEffect } from "react";
-import HeadingUnderline from "./shared/HeadingUnderline";
+import SectionTitle from "./shared/SectionTitle";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -7,15 +7,6 @@ import Image from "next/image";
 
 // Import projects data
 import projects from "@/app/data/projects";
-
-const SectionTitle = () => {
-	return (
-		<div className="mb-8" data-aos="fade-up">
-			<h2 className="text-4xl font-semibold tracking-tight">Projects</h2>
-			<HeadingUnderline />
-		</div>
-	);
-};
 
 const ProjectCard = ({ project, index }) => {
 	return (
@@ -116,7 +107,7 @@ const Projects = () => {
 			className="mx-auto max-w-(--breakpoint-2xl) px-8 py-24 text-white 2xl:px-1"
 			data-aos="fade-up"
 		>
-			<SectionTitle />
+			<SectionTitle content="Projects" />
 
 			{/* Filter buttons */}
 			<div

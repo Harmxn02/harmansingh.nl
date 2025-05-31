@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { FaCode, FaDatabase, FaTools } from "react-icons/fa";
 import { IoLanguage } from "react-icons/io5";
 import { TbMathSymbols } from "react-icons/tb";
-import HeadingUnderline from "./shared/HeadingUnderline";
+import SectionTitle from "./shared/SectionTitle";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -39,15 +39,6 @@ const skills = {
 	languages: ["Python", "JavaScript", "TypeScript", "SQL", "Java", "PHP"],
 };
 
-const SectionTitle = () => {
-	return (
-		<div className="mb-8" data-aos="fade-up">
-			<h2 className="text-4xl font-semibold tracking-tight">Skills</h2>
-			<HeadingUnderline />
-		</div>
-	);
-};
-
 const Skills = () => {
 	// Initialize AOS
 	useEffect(() => {
@@ -64,7 +55,7 @@ const Skills = () => {
 			className="bg-backgroundSecondary mx-auto max-w-(--breakpoint-2xl) px-8 py-24 text-white 2xl:px-1"
 			data-aos="fade-up"
 		>
-			<SectionTitle />{" "}
+			<SectionTitle content="Skills" />{" "}
 			<div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
 				{Object.entries(skills).map(
 					([category, categorySkills], index) => (

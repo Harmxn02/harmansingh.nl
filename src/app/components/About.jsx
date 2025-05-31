@@ -3,18 +3,9 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 import CTA from "./shared/CTA";
-import HeadingUnderline from "./shared/HeadingUnderline";
+import SectionTitle from "./shared/SectionTitle";
 
 import { FaLinkedin } from "react-icons/fa";
-
-const SectionTitle = () => {
-	return (
-		<div className="mb-8" data-aos="fade-up">
-			<h2 className="text-4xl font-semibold tracking-tight">About Me</h2>
-			<HeadingUnderline />
-		</div>
-	);
-};
 
 const About = () => {
 	// Initialize AOS
@@ -32,7 +23,7 @@ const About = () => {
 			className="mx-auto max-w-(--breakpoint-2xl) px-8 py-24 text-white 2xl:px-1"
 			data-aos="fade-up"
 		>
-			<SectionTitle />
+			<SectionTitle content="About Me" />
 
 			<div className="grid gap-8 md:grid-cols-2">
 				<div

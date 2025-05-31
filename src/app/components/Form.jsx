@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import toast, { Toaster } from "react-hot-toast";
-import HeadingUnderline from "./shared/HeadingUnderline";
+import SectionTitle from "./shared/SectionTitle";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -53,15 +53,6 @@ function LabelHint(props) {
 // 	toast("✅ Email copied to clipboard");
 // }
 
-const SectionTitle = () => {
-	return (
-		<div className="mb-8" data-aos="fade-up">
-			<h2 className="text-4xl font-semibold tracking-tight">Contact</h2>
-			<HeadingUnderline />
-		</div>
-	);
-};
-
 export default function Contact() {
 	const form = useRef();
 
@@ -104,7 +95,7 @@ export default function Contact() {
 			className="mx-auto max-w-(--breakpoint-2xl) px-8 py-24 text-white 2xl:px-1"
 			data-aos="fade-up"
 		>
-			<SectionTitle />
+			<SectionTitle content="Contact" />
 			<div
 				className="mt-12 max-w-4xl rounded-md border border-zinc-800 bg-zinc-900/40 p-6 pb-12 backdrop-blur-sm"
 				data-aos="fade-up"
