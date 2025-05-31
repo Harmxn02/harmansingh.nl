@@ -3,6 +3,9 @@ import CTA from "./shared/CTA";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
+import { FaLinkedinIn } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+
 const TopLogo = () => {
 	return (
 		<div className="flex max-w-fit items-end space-x-1" data-aos="fade-up">
@@ -15,17 +18,15 @@ const TopLogo = () => {
 
 const Link = ({ content, url, children }) => {
 	return (
-		<button className="bg-buttonPrimaryHover hover:bg-pillSecondary flex items-center gap-2 rounded-md font-medium text-white transition-colors duration-500">
-			<a
-				href={url}
-				target="_blank"
-				rel="noreferrer"
-				className="px-5 py-3 text-sm md:text-base"
-			>
-				{content}
-			</a>
+		<a
+			href={url}
+			target="_blank"
+			rel="noreferrer"
+			className="bg-buttonPrimaryHover hover:bg-pillSecondary flex items-center gap-3 rounded-md px-5 py-3 text-sm font-medium text-white transition-colors duration-500 md:text-base"
+		>
 			{children}
-		</button>
+			<span className="hidden sm:block">{content}</span>
+		</a>
 	);
 };
 
@@ -87,11 +88,12 @@ const MainContent = () => {
 				<Link
 					content="LinkedIn"
 					url="https://www.linkedin.com/in/harmanpnahal/"
-				></Link>
-				<Link
-					content="GitHub"
-					url="https://github.com/Harmxn02/"
-				></Link>
+				>
+					<FaLinkedinIn className="size-5" />
+				</Link>
+				<Link content="GitHub" url="https://github.com/Harmxn02/">
+					<FaGithub className="size-5" />
+				</Link>
 			</div>
 		</div>
 	);
@@ -115,26 +117,23 @@ const Hero = () => {
 		>
 			<div className="flex items-center justify-between">
 				<TopLogo />
-				<CTA
-					content="Contact"
-					url="#contact"
-					redirect={false}
-					data-aos="fade-up"
-					data-aos-delay="50"
-				>
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						viewBox="0 0 24 24"
-						fill="currentColor"
-						className="size-5"
-					>
-						<path
-							fillRule="evenodd"
-							d="M15.75 2.25H21a.75.75 0 0 1 .75.75v5.25a.75.75 0 0 1-1.5 0V4.81L8.03 17.03a.75.75 0 0 1-1.06-1.06L19.19 3.75h-3.44a.75.75 0 0 1 0-1.5Zm-10.5 4.5a1.5 1.5 0 0 0-1.5 1.5v10.5a1.5 1.5 0 0 0 1.5 1.5h10.5a1.5 1.5 0 0 0 1.5-1.5V10.5a.75.75 0 0 1 1.5 0v8.25a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3V8.25a3 3 0 0 1 3-3h8.25a.75.75 0 0 1 0 1.5H5.25Z"
-							clipRule="evenodd"
-						/>
-					</svg>
-				</CTA>{" "}
+
+				<div data-aos="fade-up" data-aos-delay="50">
+					<CTA content="Contact" url="#contact" redirect={false}>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 24 24"
+							fill="currentColor"
+							className="size-5"
+						>
+							<path
+								fillRule="evenodd"
+								d="M15.75 2.25H21a.75.75 0 0 1 .75.75v5.25a.75.75 0 0 1-1.5 0V4.81L8.03 17.03a.75.75 0 0 1-1.06-1.06L19.19 3.75h-3.44a.75.75 0 0 1 0-1.5Zm-10.5 4.5a1.5 1.5 0 0 0-1.5 1.5v10.5a1.5 1.5 0 0 0 1.5 1.5h10.5a1.5 1.5 0 0 0 1.5-1.5V10.5a.75.75 0 0 1 1.5 0v8.25a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3V8.25a3 3 0 0 1 3-3h8.25a.75.75 0 0 1 0 1.5H5.25Z"
+								clipRule="evenodd"
+							/>
+						</svg>
+					</CTA>{" "}
+				</div>
 			</div>{" "}
 			<div className="flex w-full flex-col md:flex-row md:items-center">
 				<MainContent />
