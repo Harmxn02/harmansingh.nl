@@ -63,7 +63,7 @@ const About = () => {
 							</a>
 						</strong>
 						). I made it for a course in my bachelor&apos;s degree
-						programme, but it's still up.
+						programme, but it&apos;s still up.
 					</p>
 					<CTA
 						icon={<FaLinkedin className="text-[#0072b1]" />}
