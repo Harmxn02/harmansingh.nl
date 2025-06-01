@@ -23,7 +23,7 @@ export const metadata = {
 		siteName: "Harman Singh",
 		images: [
 			{
-				url: "/og-image.png",
+				url: "/cooler-og-image.png",
 				width: 1200,
 				height: 628,
 				alt: "Harman Singh's personal website",
