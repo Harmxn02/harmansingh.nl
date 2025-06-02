@@ -1,6 +1,6 @@
 const projects = [
 	{
-		id: 3,
+		id: 1,
 		highlighted: false,
 		name: "harmansingh.nl",
 		imageSrc: "https://placehold.co/600x400?text=Portfolio+Website",
@@ -28,7 +28,7 @@ const projects = [
 	// 	button_text: ["Code Repository", "Live Deployment"],
 	// },
 	{
-		id: 4,
+		id: 3,
 		highlighted: false,
 		name: "links.harmansingh.nl",
 		imageSrc: "https://placehold.co/600x400?text=Links+Website",
@@ -42,7 +42,7 @@ const projects = [
 		button_text: ["Code Repository", "Live Deployment"],
 	},
 	{
-		id: 9,
+		id: 4,
 		highlighted: false,
 		name: "AI-driven Project Estimations Tool",
 		imageSrc: "https://placehold.co/600x400?text=AI+Project+Estimations",
@@ -55,7 +55,7 @@ const projects = [
 		button_text: ["Code Repository"],
 	},
 	{
-		id: 10,
+		id: 5,
 		highlighted: false,
 		name: "Agentic AI to automate ML tasks",
 		imageSrc: "https://placehold.co/600x400?text=Agentic+AI",
@@ -68,7 +68,7 @@ const projects = [
 		button_text: ["no code available"],
 	},
 	{
-		id: 11,
+		id: 6,
 		highlighted: false,
 		name: "Adversarial Attacks and Robustness",
 		imageSrc: "https://placehold.co/600x400?text=Adversarial+Attacks",
@@ -80,6 +80,19 @@ const projects = [
 		repository: "https://github.com/Harmxn02/",
 		button_text: ["no code available"],
 	},
+	{
+		id: 7,
+		highlighted: false,
+		name: "H5 Research",
+		imageSrc: "https://placehold.co/600x400?text=H5+Research",
+		imageAlt: "Preview of project",
+		domain: "ML/AI",
+		technologies: ["Next.js", "Tailwind CSS", "Typescript"],
+		description: "A website where I share all my research (currently in progress). Inspired by Open WebUI's homepage",
+		deployment: "https://h5.harmansingh.nl",
+		button_text: ["Live Deployment"],
+	}
+
 ];
 
 export default projects;
