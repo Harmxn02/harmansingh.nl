@@ -85,7 +85,7 @@ const projects = [
 		id: 7,
 		highlighted: false,
 		name: "H5 Research",
-		imageSrc: "https://placehold.co/600x400?text=H5+Research",
+		imageSrc: "https://placehold.co/600x400/221a13/ffffff/?text=H5+Research&font=Lora",
 		imageAlt: "Preview of project",
 		domain: "Frontend",
 		technologies: ["Next.js", "Tailwind CSS", "Typescript"],
@@ -107,7 +107,7 @@ const projects = [
 			"Travel website for a post-apocalyptic world where users can use drones explore a ravaged Earth (school project).",
 		repository: "",
 		repository: "https://github.com/Harmxn02/AD-project",
-		deployment: "https://ad-project-sigma.vercel.app/",
+		deployment: "https://xplor.harmansingh.nl/",
 		button_text: ["Code Repository", "Live Deployment"],
 	},
 ];
