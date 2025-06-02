@@ -87,7 +87,7 @@ const projects = [
 		name: "H5 Research",
 		imageSrc: "https://placehold.co/600x400?text=H5+Research",
 		imageAlt: "Preview of project",
-		domain: "ML/AI",
+		domain: "Frontend",
 		technologies: ["Next.js", "Tailwind CSS", "Typescript"],
 		description:
 			"A website where I share all my research (currently in progress). Inspired by Open WebUI's homepage",
@@ -102,7 +102,7 @@ const projects = [
 		imageSrc: "https://placehold.co/600x400/002e2c/92ffd0/?text=X-Plor",
 		imageAlt: "Preview of project",
 		domain: "Fullstack",
-		technologies: ["Next.js", "Tailwind CSS", "Java", "MySQL"],
+		technologies: ["Next.js", "Tailwind CSS", "Java", "SQL"],
 		description:
 			"Travel website for a post-apocalyptic world where users can use drones explore a ravaged Earth (school project).",
 		repository: "",
