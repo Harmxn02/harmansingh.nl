@@ -52,7 +52,8 @@ const projects = [
 		description:
 			"Solution to assist Delaware Consulting consultants in generating more accurate project estimations based on historical data",
 		repository: "https://github.com/Harmxn02/DELAWARExHOWEST",
-		button_text: ["Code Repository"],
+		deployment: "https://delawarexhowest.streamlit.app/",
+		button_text: ["Code Repository", "Live Deployment"],
 	},
 	{
 		id: 5,
@@ -77,8 +78,8 @@ const projects = [
 		technologies: ["Python", "PyTorch", "Computer Vision"],
 		description:
 			"Implemented and analysed the effectiveness of adversarial attacks on pre-trained computer vision models.",
-		repository: "https://github.com/Harmxn02/",
-		button_text: ["no code available"],
+		repository: "https://github.com/Harmxn02/AIS-Project-TinyImageNet",
+		button_text: ["Code Repository"],
 	},
 	{
 		id: 7,
@@ -88,11 +89,27 @@ const projects = [
 		imageAlt: "Preview of project",
 		domain: "ML/AI",
 		technologies: ["Next.js", "Tailwind CSS", "Typescript"],
-		description: "A website where I share all my research (currently in progress). Inspired by Open WebUI's homepage",
+		description:
+			"A website where I share all my research (currently in progress). Inspired by Open WebUI's homepage",
+		repository: "https://github.com/Harmxn02/h5.harmansingh.nl",
 		deployment: "https://h5.harmansingh.nl",
-		button_text: ["Live Deployment"],
-	}
-
+		button_text: ["Code Repository", "Live Deployment"],
+	},
+	{
+		id: 8,
+		highlighted: false,
+		name: "X-Plor",
+		imageSrc: "https://placehold.co/600x400/002e2c/92ffd0/?text=X-Plor",
+		imageAlt: "Preview of project",
+		domain: "Fullstack",
+		technologies: ["Next.js", "Tailwind CSS", "Java", "MySQL"],
+		description:
+			"Travel website for a post-apocalyptic world where users can use drones explore a ravaged Earth (school project).",
+		repository: "",
+		repository: "https://github.com/Harmxn02/AD-project",
+		deployment: "https://ad-project-sigma.vercel.app/",
+		button_text: ["Code Repository", "Live Deployment"],
+	},
 ];
 
 export default projects;
