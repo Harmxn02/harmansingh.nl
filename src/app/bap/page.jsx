@@ -43,7 +43,7 @@ export default function BachelorThesis() {
 							>
 								{thesisStatus} event
 							</p>
-							<p>16 June '25</p>
+							<p>16 June &apos;25</p>
 							<p>—</p>
 							<p>11:00 AM</p>
 						</div>
