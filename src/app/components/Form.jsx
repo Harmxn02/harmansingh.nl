@@ -48,10 +48,10 @@ function LabelHint(props) {
 	return <p className="text-xs text-gray-300">{props.children}</p>;
 }
 
-// function copyEmail() {
-// 	navigator.clipboard.writeText("harman.pnahal@gmail.com");
-// 	toast("✅ Email copied to clipboard");
-// }
+function copyEmail() {
+	navigator.clipboard.writeText("harman.pnahal@gmail.com");
+	toast("✅ Email copied to clipboard");
+}
 
 export default function Contact() {
 	const form = useRef();
@@ -167,19 +167,36 @@ export default function Contact() {
 						</button>
 					</div>
 				</form>{" "}
-				<p
-					className="pt-8 text-white"
-					data-aos="fade-up"
-					data-aos-delay="350"
-				>
+				<p className="flex flex-wrap items-center pt-8 text-white">
 					Or send a regular email:{" "}
 					<a
-						className="font-medium text-[#997db6] underline-offset-2 transition-colors duration-500 hover:text-[#958ab5] hover:underline"
+						className="font-medium text-[#997db6] underline-offset-2 transition-colors duration-500 hover:text-[#958ab5] hover:underline sm:pl-1"
 						href="mailto:harman.pnahal@gmail.com"
 						// onClick={copyEmail}
 					>
 						harman.pnahal@gmail.com
 					</a>
+					<button
+						onClick={copyEmail}
+						className="ml-2 inline-flex items-center rounded-md p-1.5 text-zinc-400 transition-colors duration-200 hover:bg-zinc-800 hover:text-[#997db6]"
+						title="Copy email to clipboard"
+						aria-label="Copy email to clipboard"
+					>
+						<svg
+							className="h-5 w-5"
+							fill="none"
+							stroke="currentColor"
+							viewBox="0 0 24 24"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								strokeLinecap="round"
+								strokeLinejoin="round"
+								strokeWidth={2}
+								d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
+							/>
+						</svg>
+					</button>
 				</p>
 			</div>
 		</section>
