@@ -43,13 +43,12 @@ const About = () => {
 						stopped learning since.
 					</p>
 					<p className="text-textPrimary text-lg leading-relaxed">
-						At the moment I am finishing up my bachelor&apos;s in
-						Applied Computer Science at Howest University of Applied
-						Sciences. I recently finished an internship there as an
-						Applied AI Researcher (more about that on my LinkedIn)
+						At the moment I am pursuing a Master of Science in
+						Artificial Intelligence at The Open University of The
+						Netherlands.
 					</p>
 
-					<p className="text-textPrimary text-lg leading-relaxed italic">
+					{/* <p className="text-textPrimary text-lg leading-relaxed italic">
 						p.s. I also have a blog (
 						<strong>
 							<a
@@ -64,7 +63,7 @@ const About = () => {
 						</strong>
 						). I made it for a course in my bachelor&apos;s degree
 						programme, but it&apos;s still up.
-					</p>
+					</p> */}
 					<CTA
 						icon={<FaLinkedin className="text-[#0072b1]" />}
 						content="LinkedIn"
@@ -96,18 +95,20 @@ const About = () => {
 						data-aos-delay="250"
 					>
 						<h3 className="mb-4 text-xl font-medium">Experience</h3>
-						<div className="space-y-2">
-							<p className="flex items-center justify-between">
-								<span className="font-medium">
-									Applied AI Researcher
-								</span>
-								<span className="text-sm text-gray-400">
-									Feb 2025 - May 2025
-								</span>
-							</p>
-							<p className="text-textPrimary">
-								Howest University of Applied Sciences
-							</p>
+						<div className="space-y-6">
+							<div>
+								<p className="flex items-center justify-between">
+									<span className="font-medium">
+										Applied AI Researcher
+									</span>
+									<span className="text-sm text-gray-400">
+										Feb 2025 - May 2025
+									</span>
+								</p>
+								<p className="text-textPrimary">
+									Howest University of Applied Sciences
+								</p>
+							</div>
 						</div>
 					</div>{" "}
 					<div
@@ -116,19 +117,34 @@ const About = () => {
 						data-aos-delay="300"
 					>
 						<h3 className="mb-4 text-xl font-medium">Education</h3>
-						<div className="space-y-2">
-							<p className="flex items-center justify-between">
-								<span className="font-medium">
-									Bachelor, Applied Computer Science
-								</span>
-								<span className="text-sm text-gray-400">
-									June 2025
-								</span>
-							</p>
-							<p className="text-textPrimary">
-								Howest University of Applied Sciences
-							</p>
-						</div>{" "}
+						<div className="space-y-6">
+							<div className="">
+								<p className="flex items-center justify-between">
+									<span className="font-medium">
+										MS, Artificial Intelligence
+									</span>
+									<span className="text-sm text-gray-400">
+										in progress ...{" "}
+									</span>
+								</p>
+								<p className="text-textPrimary">
+									Open Universiteit
+								</p>
+							</div>{" "}
+							<div className="">
+								<p className="flex items-center justify-between">
+									<span className="font-medium">
+										Bachelor, Applied Computer Science
+									</span>
+									<span className="text-sm text-gray-400">
+										June 2025
+									</span>
+								</p>
+								<p className="text-textPrimary">
+									Howest University of Applied Sciences
+								</p>
+							</div>{" "}
+						</div>
 					</div>
 				</div>
 			</div>
