@@ -52,7 +52,6 @@ html {
 	padding: 0.5rem 1rem;
 }
 
-
 @utility slight-purple-glow {
 	text-shadow: 0 0 20px rgba(153, 125, 182, 0.5);
 }
@@ -97,3 +96,43 @@ html {
 		animation: pulse-slight 3s ease-in-out infinite;
 	}
 }
+
+/* ====================================================================== */
+/* Mobile / AOS layout fixes                                                  */
+/* Prevent a thin white gap at the bottom of the page on mobile devices.   */
+/* AOS uses transforms/translate which can expose the underlying root if   */
+/* the html/body background isn't explicitly set or if subpixel rounding   */
+/* causes overscroll. These rules make the root background explicit and    */
+/* reduce the chance of overflow from transforms.                         */
+/* ====================================================================== */
+
+html,
+body,
+#__next {
+	height: 100%;
+	min-height: 100%;
+	/* dark background used across the site; override if you use a different one */
+	background-color: #08000b;
+}
+
+/* Prevent horizontal/vertical overscroll showing underlying white areas */
+body {
+	overflow-x: hidden;
+	-webkit-overflow-scrolling: touch; /* smoother scrolling on iOS */
+}
+
+/* Hint to browsers that animated elements will change transform/opacity so
+	 they can optimize compositing and avoid visual artifacts during AOS
+	 transitions. Also force a 3D layer to avoid subpixel gaps on some devices. */
+[data-aos],
+.aos-init,
+.aos-animate {
+	will-change: transform, opacity;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	transform: translateZ(0);
+}
+
+/* If you still see a gap after this change, try adjusting the background-color
+	 to match your site's theme or add `overflow-y: hidden` temporarily to body
+	 to diagnose whether content is overscrolling. */
