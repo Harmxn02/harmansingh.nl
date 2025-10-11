@@ -96,10 +96,12 @@ const Projects = () => {
 
 	// Filter projects based on selected domain
 	const filteredProjects = useMemo(() => {
+		const visibleProjects = projects.filter((project) => project.shown);
+		
 		if (selectedDomain === "All") {
-			return projects;
+			return visibleProjects;
 		}
-		return projects.filter((project) => project.domain === selectedDomain);
+		return visibleProjects.filter((project) => project.domain === selectedDomain);
 	}, [selectedDomain]);
 	return (
 		<section

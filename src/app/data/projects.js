@@ -1,6 +1,7 @@
 const projects = [
 	{
 		id: 1,
+		shown: false,
 		highlighted: false,
 		name: "harmansingh.nl",
 		imageSrc: "https://placehold.co/600x400?text=Portfolio+Website",
@@ -13,22 +14,24 @@ const projects = [
 		deployment: "https://www.harmansingh.nl",
 		button_text: ["Code Repository", "Live Deployment"],
 	},
-	// {
-	// 	id: 2,
-	// 	highlighted: false,
-	// 	name: "dev.harmansingh.nl",
-	// 	imageSrc: "https://placehold.co/600x400/?text=New+Portfolio+Website",
-	// 	imageAlt: "Preview of project.",
-	// 	domain: "Frontend",
-	// 	technologies: ["Next.js", "Tailwind CSS"],
-	// 	description:
-	// 		"The website you are currently looking at was also coded from scratch using Next.js and Tailwind CSS.",
-	// 	repository: "https://github.com/Harmxn02/dev.harmansingh.nl",
-	// 	deployment: "https://www.harmansingh.nl",
-	// 	button_text: ["Code Repository", "Live Deployment"],
-	// },
+	{
+		id: 2,
+		shown: false,
+		highlighted: false,
+		name: "dev.harmansingh.nl",
+		imageSrc: "https://placehold.co/600x400/?text=New+Portfolio+Website",
+		imageAlt: "Preview of project.",
+		domain: "Frontend",
+		technologies: ["Next.js", "Tailwind CSS"],
+		description:
+			"The website you are currently looking at was also coded from scratch using Next.js and Tailwind CSS.",
+		repository: "https://github.com/Harmxn02/dev.harmansingh.nl",
+		deployment: "https://www.harmansingh.nl",
+		button_text: ["Code Repository", "Live Deployment"],
+	},
 	{
 		id: 3,
+		shown: false,
 		highlighted: false,
 		name: "links.harmansingh.nl",
 		imageSrc: "https://placehold.co/600x400?text=Links+Website",
@@ -43,6 +46,7 @@ const projects = [
 	},
 	{
 		id: 4,
+		shown: true,
 		highlighted: false,
 		name: "AI-driven Project Estimations Tool",
 		imageSrc: "https://placehold.co/600x400?text=AI+Project+Estimations",
@@ -57,6 +61,7 @@ const projects = [
 	},
 	{
 		id: 5,
+		shown: true,
 		highlighted: false,
 		name: "Agentic AI to automate ML tasks",
 		imageSrc: "https://placehold.co/600x400?text=Agentic+AI",
@@ -70,6 +75,7 @@ const projects = [
 	},
 	{
 		id: 6,
+		shown: true,
 		highlighted: false,
 		name: "Adversarial Attacks and Robustness",
 		imageSrc: "https://placehold.co/600x400?text=Adversarial+Attacks",
@@ -83,9 +89,11 @@ const projects = [
 	},
 	{
 		id: 7,
+		shown: false,
 		highlighted: false,
 		name: "H5 Research",
-		imageSrc: "https://placehold.co/600x400/221a13/ffffff/?text=H5+Research&font=Lora",
+		imageSrc:
+			"https://placehold.co/600x400/221a13/ffffff/?text=H5+Research&font=Lora",
 		imageAlt: "Preview of project",
 		domain: "Frontend",
 		technologies: ["Next.js", "Tailwind CSS", "Typescript"],
@@ -97,6 +105,7 @@ const projects = [
 	},
 	{
 		id: 8,
+		shown: false,
 		highlighted: false,
 		name: "X-Plor",
 		imageSrc: "https://placehold.co/600x400/002e2c/92ffd0/?text=X-Plor",
