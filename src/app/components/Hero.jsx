@@ -76,7 +76,7 @@ const MainContent = () => {
 					Harman Singh
 				</h1>
 				<p className="text-[1rem] sm:text-[1.1rem] md:pl-1 md:text-[1.3rem] lg:pl-2 lg:text-[1.5rem]">
-					Software Engineer & Data Scientist
+					Data Scientist + Machine Learning Engineer
 				</p>
 				{/* <div className="w-2 mb-[24px] sm:w-4 sm:mb-[14px] md:w-6 md:mb-[18px] lg:mb-[22px] xl:mb-[26px] 2xl:mb-[30px] aspect-square bg-white"></div> */}
 			</div>
