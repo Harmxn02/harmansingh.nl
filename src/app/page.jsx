@@ -33,7 +33,7 @@ export default function Home() {
 	};
 
 	return (
-		<div className="bg-black font-[family-name:var(--font-geist-sans)] text-white selection:bg-purple-300/40 md:px-8">
+		<div className="bg-[#08000b] font-[family-name:var(--font-geist-sans)] text-white selection:bg-purple-300/40 md:px-8">
 			{showIntro && <IntroAnimation onEnd={handleIntroEnd} />}
 			{showHero && (
 				<>

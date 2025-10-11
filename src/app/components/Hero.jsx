@@ -9,8 +9,8 @@ import { FaGithub } from "react-icons/fa";
 const TopLogo = () => {
 	return (
 		<div className="flex max-w-fit items-end space-x-1" data-aos="fade-up">
-			<h1 className="text-2xl font-semibold text-white md:text-3xl">
-				Harman.
+			<h1 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">
+				HPS
 			</h1>
 		</div>
 	);
@@ -71,12 +71,13 @@ const MainContent = () => {
 			data-aos="fade-up"
 			data-aos-delay="100"
 		>
-			<div className="flex w-full flex-col space-y-1 space-x-2">
-				<h1 className="text-[2.5rem] leading-none font-semibold tracking-[-0.125rem] sm:text-[4rem] sm:tracking-[-0.25rem] md:text-[5rem] md:tracking-[-0.375rem] lg:text-[7rem] lg:tracking-[-0.5rem]">
+			<div className="flex w-full flex-col space-y-3 space-x-2">
+				<h1 className="slight-purple-glow text-[2.5rem] leading-none font-semibold tracking-[-0.125rem] sm:text-[4rem] sm:tracking-[-0.25rem] md:text-[5rem] md:tracking-[-0.375rem] lg:text-[7rem] lg:tracking-[-0.5rem]">
 					Harman Singh
 				</h1>
+
 				<p className="text-[1rem] sm:text-[1.1rem] md:pl-1 md:text-[1.3rem] lg:pl-2 lg:text-[1.5rem]">
-					Data Scientist + Machine Learning Engineer
+					Data Scientist // ML Engineer
 				</p>
 				{/* <div className="w-2 mb-[24px] sm:w-4 sm:mb-[14px] md:w-6 md:mb-[18px] lg:mb-[22px] xl:mb-[26px] 2xl:mb-[30px] aspect-square bg-white"></div> */}
 			</div>

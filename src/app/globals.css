@@ -9,8 +9,8 @@ html {
 	--color-foreground: var(--foreground);
 
 	/* Custom colours */
-	--color-buttonPrimary: #101010;
-	--color-buttonPrimaryHover: #202020;
+	--color-buttonPrimary: #101010; /* Dark purple */
+	--color-buttonPrimaryHover: #1e1a26; /* Lighter dark purple */
 	--color-buttonSecondary: white;
 	--color-buttonSecondaryHover: #cecece;
 
@@ -50,6 +50,11 @@ html {
 	border-style: dashed;
 	border-color: #878787;
 	padding: 0.5rem 1rem;
+}
+
+
+@utility slight-purple-glow {
+	text-shadow: 0 0 20px rgba(153, 125, 182, 0.5);
 }
 
 @keyframes spin-slow {

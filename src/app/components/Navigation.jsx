@@ -7,6 +7,14 @@ import "aos/dist/aos.css";
 export default function Navigation() {
 	const [activeSection, setActiveSection] = useState("hero");
 
+	const sections = {
+		hero: ["Home", "hero"],
+		projects: ["Projects", "projects"],
+		skills: ["Skills", "skills"],
+		about: ["About", "about"],
+		contact: ["Contact", "contact"],
+	};
+
 	// Initialize AOS
 	useEffect(() => {
 		AOS.init({
@@ -53,66 +61,23 @@ export default function Navigation() {
 		>
 			<div className="flex items-center space-x-4 rounded-full border border-zinc-800 bg-zinc-900/80 px-6 py-3 backdrop-blur-md">
 				<ul className="flex items-center space-x-8">
-					<li>
-						<button
-							onClick={() => scrollToSection("hero")}
-							className={`text-sm font-medium transition-colors ${
-								activeSection === "hero"
-									? "text-white"
-									: "text-zinc-400 hover:text-zinc-200"
-							}`}
-						>
-							Home
-						</button>
-					</li>
-					<li>
-						<button
-							onClick={() => scrollToSection("projects")}
-							className={`text-sm font-medium transition-colors ${
-								activeSection === "projects"
-									? "text-white"
-									: "text-zinc-400 hover:text-zinc-200"
-							}`}
-						>
-							Projects
-						</button>
-					</li>
-					<li>
-						<button
-							onClick={() => scrollToSection("skills")}
-							className={`text-sm font-medium transition-colors ${
-								activeSection === "skills"
-									? "text-white"
-									: "text-zinc-400 hover:text-zinc-200"
-							}`}
-						>
-							Skills
-						</button>
-					</li>{" "}
-					<li>
-						<button
-							onClick={() => scrollToSection("about")}
-							className={`text-sm font-medium transition-colors ${
-								activeSection === "about"
-									? "text-white"
-									: "text-zinc-400 hover:text-zinc-200"
-							}`}
-						>
-							About
-						</button>
-					</li>
-					<li>
-						<button
-							onClick={() => scrollToSection("contact")}
-							className={`text-sm font-medium transition-colors ${
-								activeSection === "contact"
-									? "text-white"
-									: "text-zinc-400 hover:text-zinc-200"
-							}`}
-						>
-							Contact
-						</button>
-					</li>
+					{sections &&
+						Object.keys(sections).map((key) => (
+							<li key={key}>
+								<button
+									onClick={() =>
+										scrollToSection(sections[key][1])
+									}
+									className={`text-sm font-medium transition-colors ${
+										activeSection === sections[key][1]
+											? "cursor-pointer text-white"
+											: "cursor-pointer text-zinc-400 hover:text-zinc-200"
+									}`}
+								>
+									{sections[key][0]}
+								</button>
+							</li>
+						))}
 				</ul>
 			</div>
 		</nav>

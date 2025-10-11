@@ -18,7 +18,7 @@ const CTA = ({ icon, redirect, content, url, children, ...props }) => {
 			{...props}
 			target={target}
 			rel={rel}
-			className="bg-buttonSecondary hover:bg-buttonSecondaryHover flex w-fit items-center gap-2 rounded-full py-3 pr-5 pl-5 text-sm font-medium text-black transition-colors duration-500 md:text-base"
+			className="bg-buttonSecondary hover:bg-buttonSecondaryHover flex w-fit items-center gap-2 rounded-md py-3 pr-5 pl-5 text-sm font-medium text-black transition-colors duration-500 md:text-base"
 		>
 			{icon && <span className="text-2xl">{icon}</span>}
 			{content}
