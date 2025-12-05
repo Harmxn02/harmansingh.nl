@@ -12,6 +12,42 @@ import { FaLinkedin } from "react-icons/fa";
 // import images
 import HowestLogo from "../../../public/assets/howest_logo.webp";
 import OULogo from "../../../public/assets/ou_logo.webp";
+import UGentLogo from "../../../public/assets/ugent_logo.webp";
+
+const ExperienceItem = ({ role, company, duration, logo }) => (
+	<div className="xs:flex-row xs:items-center flex min-w-full flex-col justify-between">
+		<div className="flex items-center">
+			<Image
+				src={logo}
+				alt={`${company} logo`}
+				width={32}
+				height={32}
+				className="mr-4 mb-1 inline-block"
+			/>
+			<div>
+				<p className="font-medium">{role}</p>
+				<p className="text-textPrimary">{company}</p>
+			</div>
+		</div>
+		<span className="text-sm text-gray-400">{duration}</span>
+	</div>
+);
+
+const EducationItem = ({ institution, degree, logo }) => (
+	<div className="flex items-center">
+		<Image
+			src={logo}
+			alt={`${institution} logo`}
+			width={32}
+			height={32}
+			className="mr-4 mb-1 inline-block"
+		/>
+		<div>
+			<span className="font-medium">{degree}</span>
+			<p className="text-textPrimary">{institution}</p>
+		</div>
+	</div>
+);
 
 const About = () => {
 	// Initialize AOS
@@ -38,8 +74,8 @@ const About = () => {
 					data-aos-delay="100"
 				>
 					<p className="text-textPrimary text-lg leading-relaxed">
-						Hello! I&apos;m Harman, a Data
-						Scientist / ML Engineer based in Belgium 🇧🇪.
+						Hello! I&apos;m Harman, a Data Scientist / ML Engineer
+						based in Belgium 🇧🇪.
 					</p>
 					<p className="text-textPrimary text-lg leading-relaxed">
 						My journey in tech started all the way back in 2020,
@@ -53,23 +89,6 @@ const About = () => {
 						Artificial Intelligence at The Open University of The
 						Netherlands.
 					</p>
-
-					{/* <p className="text-textPrimary text-lg leading-relaxed italic">
-						p.s. I also have a blog (
-						<strong>
-							<a
-								href="https://ti.harmansingh.nl"
-								target="_blank"
-								rel="noopener noreferrer"
-								aria-label="Harman Singh's blog"
-								className="text-purple-light underline"
-							>
-								ti.harmansingh.nl
-							</a>
-						</strong>
-						). I made it for a course in my bachelor&apos;s degree
-						programme, but it&apos;s still up.
-					</p> */}
 					<CTA
 						icon={<FaLinkedin className="text-[#0072b1]" />}
 						content="LinkedIn"
@@ -88,31 +107,13 @@ const About = () => {
 						data-aos-delay="250"
 					>
 						<h3 className="mb-4 text-xl font-medium">Experience</h3>
-						<div className="space-y-6">
-							<div className="flex items-center justify-between">
-								{/* Applied AI Researcher */}
-								<div className="flex items-center">
-									<Image
-										src={HowestLogo}
-										alt="Howest logo"
-										width={32}
-										height={32}
-										className="mr-4 mb-1 inline-block"
-									/>
-									<div>
-										<p className="font-medium">
-											Applied AI Researcher
-										</p>
-										<p className="text-textPrimary">
-											Howest University of Applied
-											Sciences
-										</p>
-									</div>
-								</div>
-								<span className="text-sm text-gray-400">
-									Feb 2025 - May 2025
-								</span>
-							</div>
+						<div className="flex flex-col items-start space-y-6">
+							<ExperienceItem
+								role="Applied AI Researcher"
+								company="Howest University of Applied Sciences"
+								duration="Feb 2025 - May 2025"
+								logo={HowestLogo}
+							/>
 						</div>
 					</div>{" "}
 					<div
@@ -122,43 +123,17 @@ const About = () => {
 					>
 						<h3 className="mb-4 text-xl font-medium">Education</h3>
 						<div className="space-y-4">
-							<div className="flex items-center">
-								<Image
-									src={OULogo}
-									alt="Open Universiteit logo"
-									width={32}
-									height={32}
-									className="mr-4 mb-1 inline-block"
-								/>
-								<div>
-									<span className="font-medium">
-										Master of Science in Artificial
-										Intelligence
-									</span>
+							<EducationItem
+								institution="Open Universiteit"
+								degree="Master of Science in Artificial Intelligence"
+								logo={OULogo}
+							/>
 
-									<p className="text-textPrimary">
-										Open Universiteit
-									</p>
-								</div>
-							</div>
-							<div className="flex items-center">
-								<Image
-									src={HowestLogo}
-									alt="Howest logo"
-									width={32}
-									height={32}
-									className="mr-4 mb-1 inline-block"
-								/>
-								<div>
-									<span className="font-medium">
-										Bachelor in Applied Computer Science
-									</span>
-
-									<p className="text-textPrimary">
-										Howest University of Applied Sciences
-									</p>
-								</div>
-							</div>
+							<EducationItem
+								institution="Howest University of Applied Sciences"
+								degree="Bachelor in Applied Computer Science"
+								logo={HowestLogo}
+							/>
 						</div>
 					</div>
 				</div>

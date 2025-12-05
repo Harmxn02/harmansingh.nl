@@ -25,6 +25,9 @@ html {
 	--color-purple-medium: #755eac;
 	--color-purple-dark: #574c9c;
 	--color-purple-darker: #382f5d;
+
+	--breakpoint-xs: 450px;
+
 }
 
 /*
