@@ -116,7 +116,12 @@ const About = () => {
 						data-aos="fade-up"
 						data-aos-delay="300"
 					>
-						<h3 className="mb-4 text-xl font-medium">Education</h3>
+						<div className="mb-4 flex items-center justify-between">
+							<h3 className="text-xl font-medium">Education</h3>
+							<p className="underline text-purple-light text-sm font-bold">
+								<a href="/in/education" target="_blank" >more information</a>
+							</p>
+						</div>
 						<div className="space-y-6">
 							<div className="">
 								<p className="flex items-center justify-between">
