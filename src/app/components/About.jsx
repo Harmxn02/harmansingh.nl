@@ -122,9 +122,9 @@ const About = () => {
 						data-aos-delay="300"
 					>
 						<h3 className="mb-4 text-xl font-medium">Education</h3>
-						<div className="space-y-4">
+						<div className="space-y-4">							
 							<EducationItem
-								institution="Open Universiteit"
+								institution="Open Universiteit (in progress...)"
 								degree="Master of Science in Artificial Intelligence"
 								logo={OULogo}
 							/>
