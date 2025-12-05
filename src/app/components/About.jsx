@@ -2,10 +2,16 @@ import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
+import Image from "next/image";
+
 import CTA from "./shared/CTA";
 import SectionTitle from "./shared/SectionTitle";
 
 import { FaLinkedin } from "react-icons/fa";
+
+// import images
+import HowestLogo from "../../../public/assets/howest_logo.webp";
+import OULogo from "../../../public/assets/ou_logo.webp";
 
 const About = () => {
 	// Initialize AOS
@@ -32,12 +38,12 @@ const About = () => {
 					data-aos-delay="100"
 				>
 					<p className="text-textPrimary text-lg leading-relaxed">
-						Hello! I&apos;m Harman Singh, a Software Engineer / Data
-						Scientist based in Belgium 🇧🇪.
+						Hello! I&apos;m Harman, a Data
+						Scientist / ML Engineer based in Belgium 🇧🇪.
 					</p>
 					<p className="text-textPrimary text-lg leading-relaxed">
 						My journey in tech started all the way back in 2020,
-						when during the COVID-19 Lockdown I discovered a new
+						when during the COVID-19 lockdown I discovered a new
 						interest in programming. I started with CS50&apos;s
 						introduction to programming course, and I have not
 						stopped learning since.
@@ -69,20 +75,7 @@ const About = () => {
 						content="LinkedIn"
 						redirect={true}
 						url="https://www.linkedin.com/in/harmanpnahal/"
-					>
-						{/* <svg
-							xmlns="http://www.w3.org/2000/svg"
-							viewBox="0 0 24 24"
-							fill="currentColor"
-							className="size-5"
-						>
-							<path
-								fillRule="evenodd"
-								d="M15.75 2.25H21a.75.75 0 0 1 .75.75v5.25a.75.75 0 0 1-1.5 0V4.81L8.03 17.03a.75.75 0 0 1-1.06-1.06L19.19 3.75h-3.44a.75.75 0 0 1 0-1.5Zm-10.5 4.5a1.5 1.5 0 0 0-1.5 1.5v10.5a1.5 1.5 0 0 0 1.5 1.5h10.5a1.5 1.5 0 0 0 1.5-1.5V10.5a.75.75 0 0 1 1.5 0v8.25a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3V8.25a3 3 0 0 1 3-3h8.25a.75.75 0 0 1 0 1.5H5.25Z"
-								clipRule="evenodd"
-							/>
-						</svg> */}
-					</CTA>
+					></CTA>
 				</div>{" "}
 				<div
 					className="space-y-6"
@@ -96,18 +89,29 @@ const About = () => {
 					>
 						<h3 className="mb-4 text-xl font-medium">Experience</h3>
 						<div className="space-y-6">
-							<div>
-								<p className="flex items-center justify-between">
-									<span className="font-medium">
-										Applied AI Researcher
-									</span>
-									<span className="text-sm text-gray-400">
-										Feb 2025 - May 2025
-									</span>
-								</p>
-								<p className="text-textPrimary">
-									Howest University of Applied Sciences
-								</p>
+							<div className="flex items-center justify-between">
+								{/* Applied AI Researcher */}
+								<div className="flex items-center">
+									<Image
+										src={HowestLogo}
+										alt="Howest logo"
+										width={32}
+										height={32}
+										className="mr-4 mb-1 inline-block"
+									/>
+									<div>
+										<p className="font-medium">
+											Applied AI Researcher
+										</p>
+										<p className="text-textPrimary">
+											Howest University of Applied
+											Sciences
+										</p>
+									</div>
+								</div>
+								<span className="text-sm text-gray-400">
+									Feb 2025 - May 2025
+								</span>
 							</div>
 						</div>
 					</div>{" "}
@@ -116,39 +120,45 @@ const About = () => {
 						data-aos="fade-up"
 						data-aos-delay="300"
 					>
-						<div className="mb-4 flex items-center justify-between">
-							<h3 className="text-xl font-medium">Education</h3>
-							<p className="underline text-purple-light text-sm font-bold">
-								<a href="/in/education" target="_blank" >more information</a>
-							</p>
-						</div>
-						<div className="space-y-6">
-							<div className="">
-								<p className="flex items-center justify-between">
+						<h3 className="mb-4 text-xl font-medium">Education</h3>
+						<div className="space-y-4">
+							<div className="flex items-center">
+								<Image
+									src={OULogo}
+									alt="Open Universiteit logo"
+									width={32}
+									height={32}
+									className="mr-4 mb-1 inline-block"
+								/>
+								<div>
 									<span className="font-medium">
-										MS, Artificial Intelligence
+										Master of Science in Artificial
+										Intelligence
 									</span>
-									<span className="text-sm text-gray-400">
-										in progress ...{" "}
-									</span>
-								</p>
-								<p className="text-textPrimary">
-									Open Universiteit
-								</p>
-							</div>{" "}
-							<div className="">
-								<p className="flex items-center justify-between">
+
+									<p className="text-textPrimary">
+										Open Universiteit
+									</p>
+								</div>
+							</div>
+							<div className="flex items-center">
+								<Image
+									src={HowestLogo}
+									alt="Howest logo"
+									width={32}
+									height={32}
+									className="mr-4 mb-1 inline-block"
+								/>
+								<div>
 									<span className="font-medium">
-										Bachelor, Applied Computer Science
+										Bachelor in Applied Computer Science
 									</span>
-									<span className="text-sm text-gray-400">
-										June 2025
-									</span>
-								</p>
-								<p className="text-textPrimary">
-									Howest University of Applied Sciences
-								</p>
-							</div>{" "}
+
+									<p className="text-textPrimary">
+										Howest University of Applied Sciences
+									</p>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
