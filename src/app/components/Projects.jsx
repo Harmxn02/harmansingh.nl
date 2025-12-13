@@ -18,12 +18,12 @@ const ProjectCard = ({ project, index }) => {
 			<div className="relative h-48 w-full overflow-hidden">
 				<Image
 					src={project.imageSrc}
-					alt={project.imageAlt}
+					alt={"preview of project: " + project.name}
 					width={600}
 					height={400}
 					className="h-full w-full object-cover"
 				/>
-				<div className="absolute top-2 right-2 rounded-full bg-black/80 px-3 py-1 text-xs font-medium text-white">
+				<div className="absolute top-2 right-2 rounded-lg bg-black/80 px-2 py-1 text-xs font-medium text-white">
 					{project.domain}
 				</div>
 			</div>
@@ -47,10 +47,10 @@ const ProjectCard = ({ project, index }) => {
 					</div>
 				</div>
 				<div className="flex flex-wrap gap-3">
-					{project.repository &&
+					{project.left_button &&
 						project.button_text[0] !== "no code available" && (
 							<a
-								href={project.repository}
+								href={project.left_button}
 								target="_blank"
 								rel="noreferrer"
 								className="bg-pillPrimary hover:bg-pillSecondary rounded-md px-4 py-2 text-sm font-medium text-white transition-all"
@@ -58,9 +58,9 @@ const ProjectCard = ({ project, index }) => {
 								{project.button_text[0]}
 							</a>
 						)}
-					{project.deployment && (
+					{project.right_button && (
 						<a
-							href={project.deployment}
+							href={project.right_button}
 							target="_blank"
 							rel="noreferrer"
 							className="bg-buttonSecondary hover:bg-buttonSecondaryHover rounded-md px-4 py-2 text-sm font-medium text-black transition-all"
@@ -96,12 +96,14 @@ const Projects = () => {
 
 	// Filter projects based on selected domain
 	const filteredProjects = useMemo(() => {
-		const visibleProjects = projects.filter((project) => project.shown);
-		
+		const visibleProjects = projects.filter((project) => project.visible);
+
 		if (selectedDomain === "All") {
 			return visibleProjects;
 		}
-		return visibleProjects.filter((project) => project.domain === selectedDomain);
+		return visibleProjects.filter(
+			(project) => project.domain === selectedDomain,
+		);
 	}, [selectedDomain]);
 	return (
 		<section
@@ -136,7 +138,7 @@ const Projects = () => {
 				{filteredProjects.length > 0 ? (
 					filteredProjects.map((project, index) => (
 						<ProjectCard
-							key={project.id}
+							key={project.name}
 							project={project}
 							index={index}
 						/>
