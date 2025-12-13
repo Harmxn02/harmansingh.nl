@@ -1,7 +1,5 @@
 import React, { useEffect } from "react";
 import CTA from "./shared/CTA";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
@@ -101,14 +99,6 @@ const MainContent = () => {
 };
 
 const Hero = () => {
-	// Initialize AOS
-	useEffect(() => {
-		AOS.init({
-			duration: 800,
-			once: true,
-			easing: "ease-in-out",
-		});
-	}, []);
 
 	return (
 		<section

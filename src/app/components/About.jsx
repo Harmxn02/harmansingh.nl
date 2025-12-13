@@ -1,7 +1,4 @@
 import React, { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
-
 import Image from "next/image";
 
 import CTA from "./shared/CTA";
@@ -50,15 +47,6 @@ const EducationItem = ({ institution, degree, logo }) => (
 );
 
 const About = () => {
-	// Initialize AOS
-	useEffect(() => {
-		AOS.init({
-			duration: 800,
-			once: true,
-			easing: "ease-in-out",
-		});
-	}, []);
-
 	return (
 		<section
 			id="about"

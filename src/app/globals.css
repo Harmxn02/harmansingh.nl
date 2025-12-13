@@ -4,6 +4,24 @@ html {
 	scroll-behavior: smooth;
 }
 
+/* For font loading issues: */
+* {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+}
+
+[data-aos] {
+	backface-visibility: hidden;
+	perspective: 1000px;
+	transform: translateZ(0);
+	-webkit-font-smoothing: subpixel-antialiased;
+}
+
+[data-aos].aos-animate {
+	-webkit-font-smoothing: subpixel-antialiased;
+}
+
 @theme {
 	--color-background: var(--background);
 	--color-foreground: var(--foreground);

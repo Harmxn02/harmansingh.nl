@@ -2,21 +2,10 @@
 
 import React, { useState, useEffect } from "react";
 import { Typewriter } from "react-simple-typewriter";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 const IntroAnimation = ({ onEnd }) => {
 	const [shrinkText, setShrinkText] = useState(false);
 	const [moveOut, setMoveOut] = useState(false);
-
-	// Initialize AOS
-	useEffect(() => {
-		AOS.init({
-			duration: 800,
-			once: true,
-			easing: "ease-in-out",
-		});
-	}, []);
 
 	useEffect(() => {
 		const shrinkText = setTimeout(() => {

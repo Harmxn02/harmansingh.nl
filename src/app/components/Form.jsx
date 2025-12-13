@@ -2,8 +2,6 @@ import React, { useRef, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import toast, { Toaster } from "react-hot-toast";
 import SectionTitle from "./shared/SectionTitle";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 function Input(props) {
 	return (
@@ -55,15 +53,6 @@ function copyEmail() {
 
 export default function Contact() {
 	const form = useRef();
-
-	// Initialize AOS
-	useEffect(() => {
-		AOS.init({
-			duration: 800,
-			once: true,
-			easing: "ease-in-out",
-		});
-	}, []);
 
 	const sendEmail = (e) => {
 		e.preventDefault();

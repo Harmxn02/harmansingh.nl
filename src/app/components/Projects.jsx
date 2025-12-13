@@ -1,7 +1,5 @@
 import React, { useState, useMemo, useEffect } from "react";
 import SectionTitle from "./shared/SectionTitle";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 import Image from "next/image";
 
@@ -76,15 +74,6 @@ const ProjectCard = ({ project, index }) => {
 
 const Projects = () => {
 	const [selectedDomain, setSelectedDomain] = useState("All");
-
-	// Initialize AOS
-	useEffect(() => {
-		AOS.init({
-			duration: 800,
-			once: true,
-			easing: "ease-in-out",
-		});
-	}, []);
 
 	// Extract unique domains and add "All" option
 	const domains = useMemo(() => {

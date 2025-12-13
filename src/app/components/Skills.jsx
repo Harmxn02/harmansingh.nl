@@ -3,8 +3,6 @@ import { FaCode, FaDatabase, FaTools } from "react-icons/fa";
 import { IoLanguage } from "react-icons/io5";
 import { TbMathSymbols } from "react-icons/tb";
 import SectionTitle from "./shared/SectionTitle";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 const categoryIcons = {
 	webDevelopment: <FaCode className="text-xl text-white" />,
@@ -40,14 +38,6 @@ const skills = {
 };
 
 const Skills = () => {
-	// Initialize AOS
-	useEffect(() => {
-		AOS.init({
-			duration: 800,
-			once: true,
-			easing: "ease-in-out",
-		});
-	}, []);
 
 	return (
 		<section

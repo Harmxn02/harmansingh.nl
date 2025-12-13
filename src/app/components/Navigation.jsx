@@ -1,8 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 export default function Navigation() {
 	const [activeSection, setActiveSection] = useState("hero");
@@ -14,15 +12,6 @@ export default function Navigation() {
 		about: ["About", "about"],
 		contact: ["Contact", "contact"],
 	};
-
-	// Initialize AOS
-	useEffect(() => {
-		AOS.init({
-			duration: 800,
-			once: true,
-			easing: "ease-in-out",
-		});
-	}, []);
 
 	// Update active section based on scroll position
 	useEffect(() => {
