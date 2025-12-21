@@ -25,7 +25,7 @@ const projects = [
 		button_text: ["Code Repository"],
 	},
 	{
-		visible: true,
+		visible: false,
 		name: "H5 Research",
 		imageSrc:
 			"https://placehold.co/600x400/221a13/ffffff/?text=H5+Research&font=Lora",
