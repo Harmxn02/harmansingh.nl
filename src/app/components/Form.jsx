@@ -48,7 +48,7 @@ function LabelHint(props) {
 
 function copyEmail() {
 	navigator.clipboard.writeText("harman.pnahal@gmail.com");
-	toast("✅ Email copied to clipboard");
+	toast("✅ Email copied to clipboard.");
 }
 
 export default function Contact() {
@@ -146,7 +146,26 @@ export default function Contact() {
 					</div>
 
 					<div data-aos="fade-up" data-aos-delay="300">
-						<Toaster />{" "}
+						<Toaster
+							position="bottom-center"
+							toastOptions={{
+								duration: 1000,
+								style: {
+									background: "#27272a",
+									color: "#fafafa",
+									border: "1px solid #3f3f46",
+									borderRadius: "0.5rem",
+									padding: "12px 16px",
+									fontSize: "14px",
+								},
+								success: {
+									iconTheme: {
+										primary: "#997db6",
+										secondary: "#27272a",
+									},
+								},
+							}}
+						/>{" "}
 						<button
 							className="w-full rounded-md bg-[#755eac] p-3 text-sm font-medium text-white transition-colors duration-500 hover:bg-[#997db6]"
 							type="submit"
@@ -156,18 +175,20 @@ export default function Contact() {
 						</button>
 					</div>
 				</form>{" "}
-				<p className="flex flex-wrap items-center pt-8 text-white">
-					Or send a regular email:{" "}
-					<a
-						className="font-medium text-[#997db6] underline-offset-2 transition-colors duration-500 hover:text-[#958ab5] hover:underline sm:pl-1"
-						href="mailto:harman.pnahal@gmail.com"
-						// onClick={copyEmail}
-					>
-						harman.pnahal@gmail.com
-					</a>
+				<div className="inline-flex flex-wrap space-x-4 pt-8">
+					<p className="flex flex-wrap items-center text-white">
+						Or send a regular email:{" "}
+						<a
+							className="font-medium text-[#997db6] underline-offset-2 transition-colors duration-500 hover:text-[#958ab5] hover:underline sm:pl-1"
+							href="mailto:harman.pnahal@gmail.com"
+							// onClick={copyEmail}
+						>
+							harman.pnahal@gmail.com
+						</a>
+					</p>
 					<button
 						onClick={copyEmail}
-						className="ml-2 inline-flex items-center rounded-md p-1.5 text-zinc-400 transition-colors duration-200 hover:bg-zinc-800 hover:text-[#997db6]"
+						className="inline-flex cursor-pointer items-center rounded-md p-1.5 text-zinc-400 transition-colors duration-200 hover:bg-zinc-800 hover:text-[#997db6]"
 						title="Copy email to clipboard"
 						aria-label="Copy email to clipboard"
 					>
@@ -185,8 +206,9 @@ export default function Contact() {
 								d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
 							/>
 						</svg>
+						<a className="ml-1"> copy to clipboard </a>
 					</button>
-				</p>
+				</div>
 			</div>
 		</section>
 	);
