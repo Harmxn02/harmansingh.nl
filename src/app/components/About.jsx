@@ -54,24 +54,24 @@ const About = () => {
 		>
 			<SectionTitle content="About Me" />
 
-			<div className="grid gap-8 xl:grid-cols-2">
+			<div className="grid gap-8 xl:grid-cols-1">
 				<div
-					className="space-y-6"
+					className="text-textPrimary max-w-[60ch] space-y-6 text-lg leading-relaxed"
 					data-aos="fade-up"
 					data-aos-delay="100"
 				>
-					<p className="text-textPrimary text-lg leading-relaxed">
+					<p>
 						Hello! I&apos;m Harman, a Data Scientist / ML Engineer
 						based in Belgium 🇧🇪.
 					</p>
-					<p className="text-textPrimary text-lg leading-relaxed">
+					<p>
 						My journey in tech started all the way back in 2020,
 						when during the COVID-19 lockdown I discovered a new
 						interest in programming. I started with CS50&apos;s
 						introduction to programming course, and I have not
 						stopped learning since.
 					</p>
-					<p className="text-textPrimary text-lg leading-relaxed">
+					<p>
 						At the moment I am pursuing a Master of Science in
 						Artificial Intelligence at The Open University of The
 						Netherlands.
@@ -83,7 +83,7 @@ const About = () => {
 						url="https://www.linkedin.com/in/harmanpnahal/"
 					></CTA>
 				</div>{" "}
-				<div
+				{/* <div
 					className="max-w-md space-y-6"
 					data-aos="fade-up"
 					data-aos-delay="200"
@@ -129,7 +129,7 @@ const About = () => {
 							/>
 						</div>
 					</div>
-				</div>
+				</div> */}
 			</div>
 		</section>
 	);
