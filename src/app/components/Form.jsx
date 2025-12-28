@@ -167,7 +167,7 @@ export default function Contact() {
 							}}
 						/>{" "}
 						<button
-							className="w-full rounded-md bg-[#755eac] p-3 text-sm font-medium text-white transition-colors duration-500 hover:bg-[#997db6]"
+							className="w-full rounded-md cursor-pointer bg-[#755eac] p-3 text-sm font-medium text-white transition-colors duration-500 hover:bg-[#997db6]"
 							type="submit"
 							value="send"
 						>

@@ -57,10 +57,10 @@ export default function Navigation() {
 									onClick={() =>
 										scrollToSection(sections[key][1])
 									}
-									className={`text-sm font-medium transition-colors ${
+									className={`cursor-pointer text-sm font-medium transition-colors ${
 										activeSection === sections[key][1]
-											? "cursor-pointer text-white"
-											: "cursor-pointer text-zinc-400 hover:text-zinc-200"
+											? "text-white"
+											: "text-zinc-400 hover:text-zinc-200"
 									}`}
 								>
 									{sections[key][0]}
