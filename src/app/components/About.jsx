@@ -11,34 +11,33 @@ import HowestLogo from "../../../public/assets/howest_logo.webp";
 import OULogo from "../../../public/assets/ou_logo.webp";
 import UGentLogo from "../../../public/assets/ugent_logo.webp";
 
+const ImageItem = ({ logo, institution }) => (
+	<Image
+		src={logo}
+		alt={`${institution} logo`}
+		width={40}
+		height={40}
+		className="mr-4 mb-1 inline-block rounded-md"
+	/>
+);
+
 const ExperienceItem = ({ role, company, duration, logo }) => (
 	<div className="xs:flex-row xs:items-center flex min-w-full flex-col justify-between">
 		<div className="flex items-center">
-			<Image
-				src={logo}
-				alt={`${company} logo`}
-				width={32}
-				height={32}
-				className="mr-4 mb-1 inline-block"
-			/>
-			<div>
-				<p className="font-medium">{role}</p>
-				<p className="text-textPrimary">{company}</p>
+			<ImageItem logo={logo} institution={company} />
+			<div className="leading-snug">
+				<span className="text-sm text-gray-400">{duration}</span>
+				<p className="font-medium">{company}</p>
+				<p className="text-textPrimary">{role}</p>
 			</div>
 		</div>
-		<span className="text-sm text-gray-400">{duration}</span>
+		{/* <span className="text-sm text-gray-400">{duration}</span> */}
 	</div>
 );
 
 const EducationItem = ({ institution, degree, logo }) => (
 	<div className="flex items-center">
-		<Image
-			src={logo}
-			alt={`${institution} logo`}
-			width={32}
-			height={32}
-			className="mr-4 mb-1 inline-block"
-		/>
+		<ImageItem logo={logo} institution={institution} />
 		<div>
 			<span className="font-medium">{degree}</span>
 			<p className="text-textPrimary">{institution}</p>
@@ -55,7 +54,7 @@ const About = () => {
 		>
 			<SectionTitle content="About Me" />
 
-			<div className="grid gap-8 md:grid-cols-2">
+			<div className="grid gap-8 xl:grid-cols-2">
 				<div
 					className="space-y-6"
 					data-aos="fade-up"
@@ -85,7 +84,7 @@ const About = () => {
 					></CTA>
 				</div>{" "}
 				<div
-					className="space-y-6"
+					className="max-w-md space-y-6"
 					data-aos="fade-up"
 					data-aos-delay="200"
 				>
@@ -96,6 +95,12 @@ const About = () => {
 					>
 						<h3 className="mb-4 text-xl font-medium">Experience</h3>
 						<div className="flex flex-col items-start space-y-6">
+							<ExperienceItem
+								role="PhD Researcher"
+								company="Ghent University"
+								duration="Sep 2027 - present"
+								logo={UGentLogo}
+							/>
 							<ExperienceItem
 								role="Applied AI Researcher"
 								company="Howest University of Applied Sciences"
@@ -110,7 +115,7 @@ const About = () => {
 						data-aos-delay="300"
 					>
 						<h3 className="mb-4 text-xl font-medium">Education</h3>
-						<div className="space-y-4">							
+						<div className="space-y-4">
 							<EducationItem
 								institution="Open Universiteit (in progress...)"
 								degree="Master of Science in Artificial Intelligence"
