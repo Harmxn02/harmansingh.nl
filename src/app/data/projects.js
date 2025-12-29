@@ -40,7 +40,7 @@ const projects = [
 		// imageSrc: "/assets/projects/icon128.png",
 		imageSrc: "https://placehold.co/600x400/ffffff/cc0000/?text=Redirect+YouTube+\nShorts+UI&font=montserrat",
 		domain: "Pet projects",
-		technologies: ["Javascript"],
+		technologies: ["HTML", "CSS", "Javascript"],
 		description: "Browser extension that automatically redirects YouTube Shorts to the regular video player",
 		left_button: "https://github.com/Harmxn02/RedirectYouTubeShortsUI-Extension",
 		button_text: ["Code Repository"],
