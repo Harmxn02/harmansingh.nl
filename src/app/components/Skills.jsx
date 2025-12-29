@@ -49,7 +49,7 @@ const Skills = () => {
 	return (
 		<section
 			id="skills"
-			className="bg-backgroundSecondary mx-auto max-w-(--breakpoint-2xl) px-8 py-24 text-white 2xl:px-1"
+			className="mx-auto max-w-(--breakpoint-2xl) px-8 py-24 text-white 2xl:px-1"
 			data-aos="fade-up"
 		>
 			<SectionTitle content="Skills" />{" "}
