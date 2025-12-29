@@ -67,14 +67,13 @@ const About = () => {
 					<p>
 						My journey in tech started all the way back in 2020,
 						when during the COVID-19 lockdown I discovered a new
-						interest in programming. I started with CS50&apos;s
-						introduction to programming course, and I have not
+						interest in programming. I started with the CS50:
+						Introduction to Computer Science course, and I have not
 						stopped learning since.
 					</p>
 					<p>
-						At the moment I am pursuing a Master of Science in
-						Artificial Intelligence at The Open University of The
-						Netherlands.
+						I am currently pursuing a Master of Science in
+						Artificial Intelligence
 					</p>
 					<CTA
 						icon={<FaLinkedin className="text-[#0072b1]" />}
