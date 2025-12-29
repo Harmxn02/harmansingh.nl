@@ -4,6 +4,12 @@ import CTA from "./shared/CTA";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 
+import Image from "next/image";
+import RobotArm from "../../../public/assets/robot-purple-compressed.webp";
+
+const showAnimatedPattern = true;
+const showRobotArm = false;
+
 const TopLogo = () => {
 	return (
 		<div className="flex max-w-fit items-end space-x-1" data-aos="fade-up">
@@ -77,7 +83,6 @@ const MainContent = () => {
 				<p className="text-[1rem] sm:text-[1.1rem] md:pl-1 md:text-[1.3rem] lg:pl-2 lg:text-[1.5rem]">
 					Data Scientist // ML Engineer
 				</p>
-				{/* <div className="w-2 mb-[24px] sm:w-4 sm:mb-[14px] md:w-6 md:mb-[18px] lg:mb-[22px] xl:mb-[26px] 2xl:mb-[30px] aspect-square bg-white"></div> */}
 			</div>
 			<div
 				className="flex items-baseline space-y-2 space-x-2"
@@ -98,41 +103,61 @@ const MainContent = () => {
 	);
 };
 
-const Hero = () => {
-
+const RobotImage = () => {
 	return (
-		<section
-			id="hero"
-			className="mx-auto max-w-(--breakpoint-2xl) pt-8 pr-8 pl-8 text-white md:min-h-screen 2xl:pr-1 2xl:pl-1"
-			data-aos="fade-up"
-		>
-			<div className="flex items-center justify-between">
-				<TopLogo />
+		<div className="pointer-events-none absolute top-0 right-0 hidden h-screen items-center md:flex">
+			<Image
+				className="aspect-[0.99258] w-[28rem] xl:w-[36rem] 2xl:w-[42rem]"
+				src={RobotArm}
+				alt="robot image"
+				width={1000}
+				height={1000}
+			/>
+		</div>
+	);
+};
 
-				<div data-aos="fade-up" data-aos-delay="50">
-					<CTA content="Contact" url="#contact" redirect={false}>
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							viewBox="0 0 24 24"
-							fill="currentColor"
-							className="size-5"
-						>
-							<path
-								fillRule="evenodd"
-								d="M15.75 2.25H21a.75.75 0 0 1 .75.75v5.25a.75.75 0 0 1-1.5 0V4.81L8.03 17.03a.75.75 0 0 1-1.06-1.06L19.19 3.75h-3.44a.75.75 0 0 1 0-1.5Zm-10.5 4.5a1.5 1.5 0 0 0-1.5 1.5v10.5a1.5 1.5 0 0 0 1.5 1.5h10.5a1.5 1.5 0 0 0 1.5-1.5V10.5a.75.75 0 0 1 1.5 0v8.25a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3V8.25a3 3 0 0 1 3-3h8.25a.75.75 0 0 1 0 1.5H5.25Z"
-								clipRule="evenodd"
-							/>
-						</svg>
-					</CTA>{" "}
+const Hero = () => {
+	return (
+		<>
+			{showRobotArm && <RobotImage />}
+
+			<section
+				id="hero"
+				className="relative mx-auto max-w-(--breakpoint-2xl) pt-8 pr-8 pl-8 text-white md:min-h-screen 2xl:pr-1 2xl:pl-1"
+				data-aos="fade-up"
+			>
+				<div className="flex items-center justify-between">
+					<TopLogo />
+
+					<div data-aos="fade-up" data-aos-delay="50">
+						<CTA content="Contact" url="#contact" redirect={false}>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 24 24"
+								fill="currentColor"
+								className="size-5"
+							>
+								<path
+									fillRule="evenodd"
+									d="M15.75 2.25H21a.75.75 0 0 1 .75.75v5.25a.75.75 0 0 1-1.5 0V4.81L8.03 17.03a.75.75 0 0 1-1.06-1.06L19.19 3.75h-3.44a.75.75 0 0 1 0-1.5Zm-10.5 4.5a1.5 1.5 0 0 0-1.5 1.5v10.5a1.5 1.5 0 0 0 1.5 1.5h10.5a1.5 1.5 0 0 0 1.5-1.5V10.5a.75.75 0 0 1 1.5 0v8.25a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3V8.25a3 3 0 0 1 3-3h8.25a.75.75 0 0 1 0 1.5H5.25Z"
+									clipRule="evenodd"
+								/>
+							</svg>
+						</CTA>
+					</div>
 				</div>
-			</div>{" "}
-			<div className="flex w-full flex-col md:flex-row md:items-center">
-				<MainContent />
-				<div className="w-1/2">
-					<AnimatedPattern />
+				<div className="flex w-full flex-col md:flex-row md:items-center">
+					<MainContent />
+
+					{showAnimatedPattern && (
+						<div className="w-1/2">
+							<AnimatedPattern />
+						</div>
+					)}
 				</div>
-			</div>
-		</section>
+			</section>
+		</>
 	);
 };
 
