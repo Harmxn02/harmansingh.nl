@@ -45,7 +45,6 @@ html {
 	--color-purple-darker: #382f5d;
 
 	--breakpoint-xs: 450px;
-
 }
 
 /*
@@ -64,6 +63,16 @@ html {
 	::file-selector-button {
 		border-color: var(--color-gray-200, currentcolor);
 	}
+}
+
+/* Custom hover transition class */
+.smooth-hover {
+	transition: background-color 2000ms ease-out;
+}
+
+.smooth-hover:hover {
+	background-color: #958ab5;
+	transition-duration: 300ms;
 }
 
 @utility border-dashed {
