@@ -8,6 +8,8 @@ import IntroAnimation from "./components/IntroAnimation";
 import Navigation from "./components/Navigation";
 import Form from "./components/Form";
 
+import toast, { Toaster } from "react-hot-toast";
+
 import { useState, useEffect } from "react";
 
 export default function Home() {
@@ -30,6 +32,27 @@ export default function Home() {
 					<Skills />
 					<About />
 					<Form />
+					<Toaster
+						position="top-center"
+						toastOptions={{
+							duration: 4000,
+							style: {
+								background: "#27272a",
+								color: "#fafafa",
+								border: "1px solid #3f3f46",
+								borderRadius: "1rem",
+								padding: "12px 16px",
+								fontSize: "14px",
+							},
+							success: {
+								iconTheme: {
+									// primary: "#997db6", // purple
+									primary: "#61d345",
+									secondary: "#27272a",
+								},
+							},
+						}}
+					/>{" "}
 					<Navigation />
 				</>
 			)}

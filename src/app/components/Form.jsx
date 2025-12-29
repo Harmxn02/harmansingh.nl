@@ -48,7 +48,7 @@ function LabelHint(props) {
 
 function copyEmail(email) {
 	navigator.clipboard.writeText(email || "harman.pnahal@gmail.com");
-	toast(`✅ Email copied to clipboard.`);
+	toast.success(`Email copied to clipboard.`);
 }
 
 const FormElement = (props) => {
@@ -114,26 +114,6 @@ const FormElement = (props) => {
 				</div>
 
 				<div data-aos="fade-up" data-aos-delay="300">
-					<Toaster
-						position="bottom-center"
-						toastOptions={{
-							duration: 4000,
-							style: {
-								background: "#27272a",
-								color: "#fafafa",
-								border: "1px solid #3f3f46",
-								borderRadius: "0.5rem",
-								padding: "12px 16px",
-								fontSize: "14px",
-							},
-							success: {
-								iconTheme: {
-									primary: "#997db6",
-									secondary: "#27272a",
-								},
-							},
-						}}
-					/>{" "}
 					<button
 						className="w-full cursor-pointer rounded-md bg-[#755eac] p-3 text-sm font-medium text-white transition-colors duration-500 hover:bg-[#997db6]"
 						type="submit"
@@ -192,26 +172,31 @@ export default function Contact() {
 	const sendEmail = (e) => {
 		e.preventDefault();
 
-		emailjs
-			.sendForm(
+		toast.promise(
+			emailjs.sendForm(
 				process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
 				process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
 				form.current,
 				process.env.NEXT_PUBLIC_EMAILJS_USER_ID,
-			)
-
-			.then(
-				(result) => {
-					console.log(result);
-					toast("✅ Email sent succesfully.");
-				},
-				(error) => {
-					console.log(error);
-					toast(
-						"❌ Something went wrong with sending the email. Please try again",
-					);
-				},
-			);
+			),
+			{
+				loading: "Sending email...",
+				success: "Email sent successfully!",
+				error: "Something went wrong with sending the email. Please send a mail manually using the email address above.",
+			}
+			// .then(
+			// 	(result) => {
+			// 		console.log(result);
+			// 		toast.success("Email sent succesfully.");
+			// 	},
+			// 	(error) => {
+			// 		console.log(error);
+			// 		toast.error(
+			// 			"Something went wrong with sending the email. Please try again",
+			// 		);
+			// 	},
+			// ),
+		);
 	};
 	return (
 		<section
