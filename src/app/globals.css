@@ -67,6 +67,7 @@ html {
 
 /* Custom hover transition class */
 .smooth-hover {
+	cursor: pointer;
 	transition: background-color 2000ms ease-out;
 }
 
