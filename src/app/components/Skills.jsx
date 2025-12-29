@@ -58,7 +58,7 @@ const Skills = () => {
 					([category, categorySkills], index) => (
 						<div
 							key={category}
-							className="border-pillSecondary relative rounded-md border p-6"
+							className="border-zinc-800 bg-zinc-900/40 relative rounded-md border p-6"
 							data-aos="fade-up"
 							data-aos-delay={100 + index * 50}
 						>

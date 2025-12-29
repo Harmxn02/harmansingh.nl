@@ -9,7 +9,7 @@ import projects from "@/app/data/projects";
 const ProjectCard = ({ project, index }) => {
 	return (
 		<div
-			className="border-pillSecondary flex flex-col overflow-hidden rounded-md border transition-all duration-300 hover:shadow-lg"
+			className="flex flex-col overflow-hidden rounded-md border border-zinc-800 bg-zinc-900/40 transition-all duration-300"
 			data-aos="fade-up"
 			data-aos-delay={index * 100}
 		>
@@ -37,7 +37,7 @@ const ProjectCard = ({ project, index }) => {
 						{project.technologies.map((tech) => (
 							<span
 								key={tech}
-								className="bg-pillPrimary rounded-full px-3 py-1 text-xs"
+								className="bg-pillPrimary smooth-hover rounded-full px-3 py-1 text-xs"
 							>
 								{tech}
 							</span>
@@ -51,7 +51,7 @@ const ProjectCard = ({ project, index }) => {
 								href={project.left_button}
 								target="_blank"
 								rel="noreferrer"
-								className="bg-pillPrimary hover:bg-pillSecondary rounded-md px-4 py-2 text-sm font-medium text-white transition-all"
+								className="bg-pillPrimary hover:bg-pillSecondary rounded-md px-4 py-2 text-sm font-medium text-white transition-all duration-300"
 							>
 								{project.button_text[0]}
 							</a>
@@ -61,7 +61,7 @@ const ProjectCard = ({ project, index }) => {
 							href={project.right_button}
 							target="_blank"
 							rel="noreferrer"
-							className="bg-buttonSecondary hover:bg-buttonSecondaryHover rounded-md px-4 py-2 text-sm font-medium text-black transition-all"
+							className="bg-buttonSecondary hover:bg-buttonSecondaryHover rounded-md px-4 py-2 text-sm font-medium text-black transition-all duration-300"
 						>
 							{project.button_text[1]}
 						</a>
