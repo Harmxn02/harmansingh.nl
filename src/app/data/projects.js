@@ -16,7 +16,7 @@ const projects = [
 		// TODO: rewrite this, and perhaps write a report on the findings
 		visible: true,
 		name: "Case study: Adversarial Attacks and Robustness",
-		imageSrc: "https://placehold.co/600x400/?text=Case study: AAR",
+		imageSrc: "https://placehold.co/600x400/0d1117/ffffff/?text=Case study: Adversarial Attacks",
 		domain: "ML/AI",
 		technologies: ["Python", "PyTorch", "Computer Vision"],
 		description: "Implemented and analysed the effectiveness of adversarial attacks on pre-trained computer vision models.",
@@ -54,6 +54,16 @@ const projects = [
 		description: "... using research papers and architecture diagrams",
 		left_button: "https://github.com/Harmxn02/Recreating-AI-Models-from-Scratch",
 		// right_button: "https://github.com/Harmxn02/Recreating-AI-Models-from-Scratch/blob/master/report/main.pdf",
+		button_text: ["Code Repository"],
+	},
+	{
+		visible: true,
+		name: "Lightweight GUI for DeepL API",
+		imageSrc: "https://placehold.co/600x400/0f2b46/ffffff/?text=Lightweight+GUI+for+DeepL+API&font=Lato",
+		domain: "Software Engineering",
+		technologies: ["HTML", "CSS", "Javascript"],
+		description: "A lightweight GUI for the DeepL API that uses 70% less resources than the official DeepL desktop application",
+		left_button: "https://github.com/Harmxn02/GUI-for-DeepL-API",
 		button_text: ["Code Repository"],
 	},
 ];
