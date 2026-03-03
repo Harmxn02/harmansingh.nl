@@ -1,6 +1,7 @@
 import localFont from "next/font/local";
 import "./globals.css";
 import AOSInit from "./components/AOSInit";
+import LiquidBackground from "./components/backgrounds/LiquidBackground";
 
 const geistSans = localFont({
 	src: "./fonts/GeistVF.woff",
@@ -49,8 +50,11 @@ export default function RootLayout({ children }) {
 			<body
 				className={`${geistSans.variable} ${geistMono.variable} antialiased`}
 			>
-				<AOSInit />
-				{children}
+				<LiquidBackground />
+				<div>
+					<AOSInit />
+					{children}
+				</div>
 			</body>
 		</html>
 	);
