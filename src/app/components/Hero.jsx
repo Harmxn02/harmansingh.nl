@@ -7,7 +7,7 @@ import { FaGithub } from "react-icons/fa";
 import Image from "next/image";
 import RobotArm from "../../../public/assets/robot-purple-compressed.webp";
 
-const showAnimatedPattern = true;
+const showAnimatedPattern = false;
 const showRobotArm = false;
 
 const TopLogo = () => {
