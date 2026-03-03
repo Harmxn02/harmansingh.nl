@@ -79,6 +79,7 @@ const About = () => {
 						icon={<FaLinkedin className="text-[#0072b1]" />}
 						content="LinkedIn"
 						redirect={true}
+						style="white"
 						url="https://www.linkedin.com/in/harmanpnahal/"
 					></CTA>
 				</div>{" "}
