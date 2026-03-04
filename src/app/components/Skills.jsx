@@ -19,18 +19,21 @@ const skills = {
 		"Responsive design",
 		"React",
 		"Next.js",
+		"Vue.js",
 		"TailwindCSS",
 		"Node.js",
 	],
 	dataScience: [
 		"PyTorch",
 		"TensorFlow",
+		"DataBricks",
+		"Jupyter",
 		"pandas",
 		"scikit-learn",
 		"NumPy",
 		"Polars",
-		"Matplotlib",
-		"Seaborn",
+		"JAX",
+		"FastAPI"
 	],
 	tools: [
 		"Git",
@@ -39,9 +42,10 @@ const skills = {
 		"Postman",
 		"Figma",
 		"Microsoft Azure",
+		"AWS",
 		"Kubernetes",
 	],
-	databases: ["MySQL", "MongoDB", "PostgreSQL"],
+	databases: ["MySQL", "MS SQL Server", "MongoDB", "PostgreSQL"],
 	languages: ["Python", "JavaScript", "TypeScript", "SQL", "Java", "PHP"],
 };
 
