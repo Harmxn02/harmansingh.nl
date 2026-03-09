@@ -9,7 +9,7 @@ import projects from "@/app/data/projects";
 const ProjectCard = ({ project, index }) => {
 	return (
 		<div
-			className="flex md:max-w-[400px] flex-col overflow-hidden rounded-md border border-zinc-800 bg-zinc-900/40 transition-all duration-300"
+			className="group flex flex-col overflow-hidden rounded-md border border-zinc-800 bg-zinc-900/40 transition-all duration-300 md:max-w-[400px]"
 			data-aos="fade-up"
 			data-aos-delay={index * 100}
 		>
@@ -19,7 +19,7 @@ const ProjectCard = ({ project, index }) => {
 					alt={"preview of project: " + project.name}
 					width={600}
 					height={400}
-					className="h-full w-full object-cover"
+					className="h-full w-full object-cover opacity-65 transition-opacity duration-300 group-hover:opacity-100"
 				/>
 				<div className="absolute top-2 right-2 rounded-lg bg-black/80 px-2 py-1 text-xs font-medium text-white">
 					{project.domain}
