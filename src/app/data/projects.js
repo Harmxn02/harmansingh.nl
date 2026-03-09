@@ -88,6 +88,17 @@ const projects = [
 		left_button: "https://github.com/Harmxn02/Art-Style-Transfer-Model",
 		button_text: ["Code Repository"],
 	},
+	{
+		visible: true,
+		name: "Odd One Out",
+		imageSrc: "/assets/projects/Odd One Out.png",
+		domain: "Pet projects",
+		technologies: ["Next.js", "Tailwind CSS", "Javascript"],
+		description: "A small web game where you have to find the odd colour out of a 3x3 grid",
+		left_button: "https://github.com/Harmxn02/odd-one-out",
+		right_button: "https://odd-one-out.harmansingh.nl",
+		button_text: ["Code Repository", "Live Deployment"],
+	}
 ];
 
 export default projects;
