@@ -9,7 +9,7 @@ import projects from "@/app/data/projects";
 const ProjectCard = ({ project, index }) => {
 	return (
 		<div
-			className="flex flex-col overflow-hidden rounded-md border border-zinc-800 bg-zinc-900/40 transition-all duration-300"
+			className="flex md:max-w-[400px] flex-col overflow-hidden rounded-md border border-zinc-800 bg-zinc-900/40 transition-all duration-300"
 			data-aos="fade-up"
 			data-aos-delay={index * 100}
 		>
@@ -123,7 +123,7 @@ const Projects = () => {
 				))}
 			</div>
 
-			<div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+			<div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
 				{filteredProjects.length > 0 ? (
 					filteredProjects.map((project, index) => (
 						<ProjectCard
