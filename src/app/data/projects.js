@@ -39,8 +39,8 @@ const projects = [
 		visible: true,
 		name: "Redirect YouTube Shorts UI",
 		// imageSrc: "/assets/projects/icon128.png",
-		// imageSrc: "/assets/projects/Redirect Google Shorts UI.png",
-		imageSrc: "https://placehold.co/600x400/ffffff/cc0000/?text=Redirect+YouTube+\nShorts+UI&font=montserrat",
+		imageSrc: "/assets/projects/Redirect_YouTube_Shorts_UI.png",
+		// imageSrc: "https://placehold.co/600x400/ffffff/cc0000/?text=Redirect+YouTube+\nShorts+UI&font=montserrat",
 		domain: "Pet projects",
 		technologies: ["HTML", "CSS", "Javascript"],
 		description: "Browser extension that automatically redirects YouTube Shorts to the regular video player",
@@ -71,7 +71,7 @@ const projects = [
 	{
 		visible: true,
 		name: "AI Learns to Drive",
-		imageSrc: "/assets/projects/AI Learns to Drive.png",
+		imageSrc: "/assets/projects/AI_Learns_to_Drive.png",
 		domain: "ML/AI",
 		technologies: ["Python", "PyTorch", "TensorFlow"],
 		description: "Trained multiple reinforcement learning agents to drive in a highway environment",
@@ -81,7 +81,7 @@ const projects = [
 	{
 		visible: true,
 		name: "Art Style Transfer Model",
-		imageSrc: "/assets/projects/Art Style Transfer Model.png",
+		imageSrc: "/assets/projects/Art_Style_Transfer_Model.png",
 		domain: "ML/AI",
 		technologies: ["Python", "PyTorch", "Computer Vision"],
 		description: "Trained a convolutional neural network to perform artistic style transfer",
@@ -91,7 +91,7 @@ const projects = [
 	{
 		visible: true,
 		name: "Odd One Out",
-		imageSrc: "/assets/projects/Odd One Out.png",
+		imageSrc: "/assets/projects/Odd_One_Out.png",
 		domain: "Pet projects",
 		technologies: ["Next.js", "Tailwind CSS", "Javascript"],
 		description: "A small web game where you have to find the odd colour out of a 3x3 grid",
