@@ -98,6 +98,16 @@ const projects = [
 		left_button: "https://github.com/Harmxn02/odd-one-out",
 		right_button: "https://odd-one-out.harmansingh.nl",
 		button_text: ["Code Repository", "Live Deployment"],
+	},
+	{
+		visible: true,
+		name: "Minecraft Horror Mod",
+		imageSrc: "https://placehold.co/600x400/0d1117/ffffff/",
+		domain: "Software Engineering",
+		technologies: ["Java"],
+		description: "still a work in progress",
+		left_button: "https://github.com/Harmxn02/MC-Schizophrenia-Mod",
+		button_text: ["Code Repository"],
 	}
 ];
 
