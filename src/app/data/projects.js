@@ -62,7 +62,7 @@ const projects = [
 		visible: true,
 		name: "Lightweight GUI for DeepL API",
 		imageSrc: "https://placehold.co/600x400/0f2b46/ffffff/?text=Lightweight+GUI+for+DeepL+API&font=Lato",
-		domain: "Software Engineering",
+		domain: "Pet projects",
 		technologies: ["HTML", "CSS", "Javascript"],
 		description: "A lightweight GUI for the DeepL API that uses 70% less resources than the official DeepL desktop application",
 		left_button: "https://github.com/Harmxn02/GUI-for-DeepL-API",
