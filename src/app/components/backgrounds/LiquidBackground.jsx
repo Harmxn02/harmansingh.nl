@@ -9,12 +9,13 @@ export default function LiquidBackground() {
 				position: "fixed",
 				inset: 0,
 				width: "100%",
-				height: "100%",
+				height: "100vh", // default was 100%
 				zIndex: 0,
 				pointerEvents: "none",
 			}}
 		>
 			<LiquidEther
+				className="h-screen w-full" // added myself
 				colors={["#5227FF", "#FF9FFC", "#B19EEF"]}
 				mouseForce={20}
 				cursorSize={100}
@@ -28,7 +29,7 @@ export default function LiquidBackground() {
 				autoSpeed={0.5}
 				autoIntensity={2.2}
 				takeoverDuration={0.25}
-				autoResumeDelay={3000}
+				autoResumeDelay={1000}
 				autoRampDuration={0.6}
 				color0="#5227FF"
 				color1="#FF9FFC"
