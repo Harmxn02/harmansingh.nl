@@ -1,6 +1,7 @@
 "use client";
 
 import Hero from "./components/Hero";
+// import Experience from "./components/Experience";
 import About from "./components/About";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
@@ -28,6 +29,7 @@ export default function Home() {
 			{showHero && (
 				<>
 					<Hero />
+					{/* <Experience /> */}
 					<Projects />
 					<Skills />
 					<About />
