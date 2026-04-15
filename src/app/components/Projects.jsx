@@ -9,7 +9,7 @@ import projects from "@/app/data/projects";
 const ProjectCard = ({ project, index }) => {
 	return (
 		<div
-			className="flex flex-col overflow-hidden rounded-md border border-zinc-800 bg-zinc-900/40 transition-all duration-300 md:max-w-[400px]"
+			className="flex max-w-[400px] flex-col overflow-hidden rounded-md border border-zinc-800 bg-zinc-900/40 transition-all duration-300 md:max-w-[400px]"
 			data-aos="fade-up"
 			data-aos-delay={index * 100}
 		>
@@ -19,7 +19,7 @@ const ProjectCard = ({ project, index }) => {
 					alt={"preview of project: " + project.name}
 					width={600}
 					height={400}
-					className="h-full w-full object-cover"
+					className="h-full w-full object-cover object-center"
 				/>
 				<div className="absolute top-2 right-2 rounded-lg bg-black/80 px-2 py-1 text-xs font-medium text-white">
 					{project.domain}
@@ -123,7 +123,7 @@ const Projects = () => {
 				))}
 			</div>
 
-			<div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+			<div className="flex flex-wrap gap-8">
 				{filteredProjects.length > 0 ? (
 					filteredProjects.map((project, index) => (
 						<ProjectCard
@@ -143,6 +143,20 @@ const Projects = () => {
 					</div>
 				)}
 			</div>
+			<p className="mt-6" data-aos="fade-up" data-aos-delay="300">
+				More projects on my
+				<strong className="text-purple-light hover:text-purple-lighter underline underline-offset-2 transition-colors duration-500">
+					{" "}
+					<a
+						href="https://github.com/Harmxn02"
+						target="_blank"
+						rel="noreferrer"
+					>
+						GitHub
+					</a>
+				</strong>{" "}
+				profile!{" "}
+			</p>
 		</section>
 	);
 };
