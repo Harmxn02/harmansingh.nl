@@ -7,8 +7,8 @@ export default function Navigation() {
 
 	const sections = {
 		hero: ["Home", "hero"],
-		// projects: ["Projects", "projects"],
 		experience: ["Experience", "experience"],
+		projects: ["Projects", "projects"],
 		skills: ["Skills", "skills"],
 		about: ["About", "about"],
 		contact: ["Contact", "contact"],
