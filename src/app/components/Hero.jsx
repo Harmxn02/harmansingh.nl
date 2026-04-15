@@ -81,7 +81,7 @@ const MainContent = () => {
 				</h1>
 
 				<p className="text-[1rem] sm:text-[1.1rem] md:pl-1 md:text-[1.3rem] lg:pl-2 lg:text-[1.5rem]">
-					Data Scientist // ML Engineer
+					Data Engineer // Data Scientist
 				</p>
 			</div>
 			<div
