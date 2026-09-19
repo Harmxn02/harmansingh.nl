@@ -30,7 +30,7 @@ export default function Home() {
 				<>
 					<Hero />
 					<Experience />
-					<Projects />
+					{/* <Projects /> */}
 					<Skills />
 					<About />
 					<Form />

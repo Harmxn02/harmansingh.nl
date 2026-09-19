@@ -61,8 +61,7 @@ const About = () => {
 					data-aos-delay="100"
 				>
 					<p>
-						Hello! I&apos;m Harman, a Data Engineer / Data Scientist
-						based in Belgium 🇧🇪.
+						Hello! I&apos;m Harman, a Data Engineer based in Belgium 🇧🇪.
 					</p>
 					<p>
 						My journey in tech started all the way back in 2020,

@@ -12,14 +12,14 @@ const Experience = () => {
 			<SectionTitle content="Experience" />
 			<ol className="relative ml-4 border-l border-zinc-800/90 pl-6">
 				<Timeline
-					dates="since May 2026"
+					dates="May 2026 - present"
 					title="Data Engineer"
 					company="Lighthouse"
 					image="/assets/lighthouse_logo.webp"
 				/>
 				<Timeline
 					dates="Feb 2025 – May 2025"
-					title="Research Intern"
+					title="AI Research Intern"
 					company="Howest AI Lab"
 					image="/assets/howest_logo.webp"
 				/>

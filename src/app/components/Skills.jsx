@@ -42,6 +42,7 @@ const skills = {
 		"Postman",
 		"Figma",
 		"Microsoft Azure",
+		"Google Cloud Platform",
 		"AWS",
 		"Kubernetes",
 	],
